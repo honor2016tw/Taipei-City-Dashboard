@@ -58,7 +58,7 @@ COPY public.components (id, index, name) FROM stdin;
 216	city_age_distribution	全市年齡分區
 218	aging_kpi	長照指標
 215	aging_workforce_trend	高齡就業人口之年增結構
-217	bike_map	自行車道路網圖資
+217	bike_map	自行車道路網圖資hahahe~~~
 \.
 
 
