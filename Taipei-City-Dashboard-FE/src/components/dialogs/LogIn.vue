@@ -113,7 +113,7 @@ function handleClose() {
           type="password"
         >
         <button @click="handleEmailLogin">
-          登入
+          湯泡飯
         </button>
       </div>
       <p>點擊「台北通登入」即表示您已閱讀並同意</p>
