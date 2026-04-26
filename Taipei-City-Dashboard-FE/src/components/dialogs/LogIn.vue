@@ -93,7 +93,7 @@ function handleClose() {
         class="login-form"
       >
         <button @click="handleTaipeiPassLogin">
-          <img src="../../assets/images/taipeipass.png">台北通湯泡飯
+          <img src="../../assets/images/taipeipass.png">台北通
         </button>
       </div>
       <div
@@ -113,7 +113,7 @@ function handleClose() {
           type="password"
         >
         <button @click="handleEmailLogin">
-          湯泡飯
+          登入
         </button>
       </div>
       <p>點擊「台北通登入」即表示您已閱讀並同意</p>

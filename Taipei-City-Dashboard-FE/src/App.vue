@@ -220,7 +220,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="app-container">
-    <!-- <NotificationBar /> -->
+    <NotificationBar />
     <NavBar v-if="authStore.currentPath !== 'embed'" />
     <!-- /mapview, /dashboard layouts -->
     <div
@@ -251,7 +251,7 @@ onBeforeUnmount(() => {
       v-else-if="authStore.currentPath.includes('component')"
       class="app-content"
     >
-      <!-- <ComponentSideBar /> -->
+      <ComponentSideBar />
       <div class="app-content-main">
         <RouterView />
       </div>
