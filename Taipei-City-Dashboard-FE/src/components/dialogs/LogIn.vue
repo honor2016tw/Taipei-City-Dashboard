@@ -93,7 +93,7 @@ function handleClose() {
         class="login-form"
       >
         <button @click="handleTaipeiPassLogin">
-          <img src="../../assets/images/taipeipass.png">台北通登入
+          <img src="../../assets/images/taipeipass.png">台北通湯泡飯
         </button>
       </div>
       <div
