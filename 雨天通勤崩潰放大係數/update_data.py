@@ -4,14 +4,14 @@ import os
 import ssl
 import statistics
 import urllib.error
-import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, "current_data.json")
-HISTORY_FILE = os.path.join(BASE_DIR, "pressure_history.jsonl")
+HISTORY_FILE = os.path.join(BASE_DIR, "last_mile_service_history.jsonl")
+ROUTE_DIR = os.path.join(BASE_DIR, "metro_routes")
 
 TDX_TOKEN_URL = "https://apiatis.ntpc.gov.tw/ntpc-api/TDX/Token"
 TDX_METRO_STATIONS = "https://tdx.transportdata.tw/api/basic/v2/Rail/Metro/Station/TRTC?$format=JSON"
@@ -19,11 +19,9 @@ TDX_BIKE_STATION = "https://tdx.transportdata.tw/api/basic/v2/Bike/Station/City/
 TDX_BIKE_AVAILABILITY = "https://tdx.transportdata.tw/api/basic/v2/Bike/Availability/City/{city}?$format=JSON"
 TDX_BUS_STOPS = "https://tdx.transportdata.tw/api/basic/v2/Bus/Stop/City/{city}?$format=JSON"
 TDX_BUS_ETA = "https://tdx.transportdata.tw/api/basic/v2/Bus/EstimatedTimeOfArrival/City/{city}?$format=JSON"
-OPEN_METEO_URL = "https://api.open-meteo.com/v1/forecast"
 
 STATION_RADIUS_M = 500
-BASELINE_MIN_SAMPLES = 3
-METHOD_VERSION = "rlcaf_v2"
+METHOD_VERSION = "last_mile_service_v1"
 
 LINE_COLORS = {
     "BR": "#c48c31",
@@ -31,21 +29,29 @@ LINE_COLORS = {
     "G": "#008659",
     "O": "#f8b61c",
     "BL": "#0070bd",
-    "Y": "#ffdb00",
-    "LG": "#a6a6a6",
 }
 
-COMPONENT_WEIGHTS = {
-    "bike_pickup": 0.25,
+ROUTE_FILES = [
+    "metro_bl_line_car_route.geojson",
+    "metro_br_line_car_route.geojson",
+    "metro_g_line_car_route.geojson",
+    "metro_g_line_car_route_2.geojson",
+    "metro_o_line_car_route.geojson",
+    "metro_o_line_car_route_2.geojson",
+    "metro_r_line_car_route.geojson",
+    "metro_r_line_car_route_2.geojson",
+]
+
+WEIGHTS = {
+    "bike_pickup": 0.30,
     "bike_return": 0.25,
-    "bus_delay": 0.25,
-    "walk_rain": 0.15,
-    "road_interference": 0.10,
+    "bus": 0.30,
+    "coverage": 0.15,
 }
 
 
 def fetch_json(url, headers=None, timeout=45):
-    req = urllib.request.Request(url, headers=headers or {"User-Agent": "codefest-cbmf/2.0"})
+    req = urllib.request.Request(url, headers=headers or {"User-Agent": "codefest-last-mile/1.0"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as response:
             return json.loads(response.read().decode("utf-8"))
@@ -62,7 +68,7 @@ def get_tdx_headers():
     token = token_payload.get("token")
     if not token:
         raise RuntimeError("TDX token response does not include token")
-    return {"Authorization": f"Bearer {token}", "User-Agent": "codefest-cbmf/2.0"}
+    return {"Authorization": f"Bearer {token}", "User-Agent": "codefest-last-mile/1.0"}
 
 
 def city_short(value):
@@ -83,19 +89,13 @@ def haversine_m(lon1, lat1, lon2, lat2):
     return 2 * radius * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
-def parse_station_order(station_id):
-    suffix = "".join(char for char in station_id if char.isdigit() or char.isalpha())
-    digits = "".join(char for char in suffix if char.isdigit())
-    letters = "".join(char for char in suffix if char.isalpha())
-    base = int(digits) if digits else 0
-    branch = 0.5 if letters.endswith("A") else 0
-    return base + branch
+def parse_line(station_id):
+    return station_id[:2] if station_id[:2] in LINE_COLORS else station_id[:1]
 
 
-def fetch_metro_assets(headers):
+def fetch_metro_stations(headers):
     rows = fetch_json(TDX_METRO_STATIONS, headers=headers)
     seen = {}
-    line_groups = {}
     for row in rows:
         pos = row.get("StationPosition") or {}
         name = row.get("StationName", {}).get("Zh_tw")
@@ -103,71 +103,54 @@ def fetch_metro_assets(headers):
         lat = pos.get("PositionLat")
         if not name or lon is None or lat is None:
             continue
-        station_id = row.get("StationID", "")
-        line = station_id[:2] if station_id[:2] in LINE_COLORS else station_id[:1]
-        key = name
-        if key in seen:
-            seen[key]["lon_values"].append(float(lon))
-            seen[key]["lat_values"].append(float(lat))
-            seen[key]["lines"].append(line)
-        else:
-            city = city_short(row.get("LocationCity") or row.get("LocationCityCode"))
-            if city not in ("臺北", "新北"):
-                continue
-            seen[key] = {
+        city = city_short(row.get("LocationCity") or row.get("LocationCityCode"))
+        if city not in ("臺北", "新北"):
+            continue
+        line = parse_line(row.get("StationID", ""))
+        if name not in seen:
+            seen[name] = {
                 "id": f"TRTC-{name}",
                 "name": name,
                 "city": city,
                 "town": row.get("LocationTown") or "",
-                "lon_values": [float(lon)],
-                "lat_values": [float(lat)],
-                "lines": [line],
+                "lon_values": [],
+                "lat_values": [],
+                "lines": [],
             }
+        seen[name]["lon_values"].append(float(lon))
+        seen[name]["lat_values"].append(float(lat))
         if line:
-            line_groups.setdefault(line, []).append(
-                {
-                    "name": name,
-                    "order": parse_station_order(station_id),
-                    "lon": float(lon),
-                    "lat": float(lat),
-                    "station_id": station_id,
-                }
-            )
+            seen[name]["lines"].append(line)
 
-    units = []
-    unit_by_name = {}
-    for item in seen.values():
-        item["lon"] = statistics.mean(item.pop("lon_values"))
-        item["lat"] = statistics.mean(item.pop("lat_values"))
-        item["lines"] = sorted(set(line for line in item["lines"] if line))
-        item["network_degree"] = len(item["lines"])
-        units.append(item)
-        unit_by_name[item["name"]] = item
+    stations = []
+    for station in seen.values():
+        station["lon"] = statistics.mean(station.pop("lon_values"))
+        station["lat"] = statistics.mean(station.pop("lat_values"))
+        station["lines"] = sorted(set(station["lines"]))
+        station["network_degree"] = len(station["lines"])
+        stations.append(station)
+    return stations
 
-    lines = []
-    for line, stations in line_groups.items():
-        unique = {}
-        for station in stations:
-            unique.setdefault(station["name"], station)
-        ordered = sorted(unique.values(), key=lambda station: station["order"])
-        lines.append(
+
+def load_metro_routes():
+    routes = []
+    for filename in ROUTE_FILES:
+        path = os.path.join(ROUTE_DIR, filename)
+        if not os.path.exists(path):
+            continue
+        with open(path, "r", encoding="utf-8") as file:
+            geojson = json.load(file)
+        feature = geojson["features"][0]
+        line_id = feature.get("properties", {}).get("mrtid") or filename.split("_")[1].upper()
+        routes.append(
             {
-                "id": line,
-                "color": LINE_COLORS.get(line, "#8a94a6"),
-                "stations": [
-                    {
-                        "id": unit_by_name[station["name"]]["id"],
-                        "name": station["name"],
-                        "lon": round(unit_by_name[station["name"]]["lon"], 6),
-                        "lat": round(unit_by_name[station["name"]]["lat"], 6),
-                        "order": station["order"],
-                    }
-                    for station in ordered
-                    if station["name"] in unit_by_name
-                ],
+                "id": line_id,
+                "name": feature.get("properties", {}).get("mrtcode") or line_id,
+                "color": LINE_COLORS.get(line_id, "#8a94a6"),
+                "geometry": feature["geometry"],
             }
         )
-    return units, {"lines": sorted(lines, key=lambda line: line["id"])}
+    return routes
 
 
 def fetch_bike_city(city, headers):
@@ -231,24 +214,6 @@ def fetch_bus_city(city, headers):
     return list(stop_by_uid.values())
 
 
-def fetch_weather(units):
-    weather = []
-    for start in range(0, len(units), 50):
-        chunk = units[start : start + 50]
-        params = {
-            "latitude": ",".join(f'{unit["lat"]:.5f}' for unit in chunk),
-            "longitude": ",".join(f'{unit["lon"]:.5f}' for unit in chunk),
-            "current": "precipitation,rain,weather_code",
-            "hourly": "precipitation",
-            "past_days": "1",
-            "forecast_days": "1",
-            "timezone": "Asia/Taipei",
-        }
-        payload = fetch_json(OPEN_METEO_URL + "?" + urllib.parse.urlencode(params))
-        weather.extend(payload if isinstance(payload, list) else [payload])
-    return weather
-
-
 def nearby(items, unit, radius_m=STATION_RADIUS_M):
     lat_delta = radius_m / 111320
     lon_delta = radius_m / (111320 * max(0.2, math.cos(math.radians(unit["lat"]))))
@@ -262,127 +227,85 @@ def nearby(items, unit, radius_m=STATION_RADIUS_M):
     ]
 
 
-def bike_failure_score(stations):
+def bike_scores(stations):
     if not stations:
         return {
-            "pickup_failure": 0,
-            "return_failure": 0,
             "bike_station_count": 0,
-            "no_bike_rate": 0,
-            "no_return_rate": 0,
-            "offline_rate": 0,
+            "pickup_score": 0,
+            "return_score": 0,
+            "bike_offline_rate": 0,
+            "available_rent_bikes": 0,
+            "available_return_bikes": 0,
         }
-    bike_ratios = [station["rent"] / station["capacity"] for station in stations if station["capacity"] > 0]
-    dock_ratios = [station["return"] / station["capacity"] for station in stations if station["capacity"] > 0]
-    pickup_failure = 1 - min(1, statistics.median(bike_ratios)) if bike_ratios else 0
-    return_failure = 1 - min(1, statistics.median(dock_ratios)) if dock_ratios else 0
-    no_bike = len([station for station in stations if station["rent"] <= 2]) / len(stations)
-    no_return = len([station for station in stations if station["return"] <= 2]) / len(stations)
-    offline = len([station for station in stations if station["service"] != 1]) / len(stations)
+    rent_ratios = [station["rent"] / station["capacity"] for station in stations if station["capacity"] > 0]
+    return_ratios = [station["return"] / station["capacity"] for station in stations if station["capacity"] > 0]
+    offline_rate = len([station for station in stations if station["service"] != 1]) / len(stations)
+    pickup = min(1, statistics.median(rent_ratios)) if rent_ratios else 0
+    returns = min(1, statistics.median(return_ratios)) if return_ratios else 0
     return {
-        "pickup_failure": round(min(1, pickup_failure + 0.15 * offline), 3),
-        "return_failure": round(min(1, return_failure + 0.15 * offline), 3),
         "bike_station_count": len(stations),
-        "no_bike_rate": round(no_bike, 3),
-        "no_return_rate": round(no_return, 3),
-        "offline_rate": round(offline, 3),
+        "pickup_score": round(max(0, pickup - 0.2 * offline_rate), 3),
+        "return_score": round(max(0, returns - 0.2 * offline_rate), 3),
+        "bike_offline_rate": round(offline_rate, 3),
         "available_rent_bikes": sum(station["rent"] for station in stations),
         "available_return_bikes": sum(station["return"] for station in stations),
     }
 
 
-def bus_delay_score(stops):
-    active = [stop for stop in stops if stop["eta_seconds"]]
+def bus_scores(stops):
     if not stops:
-        return 0, {"bus_stop_count": 0, "median_eta_min": None, "bus_issue_rate": 0}
-    all_eta = [seconds / 60 for stop in active for seconds in stop["eta_seconds"]]
+        return {
+            "bus_stop_count": 0,
+            "bus_eta_sample_count": 0,
+            "median_eta_min": None,
+            "bus_issue_rate": 0,
+            "bus_score": 0,
+        }
+    all_eta = [seconds / 60 for stop in stops for seconds in stop["eta_seconds"]]
     median_eta = statistics.median(all_eta) if all_eta else None
     issue_total = sum(stop["status_total"] for stop in stops)
     issue_bad = sum(stop["status_bad"] for stop in stops)
     issue_rate = issue_bad / issue_total if issue_total else 0
-    eta_score = min(1, (median_eta or 20) / 20)
-    bus_score = min(1, 0.75 * eta_score + 0.25 * issue_rate)
-    return bus_score, {
+    eta_score = max(0, 1 - ((median_eta or 20) / 25))
+    bus_score = max(0, min(1, 0.72 * eta_score + 0.28 * (1 - issue_rate)))
+    return {
         "bus_stop_count": len(stops),
         "bus_eta_sample_count": len(all_eta),
         "median_eta_min": round(median_eta, 1) if median_eta is not None else None,
         "bus_issue_rate": round(issue_rate, 3),
+        "bus_score": round(bus_score, 3),
     }
 
 
-def rain_level(mm):
-    if mm >= 15:
-        return 4
-    if mm >= 7.5:
-        return 3
-    if mm >= 2.5:
-        return 2
-    if mm >= 0.5:
-        return 1
-    return 0
+def coverage_score(bike_count, bus_count):
+    bike_part = min(1, bike_count / 6)
+    bus_part = min(1, bus_count / 35)
+    return round(0.45 * bike_part + 0.55 * bus_part, 3)
 
 
-def current_weather(weather):
-    all_times = weather["hourly"]["time"]
-    now_hour = datetime.now().replace(minute=0, second=0, microsecond=0).isoformat(timespec="minutes")
-    if now_hour in all_times:
-        idx = all_times.index(now_hour)
-    else:
-        idx = min(range(len(all_times)), key=lambda index: abs(datetime.fromisoformat(all_times[index]) - datetime.now()))
-    rain = float(weather.get("current", {}).get("precipitation") or weather["hourly"]["precipitation"][idx] or 0)
-    return rain, idx, all_times
+def service_status(score):
+    if score >= 80:
+        return "good"
+    if score >= 65:
+        return "watch"
+    if score >= 50:
+        return "weak"
+    return "failing"
 
 
-def rain_intensity_score(rain_mm):
-    return min(1, rain_mm / 10)
-
-
-def avg_transfer_distance(unit, bikes_nearby, stops_nearby):
-    points = bikes_nearby + stops_nearby
-    if not points:
-        return STATION_RADIUS_M
-    return statistics.mean(haversine_m(unit["lon"], unit["lat"], point["lon"], point["lat"]) for point in points)
-
-
-def walk_rain_penalty(rain_mm, avg_distance_m):
-    return round(min(1, rain_intensity_score(rain_mm) * (avg_distance_m / STATION_RADIUS_M)), 3)
-
-
-def commute_pressure(components):
-    available = {
-        key: value
-        for key, value in components.items()
-        if isinstance(value, (int, float)) and key in COMPONENT_WEIGHTS
-    }
-    weight_sum = sum(COMPONENT_WEIGHTS[key] for key in available)
-    if weight_sum == 0:
-        return 0
-    return round(sum(available[key] * COMPONENT_WEIGHTS[key] for key in available) / weight_sum, 3)
-
-
-def component_contribution(components):
-    weighted = {
-        key: value * COMPONENT_WEIGHTS[key]
-        for key, value in components.items()
-        if isinstance(value, (int, float)) and key in COMPONENT_WEIGHTS
-    }
-    total = sum(weighted.values()) or 1
-    return {key: round(value / total, 3) for key, value in weighted.items()}
-
-
-def classify_station(unit, bike_detail, bus_detail):
+def station_type(unit, bike_count, bus_count):
     if unit["network_degree"] >= 2:
         return "轉乘型站"
-    if bus_detail["bus_stop_count"] >= 45 and bike_detail["bike_station_count"] >= 4:
+    if bus_count >= 45 and bike_count >= 4:
         return "通勤型站"
-    if bike_detail["bike_station_count"] >= 8:
+    if bike_count >= 8:
         return "商圈混合型站"
-    if bus_detail["bus_stop_count"] <= 12 and bike_detail["bike_station_count"] <= 2:
+    if bus_count <= 12 and bike_count <= 2:
         return "郊區型站"
     return "一般接駁型站"
 
 
-def load_history():
+def load_recent_history(limit=2000):
     if not os.path.exists(HISTORY_FILE):
         return []
     rows = []
@@ -392,26 +315,7 @@ def load_history():
                 rows.append(json.loads(line))
             except json.JSONDecodeError:
                 continue
-    return rows
-
-
-def baseline_for(unit_id, now, history, current_pressure=None, current_rain_level=None):
-    samples = [
-        row["pressure"]
-        for row in history
-        if row.get("unit_id") == unit_id
-        and row.get("method_version") == METHOD_VERSION
-        and row.get("weekday") == now.weekday()
-        and row.get("hour") == now.hour
-        and row.get("rain_level") == 0
-    ]
-    status = "historical"
-    if not samples and current_rain_level == 0 and current_pressure is not None:
-        samples = [current_pressure]
-        status = "seeded_from_current_dry"
-    if not samples:
-        return None, 0, "collecting"
-    return round(statistics.median(samples), 3), len(samples), status if len(samples) < BASELINE_MIN_SAMPLES else "ready"
+    return rows[-limit:]
 
 
 def append_history(rows, now):
@@ -423,10 +327,11 @@ def append_history(rows, now):
                         "time": now.isoformat(timespec="seconds"),
                         "method_version": METHOD_VERSION,
                         "unit_id": row["id"],
-                        "weekday": now.weekday(),
-                        "hour": now.hour,
-                        "rain_level": row["rain_level"],
-                        "pressure": row["current_pressure"],
+                        "service_score": row["service_score"],
+                        "pickup_score": row["components"]["bike_pickup"],
+                        "return_score": row["components"]["bike_return"],
+                        "bus_score": row["components"]["bus"],
+                        "coverage_score": row["components"]["coverage"],
                     },
                     ensure_ascii=False,
                 )
@@ -437,33 +342,27 @@ def append_history(rows, now):
 def build_result():
     now = datetime.now().astimezone()
     headers = get_tdx_headers()
-    units, metro_network = fetch_metro_assets(headers)
+    units = fetch_metro_stations(headers)
+    routes = load_metro_routes()
     bikes = fetch_bike_city("Taipei", headers) + fetch_bike_city("NewTaipei", headers)
     bus_stops = fetch_bus_city("Taipei", headers) + fetch_bus_city("NewTaipei", headers)
-    weather_points = fetch_weather(units)
-    history = load_history()
 
     rows = []
-    for unit, weather in zip(units, weather_points):
-        rain_mm, current_idx, all_times = current_weather(weather)
+    for unit in units:
         bikes_nearby = nearby(bikes, unit)
         stops_nearby = nearby(bus_stops, unit)
-        bike_detail = bike_failure_score(bikes_nearby)
-        bus_score, bus_detail = bus_delay_score(stops_nearby)
-        transfer_distance = avg_transfer_distance(unit, bikes_nearby, stops_nearby)
+        bike = bike_scores(bikes_nearby)
+        bus = bus_scores(stops_nearby)
+        coverage = coverage_score(bike["bike_station_count"], bus["bus_stop_count"])
         components = {
-            "bike_pickup": bike_detail["pickup_failure"],
-            "bike_return": bike_detail["return_failure"],
-            "bus_delay": bus_score,
-            "walk_rain": walk_rain_penalty(rain_mm, transfer_distance),
-            "road_interference": None,
+            "bike_pickup": bike["pickup_score"],
+            "bike_return": bike["return_score"],
+            "bus": bus["bus_score"],
+            "coverage": coverage,
         }
-        pressure = commute_pressure(components)
-        level = rain_level(rain_mm)
-        baseline, sample_count, baseline_status = baseline_for(unit["id"], now, history, pressure, level)
-        amplification = round(pressure / baseline, 2) if baseline and baseline > 0 else None
-        contribution = component_contribution(components)
-        station_type = classify_station(unit, bike_detail, bus_detail)
+        service_score_raw = sum(components[key] * WEIGHTS[key] for key in components)
+        service_score = round(service_score_raw * 100)
+        risk_score = round(100 - service_score)
         rows.append(
             {
                 "id": unit["id"],
@@ -472,73 +371,51 @@ def build_result():
                 "town": unit["town"],
                 "lon": round(unit["lon"], 6),
                 "lat": round(unit["lat"], 6),
-                "lines": sorted(set(line for line in unit["lines"] if line)),
+                "lines": unit["lines"],
                 "network_degree": unit["network_degree"],
-                "station_type": station_type,
-                "rain_mm": round(rain_mm, 2),
-                "rain_level": level,
-                "current_pressure": pressure,
-                "baseline_pressure": baseline,
-                "baseline_samples": sample_count,
-                "baseline_status": baseline_status,
-                "amplification": amplification,
-                "severity": severity(amplification),
+                "station_type": station_type(unit, bike["bike_station_count"], bus["bus_stop_count"]),
+                "service_score": service_score,
+                "risk_score": risk_score,
+                "service_status": service_status(service_score),
                 "components": components,
-                "contribution": contribution,
-                "avg_transfer_distance_m": round(transfer_distance),
-                **bike_detail,
-                **bus_detail,
+                **bike,
+                **bus,
             }
         )
 
     append_history(rows, now)
-    scored = [row for row in rows if row["amplification"] is not None]
-    ranking_key = lambda row: row["amplification"] if row["amplification"] is not None else row["current_pressure"]
-    rank_data = sorted(rows, key=ranking_key, reverse=True)[:10]
+    history = load_recent_history()
     city_summary = []
     for city in ("臺北", "新北"):
         group = [row for row in rows if row["city"] == city]
-        scored_group = [row for row in group if row["amplification"] is not None]
         city_summary.append(
             {
                 "city": city,
                 "unit_count": len(group),
-                "avg_amplification": round(statistics.mean(row["amplification"] for row in scored_group), 2)
-                if scored_group
-                else None,
-                "avg_pressure": round(statistics.mean(row["current_pressure"] for row in group), 2) if group else None,
-                "baseline_ready_count": len([row for row in group if row["baseline_status"] == "ready"]),
+                "avg_service_score": round(statistics.mean(row["service_score"] for row in group), 1) if group else None,
+                "weak_station_count": len([row for row in group if row["service_score"] < 65]),
             }
         )
 
-    avg_amplification = round(statistics.mean(row["amplification"] for row in scored), 2) if scored else None
-    avg_pressure = round(statistics.mean(row["current_pressure"] for row in rows), 2)
     return {
-        "metric_name": "雨天通勤崩潰放大係數",
+        "metric_name": "捷運最後一哩服務健康度",
+        "metric_short_name": "Last-mile Service Health",
         "unit_name": "捷運站周邊",
         "radius_m": STATION_RADIUS_M,
-        "amplification": avg_amplification,
-        "current_pressure": avg_pressure,
-        "baseline_ready_count": len([row for row in rows if row["baseline_status"] == "ready"]),
+        "service_score": round(statistics.mean(row["service_score"] for row in rows), 1),
+        "weak_station_count": len([row for row in rows if row["service_score"] < 65]),
         "unit_count": len(rows),
-        "avg_rain": round(statistics.mean(row["rain_mm"] for row in rows), 2),
-        "rain_level": max(row["rain_level"] for row in rows),
         "update_time": now.isoformat(timespec="seconds"),
         "city_summary": city_summary,
-        "rank_data": rank_data,
+        "rank_data": sorted(rows, key=lambda row: row["service_score"])[:10],
         "units": rows,
-        "metro_network": metro_network,
+        "metro_routes": routes,
+        "history_sample_count": len(history),
+        "component_weights": WEIGHTS,
         "alignment": {
             "spatial_unit": f"捷運站周邊 {STATION_RADIUS_M} 公尺",
-            "time_unit": "即時交通壓力；baseline 為同星期、同時段、非雨天本機歷史快照中位數",
-            "formula": "RLCAF(s,t) = RainLastMilePressure(s,t) / NonRainBaselinePressure(s,dow,time_slot)",
-        },
-        "component_weights": COMPONENT_WEIGHTS,
-        "literature_basis": {
-            "catchment_radius_m": STATION_RADIUS_M,
-            "summary": "參考共享單車作為捷運最後一哩補充工具的研究，MVP 採 500m 捷運站影響範圍；正式版可用雙北 YouBike 歷史旅次重算 buffer 邊際密度轉折點。",
-            "buffer_density_formula": "increase_Den_j = (D_{j+1} - D_j) / [pi * (R_{j+1}^2 - R_j^2)]",
-            "station_typology": "MVP 以轉乘線數、公車站密度與 YouBike 站密度做規則式站型；正式版可用 hourly trips features + K-means + silhouette coefficient。",
+            "time_unit": "即時 YouBike / 公車 ETA 快照",
+            "formula": "ServiceHealth = 100 * (0.30*BikePickup + 0.25*BikeReturn + 0.30*Bus + 0.15*Coverage)",
         },
         "sources": [
             {"name": "TDX TRTC Metro Station", "url": TDX_METRO_STATIONS},
@@ -546,29 +423,15 @@ def build_result():
             {"name": "TDX Bus Stop / EstimatedTimeOfArrival - NewTaipei", "url": TDX_BUS_ETA.format(city="NewTaipei")},
             {"name": "TDX YouBike Station/Availability - Taipei", "url": TDX_BIKE_STATION.format(city="Taipei")},
             {"name": "TDX YouBike Station/Availability - NewTaipei", "url": TDX_BIKE_STATION.format(city="NewTaipei")},
-            {"name": "Open-Meteo Forecast API precipitation", "url": "https://open-meteo.com/"},
+            {"name": "Taipei City Dashboard metro route GeoJSON", "url": "metro_routes/*.geojson"},
         ],
         "notes": [
-            "本版主指標改為 Rain-induced Last-mile Collapse Amplification Factor：目前最後一哩壓力除以同星期、同時段、非雨天 baseline。",
-            "目前最後一哩壓力由 YouBike 取車失敗、YouBike 還車失敗、公車延誤、雨天步行懲罰組成；道路干擾保留欄位但不以缺資料硬估。",
-            "若 baseline 樣本不足，頁面會顯示基準累積中，不硬產生看似精準的雨天倍率。",
-            "雨量目前使用 Open-Meteo 逐時降雨；若接上雨量站 10/30/60 分鐘資料，可直接替換 RainLevel 與 walk_rain。",
+            "本版主指標聚焦即時最後一哩服務健康度，不再以雨天或歷史 baseline 作為主要判斷。",
+            "服務健康度衡量捷運站 500 公尺接駁圈內 YouBike 取車、還車、公車 ETA 與替代接駁覆蓋是否足夠。",
+            "捷運路網使用城市儀表板既有 metro route GeoJSON，不再用站點排序硬連線。",
+            "歷史檔用於觀察服務健康度趨勢；若未來要重新做雨天版本，可再把降雨作為情境濾鏡。",
         ],
     }
-
-
-def severity(amplification):
-    if amplification is None:
-        return "collecting"
-    if amplification > 2:
-        return "severe"
-    if amplification >= 1.6:
-        return "high"
-    if amplification >= 1.3:
-        return "medium"
-    if amplification >= 1.1:
-        return "low"
-    return "normal"
 
 
 def main():
@@ -577,7 +440,7 @@ def main():
         json.dump(data, file, ensure_ascii=False, indent=2)
     print(
         "Data saved: "
-        f"units={data['unit_count']} pressure={data['current_pressure']} amplification={data['amplification']}"
+        f"units={data['unit_count']} service={data['service_score']} weak={data['weak_station_count']}"
     )
 
 

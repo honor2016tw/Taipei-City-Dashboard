@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雨天通勤崩潰放大係數 | 雙北觀測儀表板</title>
+    <title>捷運最後一哩服務健康度 | 雙北觀測儀表板</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -15,7 +15,7 @@
                 <span class="brand-mark"></span>
                 <div>
                     <p>Metro Commute</p>
-                    <strong>CBMF</strong>
+                    <strong>LMH</strong>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
             </nav>
 
             <div class="sidebar-note">
-                <span>主指標只使用臺北與新北皆可對齊到行政區的資料。</span>
+                <span>主指標只使用臺北與新北可對齊到捷運站 500 公尺接駁圈的即時資料。</span>
             </div>
         </aside>
 
@@ -35,8 +35,8 @@
             <header class="page-header" id="overview">
                 <div>
                     <p class="eyebrow">雙北捷運站周邊 · 真實資料觀測</p>
-                    <h1>雨天通勤崩潰放大係數</h1>
-                    <p class="subtitle">以捷運站 500 公尺最後一哩接駁圈，觀測雨天對 YouBike、接駁公車與步行轉乘壓力的放大程度。</p>
+                    <h1>捷運最後一哩服務健康度</h1>
+                    <p class="subtitle">以捷運站 500 公尺最後一哩接駁圈，觀測 YouBike 取還、公車 ETA 與替代接駁覆蓋是否正在正常服務。</p>
                 </div>
                 <div class="update-panel">
                     <span class="live-dot"></span>
@@ -50,7 +50,7 @@
             <section class="metric-grid" aria-label="關鍵指標">
                 <article class="metric-card">
                     <div class="metric-title">
-                        <span>平均放大係數</span>
+                        <span>平均服務健康度</span>
                         <i data-lucide="activity"></i>
                     </div>
                     <strong id="cbmfValue">--</strong>
@@ -58,24 +58,24 @@
                 </article>
                 <article class="metric-card">
                     <div class="metric-title">
-                        <span>目前通勤壓力</span>
+                        <span>弱服務站點</span>
                         <i data-lucide="clock-3"></i>
                     </div>
                     <strong id="delayValue">--</strong>
-                    <p>公車 ETA 與 YouBike 失敗率合成</p>
+                    <p>健康度低於 65 的站點數</p>
                 </article>
                 <article class="metric-card">
                     <div class="metric-title">
-                        <span>baseline ready</span>
+                        <span>觀測站點</span>
                         <i data-lucide="triangle-alert"></i>
                     </div>
                     <strong id="hotspotValue">--</strong>
-                    <p>同星期同時段非雨樣本達門檻</p>
+                    <p>雙北捷運站 500m 接駁圈</p>
                 </article>
                 <article class="metric-card">
                     <div class="metric-title">
-                        <span>平均降雨</span>
-                        <i data-lucide="cloud-rain"></i>
+                        <span>歷史快照</span>
+                        <i data-lucide="history"></i>
                     </div>
                     <strong id="rainValue">--</strong>
                     <p id="weatherTime">逐時資料對齊中</p>
@@ -88,8 +88,8 @@
                 <article class="panel map-panel">
                     <div class="panel-header">
                         <div>
-                            <h2>捷運路網壓力圖</h2>
-                            <p>同一公式、同一空間粒度：捷運站周邊 500 公尺。</p>
+                            <h2>捷運路網服務圖</h2>
+                            <p>以路線 GeoJSON 畫實際捷運線形；站點顏色代表最後一哩服務健康度。</p>
                         </div>
                         <div class="segmented" role="group" aria-label="城市篩選">
                             <button class="active" data-city="all">雙北</button>
@@ -99,17 +99,17 @@
                     </div>
                     <div class="map-layout">
                         <div class="map-frame">
-                            <svg id="districtMap" viewBox="0 0 1000 820" role="img" aria-label="雙北捷運路網 RLCAF 圖"></svg>
+                            <svg id="districtMap" viewBox="0 0 1000 820" role="img" aria-label="雙北捷運最後一哩服務健康度圖"></svg>
                             <div class="map-legend">
-                                <span>低</span>
+                                <span>弱</span>
                                 <div></div>
-                                <span>高</span>
+                                <span>穩</span>
                             </div>
                         </div>
                         <aside class="district-detail" id="districtDetail">
-                            <span class="detail-label">選取行政區</span>
+                            <span class="detail-label">選取捷運站</span>
                             <strong>滑過或點選地圖</strong>
-                    <p>檢視取車、還車、公車、步行雨懲罰與 baseline。</p>
+                    <p>檢視 YouBike 取車、還車、公車 ETA 與覆蓋分數。</p>
                         </aside>
                     </div>
                 </article>
@@ -117,8 +117,8 @@
                 <article class="panel rank-panel">
                     <div class="panel-header">
                         <div>
-                            <h2>放大風險排行</h2>
-                            <p>優先依放大係數，其次依目前壓力排序。</p>
+                            <h2>弱服務排行</h2>
+                            <p>健康度越低，代表最後一哩越需要優先處理。</p>
                         </div>
                     </div>
                     <ol class="rank-list" id="rankList"></ol>
@@ -129,7 +129,7 @@
                 <article class="panel wide">
                     <div class="panel-header">
                         <div>
-                            <h2>最後一哩壓力拆解</h2>
+                            <h2>最後一哩服務拆解</h2>
                             <p id="timeAxisNote">站點周邊資料對齊中。</p>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                     <div class="panel-header">
                         <div>
                             <h2>臺北 / 新北比較</h2>
-                            <p>城市平均壓力與 baseline 覆蓋。</p>
+                            <p>城市平均服務健康度與弱服務站點。</p>
                         </div>
                     </div>
                     <div class="chart-body">

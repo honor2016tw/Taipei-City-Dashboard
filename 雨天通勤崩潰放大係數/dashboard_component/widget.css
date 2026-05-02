@@ -20,7 +20,7 @@ body {
   color: var(--text);
 }
 
-.rlcaf-widget {
+.last-mile-widget {
   min-height: 100vh;
   padding: 20px;
   background: var(--bg);
