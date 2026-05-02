@@ -275,16 +275,23 @@ onBeforeUnmount(() => {
       <ChatBox
         v-if="isChatBoxShow"
         class="chatbox"
+        @close="chatbotBtnHandler"
       />
       <div
         v-if="isChatBtnShow"
         class="chatbot-btn-area"
       >
         <div class="hide-chat-btn">
-          <button @click="hideBtnClickHandler" />
+          <button
+            aria-label="隱藏小幫手按鈕"
+            @click="hideBtnClickHandler"
+          />
         </div>
         <button
           class="chatbot-btn"
+          :class="{ active: isChatBoxShow }"
+          :aria-expanded="isChatBoxShow"
+          aria-label="開啟或收合臺北城市儀表板小幫手"
           @click="chatbotBtnHandler"
         >
           <ChatBotIcon />
@@ -338,49 +345,122 @@ onBeforeUnmount(() => {
 // Chatroom 樣式
 .chatbot-container {
 	position: fixed;
-	bottom: 1.5rem; // Tailwind bottom-6 → 24px
-	right: 1.5rem;
+	bottom: 24px;
+	right: 24px;
 	display: flex;
 	align-items: flex-end;
-	gap: 1rem; // Tailwind gap-4 → 16px
-	z-index: 10;
+	gap: 16px;
+	z-index: 40;
 
 	.chatbox {
 		width: 400px;
-		height: 500px;
-		margin-bottom: 35px;
+		height: min(650px, calc((var(--vh) * 100) - 96px));
+		margin-bottom: 34px;
+		animation: chatbox-in 0.22s ease-out;
 	}
 
 	.chatbot-btn-area {
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		align-items: flex-end;
+		gap: 8px;
+
 		.hide-chat-btn {
 			margin-left: auto;
+
 			button {
-				font-size: 16px;
+				width: 28px;
+				height: 28px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 50%;
+				background: rgba(9, 9, 9, 0.74);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+				transition:
+					background 0.18s ease,
+					border-color 0.18s ease,
+					transform 0.18s ease;
+
+				&:hover,
+				&:focus-visible {
+					background: rgba(40, 42, 44, 0.95);
+					border-color: rgba(255, 255, 255, 0.32);
+				}
+
+				&:active {
+					transform: scale(0.94);
+				}
 			}
 		}
+
 		.hide-chat-btn button::before {
 			content: "–";
-			font-weight: bold; /* 變粗 */
-			font-size: 20px; /* 可以順便調整大小 */
+			color: var(--color-normal-text);
+			font-size: 20px;
+			font-weight: 800;
+			line-height: 1;
 		}
+
 		.chatbot-btn {
-			width: 70px;
-			height: 70px;
+			width: 68px;
+			height: 68px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
-			background-color: #3b82f6; // Tailwind bg-blue-500
-			filter: brightness(1.5);
-			transition: filter 0.2s;
+			background:
+				radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.28), transparent 32%),
+				linear-gradient(135deg, #5a9cf8, #52d0ff);
+			box-shadow:
+				0 16px 36px rgba(0, 0, 0, 0.42),
+				0 0 0 1px rgba(255, 255, 255, 0.18),
+				0 0 28px rgba(90, 156, 248, 0.36);
+			transition:
+				filter 0.18s ease,
+				transform 0.18s ease,
+				box-shadow 0.18s ease;
 
-			&:hover {
-				filter: brightness(1);
+			svg {
+				width: 64px;
+				height: 64px;
+				filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.26));
+			}
+
+			&:hover,
+			&:focus-visible,
+			&.active {
+				filter: brightness(1.07);
+				box-shadow:
+					0 18px 42px rgba(0, 0, 0, 0.48),
+					0 0 0 1px rgba(255, 255, 255, 0.28),
+					0 0 34px rgba(90, 156, 248, 0.52);
+			}
+
+			&:active {
+				transform: scale(0.96);
 			}
 		}
+	}
+}
+
+@keyframes chatbox-in {
+	from {
+		opacity: 0;
+		transform: translateY(12px) scale(0.98);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.chatbot-container .chatbox {
+		animation: none;
 	}
 }
 
