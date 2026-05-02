@@ -129,6 +129,7 @@ export const useChatStore = defineStore('chat', () => {
 				body: JSON.stringify({
 					messages: aiMessages.value,
 					session_id: aiSessionId.value,
+					stream: true,
 				}),
 			})
 
