@@ -1,12 +1,14 @@
 from airflow import DAG
-from html.parser import HTMLParser
-import re
+from datetime import datetime, timedelta, timezone
+import csv
+import io
 
 from operators.common_pipeline import CommonDag
 
 
 TAIPEI_TODAYWORK_URL = "https://tpnco.blob.core.windows.net/blobfs/Todaywork.json"
-NTPC_ROAD_CONST_URL = "https://roadmt.maintenance.ntpc.gov.tw/iROAD/Home/GetCaseRoadConst"
+NTPC_ROAD_DIG_CSV_URL = "https://data.ntpc.gov.tw/api/datasets/96b6101b-c033-4834-8bd5-e312651db7a0/csv"
+NTPC_PAGE_SIZE = 100
 
 TAIPEI_DISTRICT_NAMES = {
     "北投",
@@ -22,59 +24,6 @@ TAIPEI_DISTRICT_NAMES = {
     "大安",
     "文山",
 }
-
-
-class RoadConstTableParser(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.rows = []
-        self._in_body_row = False
-        self._in_cell = False
-        self._cells = []
-        self._cell_parts = []
-        self._xy_key = None
-        self._is_expired = None
-
-    def handle_starttag(self, tag, attrs):
-        attrs = dict(attrs)
-        if tag == "tr" and "divTableBody" in attrs.get("class", ""):
-            self._in_body_row = True
-            self._cells = []
-            self._xy_key = None
-            self._is_expired = None
-            onclick = attrs.get("onclick", "")
-            match = re.search(r"GetXY\('([^']+)'\s*,\s*'([^']+)'\)", onclick)
-            if match:
-                self._xy_key = match.group(1)
-                self._is_expired = match.group(2) == "Y"
-        elif self._in_body_row and tag == "td":
-            self._in_cell = True
-            self._cell_parts = []
-
-    def handle_data(self, data):
-        if self._in_cell:
-            self._cell_parts.append(data)
-
-    def handle_endtag(self, tag):
-        if self._in_body_row and tag == "td":
-            value = " ".join("".join(self._cell_parts).split())
-            self._cells.append(value)
-            self._in_cell = False
-        elif self._in_body_row and tag == "tr":
-            if len(self._cells) >= 6:
-                self.rows.append(
-                    {
-                        "case_no": self._cells[0],
-                        "organizer": self._cells[1],
-                        "project_name": self._cells[2],
-                        "district": self._cells[3],
-                        "address": self._cells[4],
-                        "date_range": self._cells[5],
-                        "xy_key": self._xy_key,
-                        "is_expired": self._is_expired,
-                    }
-                )
-            self._in_body_row = False
 
 
 def _normalize_district_name(value):
@@ -106,128 +55,39 @@ def _to_ad_date(value):
     return f"{year:04d}-{month:02d}-{day:02d}"
 
 
-def _split_date_range(value):
-    if not value:
-        return None, None
-    parts = str(value).replace("～", "~").split("~", 1)
-    start_date = _to_ad_date(parts[0])
-    end_date = _to_ad_date(parts[1]) if len(parts) > 1 else None
-    return start_date, end_date
+def _roc_compact_to_ad_date(value):
+    value = str(value or "").strip()
+    if len(value) < 7:
+        return None
+    try:
+        year = int(value[:-4]) + 1911
+        month = int(value[-4:-2])
+        day = int(value[-2:])
+    except ValueError:
+        return None
+    return f"{year:04d}-{month:02d}-{day:02d}"
 
 
-def _parse_ntpc_rows(html):
-    parser = RoadConstTableParser()
-    parser.feed(html)
-    return parser.rows
-
-
-def _parse_total_pages(html):
-    match = re.search(r"共\s*(\d+)\s*頁", html)
-    return int(match.group(1)) if match else 1
-
-
-def _parse_current_page(html):
-    match = re.search(r"當前第\s*(\d+)\s*頁", html)
-    return int(match.group(1)) if match else None
-
-
-def _request_ntpc(session, method="get", params=None, data=None):
-    headers = {
-        "User-Agent": "Mozilla/5.0",
-        "Accept": "text/html, */*; q=0.01",
-        "Referer": "https://roadmt.maintenance.ntpc.gov.tw/iROAD/",
-        "X-Requested-With": "XMLHttpRequest",
-    }
-    if method == "post":
-        response = session.post(
-            NTPC_ROAD_CONST_URL,
-            data=data,
-            headers=headers,
-            timeout=60,
-            verify=True,
-        )
-    else:
-        response = session.get(
-            NTPC_ROAD_CONST_URL,
-            params=params,
-            headers=headers,
-            timeout=60,
-            verify=True,
-        )
-    response.raise_for_status()
-    return response.text
-
-
-def _ntpc_page_candidates(page):
-    page = str(page)
-    return [
-        ("post", None, {"page": page, "gridId": "gv_dig5"}),
-        ("post", None, {"page": page, "gv": "gv_dig5"}),
-        ("post", None, {"nowPage": page, "gv": "gv_dig5"}),
-        ("post", None, {"pageIndex": page, "gridViewID": "gv_dig5"}),
-        ("post", None, {"txt_page_gv_dig5": page}),
-        ("get", {"page": page}, None),
-        ("get", {"Page": page}, None),
-        ("get", {"nowPage": page}, None),
-        ("get", {"pageIndex": page}, None),
-    ]
-
-
-def _fetch_ntpc_all_pages():
+def _fetch_ntpc_road_dig_rows():
     import requests
 
-    session = requests.Session()
-    first_html = _request_ntpc(session)
-    first_rows = _parse_ntpc_rows(first_html)
-    if not first_rows:
-        raise ValueError("No New Taipei iROAD road construction rows were parsed.")
-
-    rows = first_rows
-    seen_case_no = {row["case_no"] for row in rows}
-    total_pages = _parse_total_pages(first_html)
-    selected_strategy = None
-
-    for page in range(2, total_pages + 1):
-        page_html = None
-        if selected_strategy:
-            method, params_template, data_template = selected_strategy
-            params = {
-                key: (str(page) if value == "{page}" else value)
-                for key, value in (params_template or {}).items()
-            }
-            data = {
-                key: (str(page) if value == "{page}" else value)
-                for key, value in (data_template or {}).items()
-            }
-            page_html = _request_ntpc(session, method, params=params, data=data)
-        else:
-            for method, params, data in _ntpc_page_candidates(page):
-                page_html = _request_ntpc(session, method, params=params, data=data)
-                candidate_rows = _parse_ntpc_rows(page_html)
-                candidate_cases = {row["case_no"] for row in candidate_rows}
-                current_page = _parse_current_page(page_html)
-                if candidate_rows and (
-                    current_page == page or not candidate_cases.issubset(seen_case_no)
-                ):
-                    selected_strategy = (
-                        method,
-                        {
-                            key: ("{page}" if value == str(page) else value)
-                            for key, value in (params or {}).items()
-                        },
-                        {
-                            key: ("{page}" if value == str(page) else value)
-                            for key, value in (data or {}).items()
-                        },
-                    )
-                    break
-
-        page_rows = _parse_ntpc_rows(page_html or "")
-        new_rows = [row for row in page_rows if row["case_no"] not in seen_case_no]
-        if not new_rows:
+    rows = []
+    page = 0
+    while True:
+        response = requests.get(
+            NTPC_ROAD_DIG_CSV_URL,
+            params={"page": page, "size": NTPC_PAGE_SIZE},
+            headers={"accept": "text/csv;charset=UTF-8"},
+            timeout=60,
+        )
+        response.raise_for_status()
+        page_rows = list(csv.DictReader(io.StringIO(response.text.lstrip("\ufeff"))))
+        if not page_rows:
             break
-        seen_case_no.update(row["case_no"] for row in new_rows)
-        rows.extend(new_rows)
+        rows.extend(page_rows)
+        if len(page_rows) < NTPC_PAGE_SIZE:
+            break
+        page += 1
 
     return rows
 
@@ -277,24 +137,34 @@ def _traffic_todaywork_metrotaipei(**kwargs):
             }
         )
 
+    today = datetime.now(timezone(timedelta(hours=8))).date()
     ntpc_rows = []
-    for row in _fetch_ntpc_all_pages():
-        start_date, end_date = _split_date_range(row.get("date_range"))
+    for row in _fetch_ntpc_road_dig_rows():
+        start_date = _roc_compact_to_ad_date(row.get("casestartdate_yyymmddroc"))
+        end_date = _roc_compact_to_ad_date(row.get("caseenddate_yyymmddroc"))
+        if not start_date or not end_date:
+            continue
+        if not (datetime.fromisoformat(start_date).date() <= today <= datetime.fromisoformat(end_date).date()):
+            continue
         ntpc_rows.append(
             {
                 "data_time": data_time,
                 "source_city": "新北市",
-                "source": "iROAD GetCaseRoadConst",
-                "case_no": row.get("case_no"),
-                "organizer": row.get("organizer"),
-                "project_name": row.get("project_name"),
+                "source": "新北市政府道路挖掘資訊 API",
+                "case_no": row.get("licno") or row.get("caseid"),
+                "organizer": row.get("supervise") or row.get("examunit") or row.get("constructionunit"),
+                "project_name": row.get("constname"),
                 "district": _normalize_district_name(row.get("district")),
-                "address": row.get("address"),
+                "address": row.get("digsite"),
                 "start_date": start_date,
                 "end_date": end_date,
-                "date_range": row.get("date_range"),
-                "is_expired": row.get("is_expired"),
-                "xy_key": row.get("xy_key"),
+                "date_range": f"{row.get('casestartdate_yyymmddroc', '')}~{row.get('caseenddate_yyymmddroc', '')}",
+                "is_expired": False,
+                "xy_key": ",".join(
+                    value
+                    for value in [row.get("twd97x"), row.get("twd97y")]
+                    if value
+                ) or None,
             }
         )
 

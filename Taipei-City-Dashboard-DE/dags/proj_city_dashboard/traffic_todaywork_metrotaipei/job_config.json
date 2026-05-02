@@ -5,7 +5,7 @@
         "schedule_interval": "*/10 * * * *",
         "catchup": false,
         "tags": ["traffic_todayworks", "道路施工", "雙北"],
-        "description": "Metro Taipei road construction cases from Taipei Todaywork and New Taipei iROAD.",
+        "description": "Metro Taipei road construction cases from Taipei Todaywork and New Taipei open data road excavation API.",
         "default_args": {
             "owner": "airflow",
             "email": ["DEFAULT_EMAIL_LIST"],
@@ -24,14 +24,14 @@
     "data_infos":{
         "name_cn": "雙北今日施工資訊",
         "airflow_update_freq": "10 minutes",
-        "source": "https://data.taipei/dataset/detail?id=c208dabd-2da0-4e6d-8dbd-a004b9782b0a; https://roadmt.maintenance.ntpc.gov.tw/iROAD/Home/GetCaseRoadConst",
-        "source_type": "data.taipei GeoJSON; New Taipei iROAD HTML table",
-        "source_dept": "臺北市政府工務局; 新北市政府養護工程處",
-        "gis_format": "None",
-        "output_coordinate": "",
-        "is_geometry": 0,
-        "dataset_description": "整合臺北市道路挖掘即時施工通報資訊與新北市 iROAD 道路工程案件，供雙北行政區統計圖表使用。",
-        "etl_description": "download Taipei GeoJSON, request New Taipei iROAD HTML pages, parse table rows, normalize ROC dates and district names",
+        "source": "https://data.taipei/dataset/detail?id=c208dabd-2da0-4e6d-8dbd-a004b9782b0a; https://data.ntpc.gov.tw/api/datasets/96b6101b-c033-4834-8bd5-e312651db7a0/csv",
+        "source_type": "data.taipei GeoJSON; New Taipei open data CSV API",
+        "source_dept": "臺北市政府工務局; 新北市政府開放資料",
+        "gis_format": "TWD97 point coordinates",
+        "output_coordinate": "EPSG:3826 for source coordinates; GeoJSON export converts to EPSG:4326",
+        "is_geometry": 1,
+        "dataset_description": "整合臺北市道路挖掘即時施工通報資訊與新北市政府道路挖掘資訊，供雙北行政區統計圖表與空間圖層使用。",
+        "etl_description": "download Taipei GeoJSON, fetch New Taipei road excavation CSV API pages, normalize ROC dates and district names, keep cases active today",
         "sensitivity": "public"
     }
 }

@@ -2,23 +2,22 @@
 """Build local GeoJSON for the Metro Taipei today-work component."""
 
 import argparse
+import csv
+import io
 import json
 import math
-import os
-import re
 from datetime import date
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 
 DEFAULT_TAIPEI_FILE = "/Users/user/Downloads/Todaywork.json"
-DEFAULT_NTPC_FILE = "/Users/user/Downloads/新北市政府道路挖掘資訊_export.json"
 DEFAULT_OUTPUT = (
     "/Users/user/Documents/codefest_2026/"
     "Taipei-City-Dashboard-FE/public/mapData/traffic_todaywork_metrotaipei.geojson"
 )
-DEFAULT_NTPC_SQL = os.path.join(
-    os.path.dirname(__file__),
-    "replace_ntpc_from_ntpc_road_dig_json.sql",
-)
+NTPC_ROAD_DIG_CSV_URL = "https://data.ntpc.gov.tw/api/datasets/96b6101b-c033-4834-8bd5-e312651db7a0/csv"
+NTPC_PAGE_SIZE = 100
 
 TAIPEI_DISTRICT_NAMES = {
     "北投",
@@ -102,15 +101,22 @@ def load_json(path):
         return json.load(f, strict=False)
 
 
-def load_ntpc_json(path):
-    if os.path.exists(path):
-        return load_json(path)
-    with open(DEFAULT_NTPC_SQL, "r", encoding="utf-8") as f:
-        sql = f.read()
-    match = re.search(r"\$json\$(.*)\$json\$", sql, re.S)
-    if not match:
-        raise FileNotFoundError(path)
-    return json.loads(match.group(1))
+def fetch_ntpc_road_dig_rows():
+    rows = []
+    page = 0
+    while True:
+        url = f"{NTPC_ROAD_DIG_CSV_URL}?{urlencode({'page': page, 'size': NTPC_PAGE_SIZE})}"
+        request = Request(url, headers={"accept": "text/csv;charset=UTF-8", "User-Agent": "Mozilla/5.0"})
+        with urlopen(request, timeout=60) as response:
+            text = response.read().decode("utf-8-sig", errors="replace")
+        page_rows = list(csv.DictReader(io.StringIO(text.lstrip("\ufeff"))))
+        if not page_rows:
+            break
+        rows.extend(page_rows)
+        if len(page_rows) < NTPC_PAGE_SIZE:
+            break
+        page += 1
+    return rows
 
 
 def taipei_features(path):
@@ -149,8 +155,8 @@ def taipei_features(path):
     return features
 
 
-def ntpc_features(path, today):
-    data = load_ntpc_json(path)
+def ntpc_features(today):
+    data = fetch_ntpc_road_dig_rows()
     features = []
     for row in data:
         start_date = roc_date(row.get("casestartdate_yyymmddroc"))
@@ -186,12 +192,11 @@ def ntpc_features(path, today):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--taipei-file", default=DEFAULT_TAIPEI_FILE)
-    parser.add_argument("--ntpc-file", default=DEFAULT_NTPC_FILE)
     parser.add_argument("--output", default=DEFAULT_OUTPUT)
     args = parser.parse_args()
 
     features = taipei_features(args.taipei_file)
-    features.extend(ntpc_features(args.ntpc_file, date.today()))
+    features.extend(ntpc_features(date.today()))
     geojson = {"type": "FeatureCollection", "features": features}
 
     with open(args.output, "w", encoding="utf-8") as f:

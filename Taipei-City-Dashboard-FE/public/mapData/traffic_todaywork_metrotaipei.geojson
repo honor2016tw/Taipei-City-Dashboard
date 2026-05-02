@@ -13847,6 +13847,6929 @@
         "date_range": "1130521~1160921",
         "status": "已核發許可證"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4139708,
+          24.9818367
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1132484063",
+        "project_name": "新北市樹林地區污水下水道系統第二期第十七標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "樹林區",
+        "address": "樹林區東陽里村里鎮前街467號",
+        "start_date": "2024-05-27",
+        "end_date": "2026-07-31",
+        "date_range": "1130527~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4483918,
+          25.0022546
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1132037454",
+        "project_name": "新北市板橋地區污水下水道系統第三期工程第六標(支(分)管及用戶接管)",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "板橋區",
+        "address": "板橋區聚安里村里環河西路五段",
+        "start_date": "2024-05-29",
+        "end_date": "2026-05-31",
+        "date_range": "1130529~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.417104,
+          24.9826623
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1132483910",
+        "project_name": "新北市樹林地區污水下水道系統第二期第十七標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "樹林區",
+        "address": "樹林區東陽里村里東榮街118號",
+        "start_date": "2024-06-03",
+        "end_date": "2026-07-31",
+        "date_range": "1130603~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3373728,
+          24.9571976
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1134712809號",
+        "project_name": "新北市三峽區、鶯歌區污水下水道系統第二期工程污水管線第十標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "鶯歌區",
+        "address": "鶯歌區永吉里村里鶯桃路173號",
+        "start_date": "2024-07-03",
+        "end_date": "2027-04-01",
+        "date_range": "1130703~1160401",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.419873,
+          24.9822512
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1132488573",
+        "project_name": "新北市樹林地區污水下水道系統第二期第十七標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "樹林區",
+        "address": "樹林區和平里村里八德街73號",
+        "start_date": "2024-07-08",
+        "end_date": "2026-07-31",
+        "date_range": "1130708~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4182213,
+          24.9791662
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1132488864",
+        "project_name": "新北市樹林地區污水下水道系統第二期第十七標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "樹林區",
+        "address": "樹林區中華里村里中華路341-7號",
+        "start_date": "2024-07-10",
+        "end_date": "2026-07-31",
+        "date_range": "1130710~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4389794,
+          25.0852872
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1134724452號",
+        "project_name": "新北市五股地區污水下水道系統第二期第三標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "五股區",
+        "address": "五股區五股里村里成泰路二段51號",
+        "start_date": "2024-08-10",
+        "end_date": "2026-06-23",
+        "date_range": "1130810~1150623",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3046216,
+          25.1169699
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1132799497號",
+        "project_name": "161kV林口~東林雙分歧西濱管路暨附屬機電工程五工區",
+        "organizer": "台灣電力公司輸變電工程處北區施工處",
+        "district": "林口區",
+        "address": "林口區下福里村里林口溪右側水防道一段",
+        "start_date": "2024-11-20",
+        "end_date": "2026-06-30",
+        "date_range": "1131120~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3352843,
+          24.958294
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1132532310",
+        "project_name": "新北市三峽區、鶯歌區污水下水道系統第二期工程第十標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "鶯歌區",
+        "address": "鶯歌區永吉里村里永吉街1號",
+        "start_date": "2024-10-28",
+        "end_date": "2026-10-31",
+        "date_range": "1131028~1151031",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4478748,
+          24.9801602
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "328287",
+        "project_name": "土城區暫緩發展區及附近地區市地重劃區公共污水下水道後續建設及障礙管段銜接工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "土城區",
+        "address": "土城區日和里村里學府路二段60號",
+        "start_date": "2024-11-15",
+        "end_date": "2026-06-30",
+        "date_range": "1131115~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4588908,
+          24.9769434
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "328503",
+        "project_name": "土城區暫緩發展區及附近地區市地重劃區公共污水下水道後續建設及障礙管段銜接工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "土城區",
+        "address": "土城區清和里村里青雲路401號",
+        "start_date": "2024-11-15",
+        "end_date": "2026-06-30",
+        "date_range": "1131115~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4536182,
+          24.9814916
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "328530",
+        "project_name": "土城區暫緩發展區及附近地區市地重劃區公共污水下水道後續建設及障礙管段銜接工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "土城區",
+        "address": "土城區學士里村里學士路33巷10號",
+        "start_date": "2024-11-15",
+        "end_date": "2026-06-30",
+        "date_range": "1131115~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3343796,
+          24.9670312
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1132535602",
+        "project_name": "新北市三峽區、鶯歌區污水下水道系統第二期工程污水管線第十標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "鶯歌區",
+        "address": "鶯歌區鳳鳴里村里鶯桃路411號",
+        "start_date": "2024-12-09",
+        "end_date": "2026-10-31",
+        "date_range": "1131209~1151031",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4242655,
+          24.9837312
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "土八字第1136015361號",
+        "project_name": "樹林區中華路1500mm電動蝶閥新設工程",
+        "organizer": "台灣自來水公司第十二區管理處",
+        "district": "樹林區",
+        "address": "樹林區和平里村里中華路3號",
+        "start_date": "2024-12-26",
+        "end_date": "2026-05-12",
+        "date_range": "1131226~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4464953,
+          24.9778533
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142425582",
+        "project_name": "土城區暫緩發展區及附近地區市地重劃區公共污水下水道後續建設及障礙管段銜接工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "土城區",
+        "address": "土城區員林里村里學府路二段171號",
+        "start_date": "2025-03-03",
+        "end_date": "2026-06-30",
+        "date_range": "1140303~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4746623,
+          25.0137636
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142019283",
+        "project_name": "新北市板橋地區污水下水道系統第三期工程第三標(支(分)管及用戶接管)",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "板橋區",
+        "address": "板橋區民生里村里中山路二段40巷30號",
+        "start_date": "2025-03-03",
+        "end_date": "2026-07-09",
+        "date_range": "1140303~1150709",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4460234,
+          25.0099457
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142020646",
+        "project_name": "新北市板橋地區污水下水道系統第三期工程第一標(支(分)管及用戶接管)",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "板橋區",
+        "address": "板橋區華中里村里僑中一街124巷20號",
+        "start_date": "2025-04-01",
+        "end_date": "2026-06-30",
+        "date_range": "1140401~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4405351,
+          24.9791563
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142428486",
+        "project_name": "新北市板橋地區污水下道道系統第三期工程第一標(支(分)管及用戶接管)",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "土城區",
+        "address": "土城區員福里村里員福路52號",
+        "start_date": "2025-04-01",
+        "end_date": "2026-06-30",
+        "date_range": "1140401~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3324329,
+          24.9602696
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142514955",
+        "project_name": "新北市三峽區、鶯歌區污水下水道系統第二期工程污水管線第十標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "鶯歌區",
+        "address": "鶯歌區永吉里村里鶯桃路301號",
+        "start_date": "2025-03-17",
+        "end_date": "2026-12-31",
+        "date_range": "1140317~1151231",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4538645,
+          24.9789035
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "333131",
+        "project_name": "土城區暫緩發展區及附近地區市地重劃區公共污水下水道後續建設及障礙管段銜接工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "土城區",
+        "address": "土城區柑林里村里金城路二段5號",
+        "start_date": "2025-03-20",
+        "end_date": "2026-06-30",
+        "date_range": "1140320~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.439627,
+          24.9794611
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1144726000",
+        "project_name": "新北市板橋地區污水下道道系統第三期工程第一標(支(分)管及用戶接管)",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "土城區",
+        "address": "土城區員福里村里中華路一段",
+        "start_date": "2025-04-10",
+        "end_date": "2026-06-04",
+        "date_range": "1140410~1150604",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3331424,
+          24.9577545
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142516581",
+        "project_name": "新北市三峽區、鶯歌區污水下水道系統第二期工程污水管線第十標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "鶯歌區",
+        "address": "鶯歌區永吉里村里德昌二街13號",
+        "start_date": "2025-04-01",
+        "end_date": "2026-06-30",
+        "date_range": "1140401~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4194062,
+          24.9773016
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142502431",
+        "project_name": "新北市樹林地區污水下水道系統第二期第十七標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "樹林區",
+        "address": "樹林區彭厝里村里太平路150巷41號",
+        "start_date": "2025-05-21",
+        "end_date": "2026-07-31",
+        "date_range": "1140521~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4321111,
+          25.0528344
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142749182",
+        "project_name": "0700006792(田宅工程-楊宅)瓦斯供氣管線埋設工程",
+        "organizer": "欣泰石油氣股份有限公司",
+        "district": "泰山區",
+        "address": "泰山區義仁里村里仁義路220巷53號",
+        "start_date": "2025-05-23",
+        "end_date": "2026-05-05",
+        "date_range": "1140523~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4070649,
+          24.9792312
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1144745098",
+        "project_name": "161kV樹林~南樹線等2案地下管路統包工程",
+        "organizer": "台灣電力公司輸變電工程處北區施工處",
+        "district": "樹林區",
+        "address": "樹林區東昇里村里中山路二段",
+        "start_date": "2025-07-07",
+        "end_date": "2026-06-11",
+        "date_range": "1140707~1150611",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4131797,
+          24.9849243
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142506698",
+        "project_name": "161kV樹林~南樹線等2案地下管路統包工程",
+        "organizer": "台灣電力公司輸變電工程處北區施工處",
+        "district": "樹林區",
+        "address": "樹林區樹人里村里啟智街",
+        "start_date": "2025-06-27",
+        "end_date": "2026-06-11",
+        "date_range": "1140627~1150611",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4123747,
+          24.9806955
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142512006",
+        "project_name": "161kV樹林~南樹線等2案地下管路統包工程",
+        "organizer": "台灣電力公司輸變電工程處北區施工處",
+        "district": "樹林區",
+        "address": "樹林區東陽里村里東陽街15號",
+        "start_date": "2025-09-01",
+        "end_date": "2026-06-11",
+        "date_range": "1140901~1150611",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.404251,
+          24.9749625
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142506699",
+        "project_name": "161kV樹林~南樹線等2案地下管路統包工程",
+        "organizer": "台灣電力公司輸變電工程處北區施工處",
+        "district": "樹林區",
+        "address": "樹林區東山里村里味王街",
+        "start_date": "2025-06-27",
+        "end_date": "2026-06-11",
+        "date_range": "1140627~1150611",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4544398,
+          24.9967349
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142060500",
+        "project_name": "161kV板城~遠信線等3案地下管路統包工程-161kV板城~遠信線管路工程",
+        "organizer": "台灣電力公司輸變電工程處北區施工處",
+        "district": "板橋區",
+        "address": "板橋區華東里村里高爾富路303號",
+        "start_date": "2025-10-27",
+        "end_date": "2026-05-24",
+        "date_range": "1141027~1150524",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4436232,
+          24.9770813
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142441471",
+        "project_name": "土城區員林街等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處土城服務所",
+        "district": "土城區",
+        "address": "土城區員林里村里員林街",
+        "start_date": "2025-07-21",
+        "end_date": "2026-07-31",
+        "date_range": "1140721~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5038208,
+          24.9911769
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142301135",
+        "project_name": "新北市中和地區污水下水道系統第三期工程第一標分支管線及用戶接管工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "中和區",
+        "address": "中和區景新里村里興南路一段80號",
+        "start_date": "2025-09-30",
+        "end_date": "2028-05-11",
+        "date_range": "1140930~1170511",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5128064,
+          25.016627
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北永工字第1142200309號",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-2標暨第六-1標後續工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區河堤里村里文化路90巷",
+        "start_date": "2025-09-01",
+        "end_date": "2026-07-31",
+        "date_range": "1140901~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4217805,
+          24.9938844
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142512997",
+        "project_name": "新北市樹林地區污水下水道系統第二期第十七標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "樹林區",
+        "address": "樹林區樹德里村里長壽街19巷14號",
+        "start_date": "2025-09-01",
+        "end_date": "2026-05-31",
+        "date_range": "1140901~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.435042,
+          25.0688304
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1144770285號",
+        "project_name": "五股區成泰路一段800mm汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處板新給水廠",
+        "district": "五股區",
+        "address": "五股區德泰里村里成泰路一段",
+        "start_date": "2025-11-01",
+        "end_date": "2026-06-01",
+        "date_range": "1141101~1150601",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5997814,
+          25.0050571
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142831891",
+        "project_name": "新北市深坑區北深路三段189巷、192巷206巷、243巷、286巷汰換管線工程",
+        "organizer": "台灣自來水股份有限公司第一區管理處文山營運所",
+        "district": "深坑區",
+        "address": "深坑區萬福里村里北深路三段189巷1弄1號",
+        "start_date": "2025-10-14",
+        "end_date": "2026-06-30",
+        "date_range": "1141014~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4706669,
+          24.9899824
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北土工字第1142450924號",
+        "project_name": "臺北都會區大眾捷運系統萬大-中和-樹林線(第二期工程)CQ880A區段標工程",
+        "organizer": "新北市政府捷運工程局",
+        "district": "土城區",
+        "address": "土城區延祿里村里延壽路13巷1號",
+        "start_date": "2025-09-11",
+        "end_date": "2026-06-30",
+        "date_range": "1140911~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5383876,
+          25.2909367
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142911830",
+        "project_name": "新北市石門區楓林路汰換管線工程",
+        "organizer": "台灣自來水股份有限公司第一區管理處淡水營運所",
+        "district": "石門區",
+        "address": "石門區富基里村里楓林路23-10號",
+        "start_date": "2025-10-13",
+        "end_date": "2026-05-06",
+        "date_range": "1141013~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3363441,
+          24.9593867
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北捷四所字第1142011037號",
+        "project_name": "新北市三峽區、鶯歌區污水下水道系統第二期工程污水管線第十標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "鶯歌區",
+        "address": "鶯歌區永吉里村里鶯桃路117號",
+        "start_date": "2025-10-07",
+        "end_date": "2026-06-30",
+        "date_range": "1141007~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5143749,
+          25.0167007
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北永工字第1142204305號",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-2標暨第六-1標後續工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區文化里村里文化路90巷32弄",
+        "start_date": "2025-09-25",
+        "end_date": "2026-07-31",
+        "date_range": "1140925~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5203921,
+          25.0082757
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142204461",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-2標暨第六-1標後續工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區光明里村里國光路49巷",
+        "start_date": "2025-09-25",
+        "end_date": "2026-05-31",
+        "date_range": "1140925~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5194444,
+          25.0122147
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142204306",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-2標暨第六-1標後續工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區永興里村里中興街135號",
+        "start_date": "2025-09-25",
+        "end_date": "2026-05-31",
+        "date_range": "1140925~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4408731,
+          24.9661873
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "341048",
+        "project_name": "土城區千歲路及忠義路等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處土城服務所",
+        "district": "土城區",
+        "address": "土城區埤塘里村里千歲路15號",
+        "start_date": "2025-10-13",
+        "end_date": "2026-06-19",
+        "date_range": "1141013~1150619",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.340299,
+          24.9479928
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1144766583號",
+        "project_name": "鶯歌區八德路1200mm汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處",
+        "district": "鶯歌區",
+        "address": "鶯歌區尖山里村里八德路2巷",
+        "start_date": "2025-10-27",
+        "end_date": "2026-08-30",
+        "date_range": "1141027~1150830",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4849821,
+          25.0570324
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "114西區11-23",
+        "project_name": "(三重區捷運19巷)瓦斯管線埋設工程(工本114-003)",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "三重區",
+        "address": "三重區重明里村里捷運路19巷11號",
+        "start_date": "2025-12-20",
+        "end_date": "2026-05-15",
+        "date_range": "1141220~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5516997,
+          24.9513134
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142426695",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區青潭里村里竹林路2巷",
+        "start_date": "2025-11-03",
+        "end_date": "2026-05-31",
+        "date_range": "1141103~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4717493,
+          25.0047063
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142305468",
+        "project_name": "中和區德光路1100mm汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處板新給水廠",
+        "district": "中和區",
+        "address": "中和區德穗里村里德光路",
+        "start_date": "2025-12-05",
+        "end_date": "2026-06-02",
+        "date_range": "1141205~1150602",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4122396,
+          25.1619771
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142832804",
+        "project_name": "113-114年度新北市揚水站改善工程",
+        "organizer": "新北市政府水利局污水設施科",
+        "district": "八里區",
+        "address": "八里區頂罟里村里博物館路90號",
+        "start_date": "2025-10-22",
+        "end_date": "2026-05-07",
+        "date_range": "1141022~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5399324,
+          24.9661411
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142430139",
+        "project_name": "114南區C管網改善工程",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區新德里村里新生街",
+        "start_date": "2025-11-19",
+        "end_date": "2026-05-31",
+        "date_range": "1141119~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5376331,
+          25.2911339
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142913319",
+        "project_name": "新北市石門區楓林路汰換管線工程",
+        "organizer": "台灣自來水股份有限公司第一區管理處淡水營運所",
+        "district": "石門區",
+        "address": "石門區富基里村里楓林路23-10號",
+        "start_date": "2025-11-04",
+        "end_date": "2026-05-06",
+        "date_range": "1141104~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4800574,
+          25.0307219
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142065910",
+        "project_name": "板橋區懷德街139巷及重慶路93巷等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處板橋服務所",
+        "district": "板橋區",
+        "address": "板橋區懷翠里村里懷德街127巷23弄",
+        "start_date": "2025-11-10",
+        "end_date": "2026-05-09",
+        "date_range": "1141110~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5396647,
+          24.9673421
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142430140",
+        "project_name": "114南區C管網改善工程",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區新德里村里中華路47巷",
+        "start_date": "2025-11-19",
+        "end_date": "2026-05-31",
+        "date_range": "1141119~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5395133,
+          24.9655224
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142431120",
+        "project_name": "114南區C管網改善工程",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區新德里村里新生街",
+        "start_date": "2025-12-01",
+        "end_date": "2026-05-31",
+        "date_range": "1141201~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4174362,
+          24.9850732
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142290431",
+        "project_name": "B14B5217B(6250014)新北市政府捷運工程局-2",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "樹林區",
+        "address": "樹林區東昇里村里中山路二段",
+        "start_date": "2025-12-01",
+        "end_date": "2026-05-09",
+        "date_range": "1141201~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4741257,
+          25.079764
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1142480536號",
+        "project_name": "蘆洲區民生街、中山一路、鷺江街及信義路巷弄等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區樹德里村里中山一路197巷8弄",
+        "start_date": "2025-12-15",
+        "end_date": "2026-05-28",
+        "date_range": "1141215~1150528",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4400274,
+          24.9718537
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142457203",
+        "project_name": "54133-4-新北市土城區公所-人行道淨寬不足改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區員信里村里中央路二段270巷",
+        "start_date": "2025-12-22",
+        "end_date": "2026-05-07",
+        "date_range": "1141222~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5490059,
+          24.9544895
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142433514",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區美潭里村里長春路",
+        "start_date": "2025-12-08",
+        "end_date": "2026-05-30",
+        "date_range": "1141208~1150530",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3083033,
+          25.1113043
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1142822740號",
+        "project_name": "林口東林雙分歧西濱管路暨附屬機電工程",
+        "organizer": "台灣電力公司輸變電工程處北區施工處",
+        "district": "林口區",
+        "address": "林口區下福里村里水防道路",
+        "start_date": "2025-12-20",
+        "end_date": "2026-12-31",
+        "date_range": "1141220~1151231",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.491461,
+          25.0053769
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142311068",
+        "project_name": "28628-新北市政府養護工程處-人行道拓寬改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "中和區",
+        "address": "中和區中原里村里橋和路",
+        "start_date": "2025-12-10",
+        "end_date": "2026-05-12",
+        "date_range": "1141210~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4726189,
+          24.9876922
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "343264",
+        "project_name": "土城服務所113-114年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處土城服務所",
+        "district": "土城區",
+        "address": "土城區延吉里村里延吉街47巷6號",
+        "start_date": "2025-12-02",
+        "end_date": "2026-12-05",
+        "date_range": "1141202~1151205",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6871358,
+          25.1953089
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北萬工字第1142957920號",
+        "project_name": "(7250201)4D0099B-設計課申請用電",
+        "organizer": "台灣電力股份有限公司基隆區營業處",
+        "district": "萬里區",
+        "address": "萬里區龜吼里村里漁澳路41號",
+        "start_date": "2025-12-22",
+        "end_date": "2026-05-08",
+        "date_range": "1141222~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4645861,
+          25.0659404
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142374375",
+        "project_name": "B14D5449B登山營造股份有限公司",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區福基里村里化成路565號",
+        "start_date": "2025-12-23",
+        "end_date": "2026-05-07",
+        "date_range": "1141223~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5439427,
+          24.9697855
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142436790",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區五峯里村里中正路65巷1號",
+        "start_date": "2025-12-19",
+        "end_date": "2026-05-31",
+        "date_range": "1141219~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4185672,
+          24.9808747
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142532743",
+        "project_name": "B14B5239B(B250729)台電北西區處-2",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "樹林區",
+        "address": "樹林區大同里村里中華路94號",
+        "start_date": "2025-12-30",
+        "end_date": "2026-05-23",
+        "date_range": "1141230~1150523",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4403091,
+          25.0541114
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1144781962號",
+        "project_name": "B14D5463B新泰塭仔圳1-2區計畫道路與新北大道銜接孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區中原里村里新北大道四段",
+        "start_date": "2026-01-12",
+        "end_date": "2026-05-06",
+        "date_range": "1150112~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4743485,
+          25.0790908
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153380360號",
+        "project_name": "蘆洲區民生街、中山一路、鷺江街及信義路巷弄等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區得仁里村里中山一路218巷2號",
+        "start_date": "2026-03-20",
+        "end_date": "2026-05-14",
+        "date_range": "1150320~1150514",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4424031,
+          25.0848393
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154640202號",
+        "project_name": "B14A5222B1美富建設股份有限公司申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "五股區",
+        "address": "五股區成泰里村里新五路二段",
+        "start_date": "2026-03-16",
+        "end_date": "2026-05-10",
+        "date_range": "1150316~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5383495,
+          24.954294
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1142439602",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區國校里村里國校路45號",
+        "start_date": "2026-01-01",
+        "end_date": "2026-05-31",
+        "date_range": "1150101~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3787139,
+          24.9307752
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153490094號",
+        "project_name": "用戶用水設備新裝工程(三峽區介壽路一段207-1號(長泰街內))",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "三峽區",
+        "address": "三峽區礁溪里村里介壽路一段207-1號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-10",
+        "date_range": "1150304~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.489614,
+          25.0583208
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115南區2-3",
+        "project_name": "B14A5239B新北市政府養護工程處申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三重區",
+        "address": "三重區光明里村里重安街",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-13",
+        "date_range": "1150304~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5360686,
+          25.2908926
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153850188",
+        "project_name": "新北市石門區楓林路汰換管線工程",
+        "organizer": "台灣自來水股份有限公司第一區管理處淡水營運所",
+        "district": "石門區",
+        "address": "石門區富基里村里楓林路18號",
+        "start_date": "2026-01-05",
+        "end_date": "2026-05-06",
+        "date_range": "1150105~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5355763,
+          25.2908768
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153850189",
+        "project_name": "新北市石門區楓林路汰換管線工程",
+        "organizer": "台灣自來水股份有限公司第一區管理處淡水營運所",
+        "district": "石門區",
+        "address": "石門區富基里村里崁子路19-2號",
+        "start_date": "2026-01-12",
+        "end_date": "2026-05-06",
+        "date_range": "1150112~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3662721,
+          25.0764099
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153729123號",
+        "project_name": "B14C5245B聿翔建設(股)公司管路埋設",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "林口區",
+        "address": "林口區南勢里村里文化北路一段458巷29號",
+        "start_date": "2026-04-24",
+        "end_date": "2026-05-09",
+        "date_range": "1150424~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5213706,
+          24.9936722
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153171024",
+        "project_name": "新北市中和地區污水下水道系統第三期工程第一標(支(分)管及用戶接管)",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "中和區",
+        "address": "中和區秀山里村里自強路15巷2號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-29",
+        "date_range": "1150304~1150529",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3820753,
+          25.0757504
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153722906號",
+        "project_name": "B14C5507B合軒建設(股)公司管路埋設",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "林口區",
+        "address": "林口區西林里村里佳林路200號",
+        "start_date": "2026-04-11",
+        "end_date": "2026-05-09",
+        "date_range": "1150411~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4188958,
+          25.032215
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154641590號",
+        "project_name": "貴子坑溪河川環境營造計畫(第二標)-十八份坑溪HDPE引水管埋設",
+        "organizer": "新北市政府水利局河川工程科",
+        "district": "泰山區",
+        "address": "泰山區貴和里村里新北大道六段458號",
+        "start_date": "2026-03-14",
+        "end_date": "2026-06-30",
+        "date_range": "1150314~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.423993,
+          25.0384118
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154641629號",
+        "project_name": "貴子坑溪河川環境營造計畫(第二標)-十八份坑溪HDPE引水管埋設",
+        "organizer": "新北市政府水利局河川工程科",
+        "district": "泰山區",
+        "address": "泰山區貴和里村里明志路三段203號",
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "date_range": "1150401~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4245414,
+          25.0382259
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153683965",
+        "project_name": "貴子坑溪河川環境營造計畫(第二標)-十八份坑溪HDPE引水管埋設",
+        "organizer": "新北市政府水利局河川工程科",
+        "district": "泰山區",
+        "address": "泰山區貴和里村里明志路三段",
+        "start_date": "2026-03-16",
+        "end_date": "2026-06-30",
+        "date_range": "1150316~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3638113,
+          24.9251819
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153495538號",
+        "project_name": "B14B5272B良將建設股份有限公司申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三峽區",
+        "address": "三峽區弘道里村里大同路297號",
+        "start_date": "2026-03-18",
+        "end_date": "2026-05-06",
+        "date_range": "1150318~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4342402,
+          25.0309134
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153235033號",
+        "project_name": "B14D5498B新莊區公所電桿地下化工程",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區福營里村里建國一路31巷",
+        "start_date": "2026-03-12",
+        "end_date": "2026-05-08",
+        "date_range": "1150312~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.339762,
+          24.9574527
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153453137",
+        "project_name": "用戶用水設備新裝工程(鶯歌區鶯桃路182巷96巷16號)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "鶯歌區",
+        "address": "鶯歌區永昌里村里鶯桃路182巷96弄16號",
+        "start_date": "2026-03-09",
+        "end_date": "2026-05-15",
+        "date_range": "1150309~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3850474,
+          24.9399899
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北捷四所字第1150200975號",
+        "project_name": "B14B5274B新北市政府交通局申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三峽區",
+        "address": "三峽區龍埔里村里龍埔路",
+        "start_date": "2026-01-25",
+        "end_date": "2026-05-09",
+        "date_range": "1150125~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3672337,
+          24.93889
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北捷四所字第1150200338號",
+        "project_name": "B14B5277B新北市政府交通局申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三峽區",
+        "address": "三峽區鳶山里村里復興路259號",
+        "start_date": "2026-01-27",
+        "end_date": "2026-05-09",
+        "date_range": "1150127~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4627993,
+          25.0326156
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153014411",
+        "project_name": "19252-TPC-臨時電新設工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區宏翠里村里民生路三段",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-15",
+        "date_range": "1150304~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4394308,
+          25.0858995
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154645934號",
+        "project_name": "中華電信埋管工程",
+        "organizer": "中華電信股份有限公司新北營運處第四客戶網路中心",
+        "district": "五股區",
+        "address": "五股區五股里村里成泰路二段224號",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-06",
+        "date_range": "1150407~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4863741,
+          25.0061818
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153178336",
+        "project_name": "114西區B管網改善工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區中原里村里立言街58號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-06-16",
+        "date_range": "1150304~1150616",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5158956,
+          25.0154372
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154637167",
+        "project_name": "市111線-開晟建設股份有限公司用戶新設給水工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "永和區",
+        "address": "永和區頂溪里村里永和路二段263號",
+        "start_date": "2026-03-05",
+        "end_date": "2026-05-12",
+        "date_range": "1150305~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3311498,
+          24.9757047
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153457849",
+        "project_name": "1261160號配合新北市政府水利局",
+        "organizer": "台灣電力股份有限公司桃園區營業處",
+        "district": "鶯歌區",
+        "address": "鶯歌區鳳福里村里鳳三路372號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-07",
+        "date_range": "1150304~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4160559,
+          25.009669
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153424945",
+        "project_name": "B14B5247B(4240782)台北西區-1",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "樹林區",
+        "address": "樹林區獇寮里村里俊興街",
+        "start_date": "2026-03-10",
+        "end_date": "2026-05-08",
+        "date_range": "1150310~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4701763,
+          24.9803927
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "344953",
+        "project_name": "/中華電信管挖及孔蓋提升新增工程G506071",
+        "organizer": "中華電信股份有限公司新北營運處第一客戶網路中心",
+        "district": "土城區",
+        "address": "土城區廷寮里村里永豐路",
+        "start_date": "2026-03-28",
+        "end_date": "2026-05-24",
+        "date_range": "1150328~1150524",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5001546,
+          25.0677714
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154638372",
+        "project_name": "B14A5143B豐霈商行黃霈淳",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三重區",
+        "address": "三重區長元里村里三和路二段36號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-15",
+        "date_range": "1150304~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4833094,
+          25.0668577
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154639215",
+        "project_name": "B14A5214B新北市政府交通局交通管制工程科申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三重區",
+        "address": "三重區六福里村里中正北路178號",
+        "start_date": "2026-03-16",
+        "end_date": "2026-05-15",
+        "date_range": "1150316~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.625083,
+          25.0684437
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153627122",
+        "project_name": "(5250188)4D0061B-設計課申請用電",
+        "organizer": "台灣電力股份有限公司基隆區營業處",
+        "district": "汐止區",
+        "address": "汐止區北山里村里明峰街296號",
+        "start_date": "2026-03-19",
+        "end_date": "2026-05-07",
+        "date_range": "1150319~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3753368,
+          25.0876576
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153727824號",
+        "project_name": "0900012481(聿德企業)瓦斯供氣管線埋設",
+        "organizer": "欣泰石油氣股份有限公司",
+        "district": "林口區",
+        "address": "林口區湖南里村里文林三街141號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-15",
+        "date_range": "1150427~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5194513,
+          25.009257
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153114826",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-1標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區光明里村里警光街2號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-06-30",
+        "date_range": "1150304~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4206706,
+          24.9870904
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153426072",
+        "project_name": "新北市樹林地區污水下水道系統第二期第十七標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "樹林區",
+        "address": "樹林區育英里村里文化街2號",
+        "start_date": "2026-03-09",
+        "end_date": "2026-05-03",
+        "date_range": "1150309~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.426905,
+          24.9864177
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153021806",
+        "project_name": "B-210571瓦斯管線埋設工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "板橋區",
+        "address": "板橋區溪福里村里滿平街84巷116號",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-07",
+        "date_range": "1150407~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.515936,
+          25.0077368
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153115502",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-1標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區大新里村里中正路513號",
+        "start_date": "2026-03-10",
+        "end_date": "2026-06-30",
+        "date_range": "1150310~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5159856,
+          25.0093775
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153115503",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-1標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區豫溪里村里中正路609巷",
+        "start_date": "2026-03-10",
+        "end_date": "2026-06-30",
+        "date_range": "1150310~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4763684,
+          25.08059
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389548號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區溪墘里村里中山一路95巷20弄104號",
+        "start_date": "2026-03-02",
+        "end_date": "2026-05-09",
+        "date_range": "1150302~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4406931,
+          25.0429045
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153683925",
+        "project_name": "塭仔圳地區第1-2區市地重劃開發工程",
+        "organizer": "新北市政府地政局",
+        "district": "泰山區",
+        "address": "泰山區義仁里村里莊田路",
+        "start_date": "2026-03-10",
+        "end_date": "2026-05-16",
+        "date_range": "1150310~1150516",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3629548,
+          25.1348599
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153728412號",
+        "project_name": "蘆洲服務所114-115年管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "林口區",
+        "address": "林口區太平里村里汕頭21號",
+        "start_date": "2026-03-02",
+        "end_date": "2026-05-09",
+        "date_range": "1150302~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.484131,
+          25.0781862
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154641172",
+        "project_name": "新北市三重區三和路四段123~161號前本管汰換工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "三重區",
+        "address": "三重區福樂里村里三和路四段123~161號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-15",
+        "date_range": "1150413~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3914707,
+          24.9377825
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153495534號",
+        "project_name": "B14B5276B新北市政府交通局申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三峽區",
+        "address": "三峽區溪南里村里佳興路",
+        "start_date": "2026-03-18",
+        "end_date": "2026-05-07",
+        "date_range": "1150318~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3725911,
+          24.9357674
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153495535號",
+        "project_name": "B14B5288B饋線增加供電人孔提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三峽區",
+        "address": "三峽區永舘里村里民生街106-1號",
+        "start_date": "2026-03-10",
+        "end_date": "2026-05-06",
+        "date_range": "1150310~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3505866,
+          24.9439676
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153457702",
+        "project_name": "自來水漏水緊急搶修工程(文化路324巷38號)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "鶯歌區",
+        "address": "鶯歌區南靖里村里文化路324巷38號",
+        "start_date": "2026-03-03",
+        "end_date": "2026-05-10",
+        "date_range": "1150303~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3680766,
+          24.9256193
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153497382號",
+        "project_name": "114年乙工區人手孔蓋升降及周邊加固工作",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三峽區",
+        "address": "三峽區中埔里村里中園街69號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-08",
+        "date_range": "1150304~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5171304,
+          25.0013416
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153117998",
+        "project_name": "114北區B管網改善工程",
+        "organizer": "臺北自來水事業處北區營業分處",
+        "district": "永和區",
+        "address": "永和區潭墘里村里中正路403號",
+        "start_date": "2026-04-06",
+        "end_date": "2026-05-05",
+        "date_range": "1150406~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4498378,
+          25.1316919
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153754483",
+        "project_name": "B14A5304B2勤樸開發有限公司申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "八里區",
+        "address": "八里區龍源里村里龍形三街17號",
+        "start_date": "2026-03-16",
+        "end_date": "2026-05-09",
+        "date_range": "1150316~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4062775,
+          25.1530587
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154645440",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "八里區",
+        "address": "八里區舊城里村里中山路二段75號",
+        "start_date": "2026-03-04",
+        "end_date": "2026-05-09",
+        "date_range": "1150304~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5435338,
+          24.9730835
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153300134",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區張北里村里德正街11號",
+        "start_date": "2026-03-13",
+        "end_date": "2026-05-30",
+        "date_range": "1150313~1150530",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5148048,
+          25.0065096
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153115658",
+        "project_name": "林顏素碧用戶新設給水工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "永和區",
+        "address": "永和區永安里村里秀朗路一段48號",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-05",
+        "date_range": "1150416~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5177767,
+          25.0088025
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153115659",
+        "project_name": "王芸軒用戶新設給水工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "永和區",
+        "address": "永和區光明里村里中正路662巷27號",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-05",
+        "date_range": "1150416~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.542324,
+          24.9810024
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153300135",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區寶安里村里寶安街4巷1號",
+        "start_date": "2026-03-13",
+        "end_date": "2026-05-31",
+        "date_range": "1150313~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4546187,
+          25.056217
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153241321號",
+        "project_name": "B14D5525B國泰建設股份有限公司孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區昌平里村里昌平街200號",
+        "start_date": "2026-03-27",
+        "end_date": "2026-07-02",
+        "date_range": "1150327~1150702",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4104299,
+          25.1564664
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154645170",
+        "project_name": "B14A5306B用戶申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "八里區",
+        "address": "八里區埤頭里村里文昌一街7號",
+        "start_date": "2026-03-26",
+        "end_date": "2026-05-13",
+        "date_range": "1150326~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4263275,
+          25.0420135
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153684650",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區貴賢里村里貴子路15巷1弄2號",
+        "start_date": "2026-03-06",
+        "end_date": "2026-05-09",
+        "date_range": "1150306~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4232485,
+          25.0410956
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153684649",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區貴子里村里工專路82巷3號",
+        "start_date": "2026-03-06",
+        "end_date": "2026-05-09",
+        "date_range": "1150306~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.426955,
+          24.986373
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153021804",
+        "project_name": "-中華電信管挖工程G528021",
+        "organizer": "中華電信股份有限公司新北營運處第一客戶網路中心",
+        "district": "板橋區",
+        "address": "板橋區溪福里村里滿平街84巷116號",
+        "start_date": "2026-03-24",
+        "end_date": "2026-05-04",
+        "date_range": "1150324~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5158409,
+          25.0153325
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153115800",
+        "project_name": "開晟建設股份有限公司用戶新設給水工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "永和區",
+        "address": "永和區頂溪里村里永和路二段263號",
+        "start_date": "2026-03-16",
+        "end_date": "2026-05-12",
+        "date_range": "1150316~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4980804,
+          24.9939052
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153179816",
+        "project_name": "28661-新北市中和區公所-電桿遷移",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "中和區",
+        "address": "中和區正行里村里板南路",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-09",
+        "date_range": "1150323~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4837512,
+          24.9960806
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153181097",
+        "project_name": "自來水漏水緊急搶修工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區仁和里村里連城路467-5號",
+        "start_date": "2026-03-09",
+        "end_date": "2026-05-03",
+        "date_range": "1150309~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4624488,
+          25.0808819
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389547號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區九芎里村里中華街57號",
+        "start_date": "2026-03-09",
+        "end_date": "2026-05-09",
+        "date_range": "1150309~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4906293,
+          25.0090221
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153181316",
+        "project_name": "28586華固建設股份有限公司-申請臨時電拆除",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "中和區",
+        "address": "中和區中原里村里環河西路三段",
+        "start_date": "2026-03-26",
+        "end_date": "2026-05-07",
+        "date_range": "1150326~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4953587,
+          25.0634241
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115北區4-2",
+        "project_name": "B14A5333B寶和建設股份有限公司申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三重區",
+        "address": "三重區重新里村里正德街60號",
+        "start_date": "2026-04-09",
+        "end_date": "2026-05-13",
+        "date_range": "1150409~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4249021,
+          25.0417763
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153685082",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區貴子里村里明志路三段74巷28弄",
+        "start_date": "2026-03-10",
+        "end_date": "2026-05-09",
+        "date_range": "1150310~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3376119,
+          24.9509443
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153455520",
+        "project_name": "114年度北區處工業用戶天然氣設置單價發包工程-奇鈺精密鑄造公司天然氣新設工程",
+        "organizer": "台灣中油公司天然氣事業部北區營業處",
+        "district": "鶯歌區",
+        "address": "鶯歌區永昌里村里建國路405巷",
+        "start_date": "2026-04-06",
+        "end_date": "2026-05-12",
+        "date_range": "1150406~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4392555,
+          25.1928601
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153547938號",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "淡水區",
+        "address": "淡水區崁頂里村里新市二路四段",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4351535,
+          25.1863709
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153547939號",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "淡水區",
+        "address": "淡水區崁頂里村里新市一路一段303號",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4475766,
+          25.1784458
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153547940號",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "淡水區",
+        "address": "淡水區正德里村里北新路106號",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.458906,
+          25.1331077
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153547941號",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "淡水區",
+        "address": "淡水區民權里村里民權路88號",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4698335,
+          25.0311924
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153021912",
+        "project_name": "板橋服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處板橋服務所",
+        "district": "板橋區",
+        "address": "板橋區江翠里村里松江街",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-06",
+        "date_range": "1150323~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4915895,
+          25.2000517
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153833766",
+        "project_name": "淡水區行忠路3.5k~4.9k汰換管線工程",
+        "organizer": "台灣自來水股份有限公司第一區管理處淡水營運所",
+        "district": "三芝區",
+        "address": "三芝區興華里村里行忠路",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-15",
+        "date_range": "1150413~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5375101,
+          24.9745203
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153300990",
+        "project_name": "新北市養護工程處(35248-1)-淺埋改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區建國里村里中正路294號",
+        "start_date": "2026-03-21",
+        "end_date": "2026-05-23",
+        "date_range": "1150321~1150523",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5348842,
+          24.9765753
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153300992",
+        "project_name": "新北市養護工程處(35248-2)-淺埋改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區百和里村里中正路362號",
+        "start_date": "2026-03-21",
+        "end_date": "2026-05-05",
+        "date_range": "1150321~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3928413,
+          25.1375165
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154644094",
+        "project_name": "八里區中華路二、三段等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "八里區",
+        "address": "八里區下罟里村里中華路三段62號",
+        "start_date": "2026-03-30",
+        "end_date": "2026-06-27",
+        "date_range": "1150330~1150627",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5348901,
+          24.9767383
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153300989",
+        "project_name": "天主教耕莘醫療財團法人耕莘醫院(35963)-配電箱遷移工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區百和里村里中正路362-1號",
+        "start_date": "2026-03-21",
+        "end_date": "2026-05-05",
+        "date_range": "1150321~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4741171,
+          25.0932285
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389546號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區水河里村里民族路422巷48弄5號",
+        "start_date": "2026-03-12",
+        "end_date": "2026-05-09",
+        "date_range": "1150312~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4403479,
+          25.0429598
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153684755",
+        "project_name": "新北市新、泰塭仔圳地區第1-2區市地重劃開發工程",
+        "organizer": "新北市政府地政局",
+        "district": "泰山區",
+        "address": "泰山區義仁里村里莊田路",
+        "start_date": "2026-03-18",
+        "end_date": "2026-05-16",
+        "date_range": "1150318~1150516",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.434286,
+          25.19029
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153547936號",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "淡水區",
+        "address": "淡水區崁頂里村里濱海路二段208號",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4315589,
+          25.1906468
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153547937號",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "淡水區",
+        "address": "淡水區崁頂里村里濱海路二段",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4556911,
+          25.0388057
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153240420號",
+        "project_name": "護新支115-003瓦斯管線埋設工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "新莊區",
+        "address": "新莊區恆安里村里中港路70號",
+        "start_date": "2026-03-19",
+        "end_date": "2026-05-15",
+        "date_range": "1150319~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.420951,
+          25.0622066
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153685084",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區黎明里村里黎明路6號",
+        "start_date": "2026-03-12",
+        "end_date": "2026-05-09",
+        "date_range": "1150312~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4798203,
+          24.9949091
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "CQ863-1150318-01",
+        "project_name": "配合捷運萬大線第一期CQ860標連城路600mm管線永遷工程",
+        "organizer": "台灣自來水公司第十二區管理處",
+        "district": "中和區",
+        "address": "中和區嘉慶里村里連城路456號",
+        "start_date": "2026-03-19",
+        "end_date": "2026-05-10",
+        "date_range": "1150319~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4587115,
+          24.9741839
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "345868",
+        "project_name": "0200011382(寶佳建設股份有限公司)瓦斯供氣管線埋設",
+        "organizer": "欣泰石油氣股份有限公司",
+        "district": "土城區",
+        "address": "土城區清和里村里青雲路467號",
+        "start_date": "2026-05-01",
+        "end_date": "2026-05-09",
+        "date_range": "1150501~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5061168,
+          24.9846853
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153181295",
+        "project_name": "28655+28656-TPC-淺埋改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "中和區",
+        "address": "中和區正南里村里興南路二段67巷",
+        "start_date": "2026-03-26",
+        "end_date": "2026-05-11",
+        "date_range": "1150326~1150511",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4762966,
+          25.0201732
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153022572",
+        "project_name": "19279英屬開曼群島商睿能新動力股份有限公司台灣分公司-電池充電站用電",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區光仁里村里永豐街120巷2弄",
+        "start_date": "2026-03-26",
+        "end_date": "2026-05-05",
+        "date_range": "1150326~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5310208,
+          24.9711785
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153301201",
+        "project_name": "115年南區給水裝置工程採購(開口契約含後續擴充)",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區福民里村里環河路113-2號",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4673298,
+          25.0886698
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389544號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區保佑里村里民族路451號",
+        "start_date": "2026-03-14",
+        "end_date": "2026-05-09",
+        "date_range": "1150314~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4584269,
+          25.0781217
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153655635",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "五股區",
+        "address": "五股區更寮里村里中興路二段164巷160號",
+        "start_date": "2026-03-14",
+        "end_date": "2026-05-09",
+        "date_range": "1150314~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4738841,
+          25.0935414
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389545號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區水河里村里民族路422巷70弄10號",
+        "start_date": "2026-03-16",
+        "end_date": "2026-05-09",
+        "date_range": "1150316~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4556044,
+          25.0845085
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389543號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區永康里村里環堤大道78號",
+        "start_date": "2026-03-17",
+        "end_date": "2026-05-09",
+        "date_range": "1150317~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4016321,
+          25.151142
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153756050",
+        "project_name": "B14A5309B東丕營造股份有限公司申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "八里區",
+        "address": "八里區頂罟里村里商港一路66號",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-04",
+        "date_range": "1150407~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4390461,
+          24.9766519
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154644296",
+        "project_name": "54313台電-淺埋改善",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區員信里村里中華路二段123號",
+        "start_date": "2026-04-06",
+        "end_date": "2026-05-04",
+        "date_range": "1150406~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3740276,
+          25.0762452
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153727513號",
+        "project_name": "B14C5711B-6艾斯摩爾(股)公司管路埋設",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "林口區",
+        "address": "林口區仁愛里村里文化二路一段368之1號",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-07",
+        "date_range": "1150429~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4763248,
+          25.0202717
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153022864",
+        "project_name": "19262-光捷股份有限公司-申請新設電池充電站用電工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區光仁里村里懷仁街8號",
+        "start_date": "2026-03-26",
+        "end_date": "2026-05-05",
+        "date_range": "1150326~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4462672,
+          25.0287985
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153245186號",
+        "project_name": "B14D5519B王O慧用電廢止孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區瓊林里村里瓊林路50號",
+        "start_date": "2026-04-17",
+        "end_date": "2026-07-18",
+        "date_range": "1150417~1150718",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5071271,
+          25.0133884
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153116777",
+        "project_name": "35965北昌營造股份有限公司-臨時電新設工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "永和區",
+        "address": "永和區下溪里村里保安路137號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-12",
+        "date_range": "1150413~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4341383,
+          25.0632658
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153686323",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區楓樹里村里明志路一段117巷20號",
+        "start_date": "2026-03-18",
+        "end_date": "2026-05-09",
+        "date_range": "1150318~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.804916,
+          25.1107469
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154644293",
+        "project_name": "瑞芳區逢甲路270巷新設排水管涵工程",
+        "organizer": "新北市政府水利局雨水下水道工程科",
+        "district": "瑞芳區",
+        "address": "瑞芳區龍山里村里逢甲路一段187號",
+        "start_date": "2026-03-25",
+        "end_date": "2026-05-03",
+        "date_range": "1150325~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4863698,
+          25.0852634
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115東區3-13",
+        "project_name": "114~117年度新北市污水下水道系統未納戶接管工程(開口契約)第一標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "三重區",
+        "address": "三重區碧華里村里集仁街38號",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-05",
+        "date_range": "1150407~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.525949,
+          25.0035322
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153116896",
+        "project_name": "逢源建設股份有限公司用戶新設給水工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "永和區",
+        "address": "永和區秀朗里村里永亨路169號",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-05",
+        "date_range": "1150401~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4660249,
+          25.0787166
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1152285276號",
+        "project_name": "蘆洲九芎街153巷5號~29號前中低壓汰換工程",
+        "organizer": "欣泰石油氣股份有限公司",
+        "district": "蘆洲區",
+        "address": "蘆洲區永安里村里九芎街153巷5號",
+        "start_date": "2026-03-23",
+        "end_date": "2026-05-08",
+        "date_range": "1150323~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5254775,
+          24.9833252
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153303729",
+        "project_name": "新北市政府交通局(35942)-侯車亭新設用電工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區中山里村里溪園路",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-05",
+        "date_range": "1150407~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4389861,
+          24.9654877
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "346102",
+        "project_name": "0200010992(聲寶股份有限公司)瓦斯供氣管線埋設",
+        "organizer": "欣泰石油氣股份有限公司",
+        "district": "土城區",
+        "address": "土城區大安里村里忠承路30號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4047919,
+          25.1511876
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153756278",
+        "project_name": "114~117年度新北市污水下水道系統未納戶接管工程(開口契約)第一標",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "八里區",
+        "address": "八里區頂罟里村里中山路二段236號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-12",
+        "date_range": "1150413~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4340078,
+          25.0325195
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154645410號",
+        "project_name": "B14D5394B新北市政府警察局交通大隊包燈用電新設",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區營盤里村里中正路510號",
+        "start_date": "2026-04-26",
+        "end_date": "2026-05-06",
+        "date_range": "1150426~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4153398,
+          25.0685085
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153686480",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區黎明里村里泰林路三段168巷28號",
+        "start_date": "2026-03-20",
+        "end_date": "2026-05-09",
+        "date_range": "1150320~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4231514,
+          25.0232045
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153241950",
+        "project_name": "中華電信人手孔提升工程",
+        "organizer": "中華電信股份有限公司新北營運處第三客戶網路中心",
+        "district": "新莊區",
+        "address": "新莊區四維里村里四維路115號",
+        "start_date": "2026-04-01",
+        "end_date": "2026-07-02",
+        "date_range": "1150401~1150702",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4628287,
+          25.0181919
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153024145",
+        "project_name": "19289皇翔建設股份有限公司-線路遷移",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區漢生里村里漢生西路",
+        "start_date": "2026-04-06",
+        "end_date": "2026-05-07",
+        "date_range": "1150406~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5162485,
+          25.0169207
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153117351",
+        "project_name": "新北市光復街和平鴿人行步道工程",
+        "organizer": "臺北市政府工務局新建工程處工務科一果工務所",
+        "district": "永和區",
+        "address": "永和區網溪里村里光復街4號",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-25",
+        "date_range": "1150401~1150525",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4616701,
+          25.0732189
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153655722",
+        "project_name": "B14A5349B新北市政府交通局交通管制工程科申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "五股區",
+        "address": "五股區更寮里村里水漾路三段",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-09",
+        "date_range": "1150413~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5339243,
+          24.979461
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153304867",
+        "project_name": "新北都鈴木汽車股份有限公司(35833-1)-孔蓋提升及周邊加固工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區江陵里村里中正路450號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-13",
+        "date_range": "1150413~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5338108,
+          24.9806535
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153304868",
+        "project_name": "新北都鈴木汽車股份有限公司(35833-2)-孔蓋提升及周邊加固工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區復興里村里中正路457號",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-08",
+        "date_range": "1150415~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3745689,
+          25.0767181
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154646824號",
+        "project_name": "B14C5711B-7艾斯摩爾(股)公司管路埋設",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "林口區",
+        "address": "林口區仁愛里村里文化二路一段384之3號",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-08",
+        "date_range": "1150429~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4546707,
+          25.0259095
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153024869",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "板橋區",
+        "address": "板橋區德翠里村里中正路453號",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-05",
+        "date_range": "1150407~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.7570763,
+          25.0296156
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154646194號",
+        "project_name": "自來水漏水緊急搶修",
+        "organizer": "台灣自來水股份有限公司第一區管理處文山營運所",
+        "district": "平溪區",
+        "address": "平溪區望古里村里靜安路三段",
+        "start_date": "2026-03-24",
+        "end_date": "2026-05-12",
+        "date_range": "1150324~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4104003,
+          25.155727
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153756457",
+        "project_name": "B14A5358B君鋐建設有限公司申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "八里區",
+        "address": "八里區埤頭里村里文昌二街37號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-07",
+        "date_range": "1150413~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4395508,
+          24.96585
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "346314",
+        "project_name": "0200011021(國美建設股份有限公司)瓦斯供氣管線埋設",
+        "organizer": "欣泰石油氣股份有限公司",
+        "district": "土城區",
+        "address": "土城區大安里村里忠承路51號",
+        "start_date": "2026-04-28",
+        "end_date": "2026-05-06",
+        "date_range": "1150428~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5414375,
+          24.9648474
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153303184",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區中興里村里檳榔路1號",
+        "start_date": "2026-03-30",
+        "end_date": "2026-05-30",
+        "date_range": "1150330~1150530",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4659795,
+          25.045099
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153242889",
+        "project_name": "B14D5396A-台灣電力公司北西營業處",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區化成里村里化成路156巷6號",
+        "start_date": "2026-04-06",
+        "end_date": "2026-05-19",
+        "date_range": "1150406~1150519",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5550551,
+          24.9551439
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153303183",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區美潭里村里秀水路1號",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-31",
+        "date_range": "1150401~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5395783,
+          24.9565085
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153303185",
+        "project_name": "新北市新店地區污水下水道系統(第二期)新建工程第七標分支管網及用戶接管",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "新店區",
+        "address": "新店區文中里村里北宜路一段39巷17號",
+        "start_date": "2026-03-30",
+        "end_date": "2026-05-30",
+        "date_range": "1150330~1150530",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4288731,
+          25.0403371
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153686935",
+        "project_name": "中華電信埋管工程",
+        "organizer": "中華電信股份有限公司新北營運處第三客戶網路中心",
+        "district": "泰山區",
+        "address": "泰山區貴賢里村里貴子路21號",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-09",
+        "date_range": "1150420~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4091402,
+          25.1520778
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153755890",
+        "project_name": "B14A5340B新北市政府養護工程處申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "八里區",
+        "address": "八里區舊城里村里中華路二段",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-06",
+        "date_range": "1150413~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5125027,
+          24.9626075
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153304022",
+        "project_name": "台電北南區處營業處(36003-2)-新設管路工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區德安里村里安德街3號",
+        "start_date": "2026-04-09",
+        "end_date": "2026-05-08",
+        "date_range": "1150409~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4606836,
+          25.0146047
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153024871",
+        "project_name": "19122-新北市政府交通局-交指燈用電工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區漢生里村里公館街",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-04",
+        "date_range": "1150416~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4309246,
+          25.0049787
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153243861號",
+        "project_name": "B14B5321B(3260324)台電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區西盛里村里大安路36號",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-09",
+        "date_range": "1150415~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5311567,
+          24.9751011
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153304948",
+        "project_name": "台電北南區處營業處(35976)-管路改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區中山里村里中央路188號",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-20",
+        "date_range": "1150415~1150520",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4584928,
+          25.0786318
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153656505",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "五股區",
+        "address": "五股區更寮里村里更州路6號",
+        "start_date": "2026-03-27",
+        "end_date": "2026-05-09",
+        "date_range": "1150327~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4176324,
+          25.0319755
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154648318號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區貴和里村里新北大道七段103號",
+        "start_date": "2026-03-27",
+        "end_date": "2026-05-09",
+        "date_range": "1150327~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5136818,
+          25.0037135
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153183787",
+        "project_name": "自來水用戶無水緊急搶修工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區中安里村里永貞路266號",
+        "start_date": "2026-03-27",
+        "end_date": "2026-05-03",
+        "date_range": "1150327~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5197485,
+          24.9861636
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153304024",
+        "project_name": "台電北南區處營業處(35962)-管障修復工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區新和里村里永安街71號",
+        "start_date": "2026-04-10",
+        "end_date": "2026-05-04",
+        "date_range": "1150410~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3812167,
+          25.0754013
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153728856號",
+        "project_name": "B14C5602B光捷(股)公司表燈新設",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "林口區",
+        "address": "林口區西林里村里四維路156之1號",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-09",
+        "date_range": "1150420~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4232496,
+          25.0104205
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153431388",
+        "project_name": "樹林服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區圳民里村里俊英街123巷46號",
+        "start_date": "2026-03-28",
+        "end_date": "2026-05-09",
+        "date_range": "1150328~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4819322,
+          25.0072357
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153186656",
+        "project_name": "立華營造股份有限公司用戶新設給水工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區員山里村里新民街33號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3791482,
+          25.0870216
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153729417號",
+        "project_name": "B15C5052B綠洲一號(股)公司新設用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "林口區",
+        "address": "林口區湖南里村里文林一街123號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.437306,
+          25.0847976
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153656690",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "五股區",
+        "address": "五股區五股里村里工商路85巷18弄8號",
+        "start_date": "2026-03-30",
+        "end_date": "2026-05-09",
+        "date_range": "1150330~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.413579,
+          25.0850549
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153656691",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程(支援泰山所修漏)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "五股區",
+        "address": "五股區五龍里村里壟鈎路20-1號",
+        "start_date": "2026-03-30",
+        "end_date": "2026-05-09",
+        "date_range": "1150330~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5188896,
+          24.9846684
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153304492",
+        "project_name": "新北市政府交通局(35918)-申請包燈新設用電工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區永安里村里新和街",
+        "start_date": "2026-04-10",
+        "end_date": "2026-05-08",
+        "date_range": "1150410~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4481079,
+          25.0479333
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153244216號",
+        "project_name": "B15D5045B豐源水產有限公司用電新設孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區中港里村里中誠街142巷13弄",
+        "start_date": "2026-04-13",
+        "end_date": "2026-06-13",
+        "date_range": "1150413~1150613",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4231961,
+          24.9829168
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153428825",
+        "project_name": "新北市大眾捷運系統萬大-中和-樹林線",
+        "organizer": "新北市政府捷運工程局",
+        "district": "樹林區",
+        "address": "樹林區和平里村里中華路",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-05",
+        "date_range": "1150413~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4624322,
+          25.0818585
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389550號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區忠義里村里長安街102巷51號",
+        "start_date": "2026-03-31",
+        "end_date": "2026-05-09",
+        "date_range": "1150331~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5271746,
+          24.9793911
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153305351",
+        "project_name": "114年度新北市增購公車候車亭設備案(第2期)",
+        "organizer": "新北市政府交通局",
+        "district": "新店區",
+        "address": "新店區中山里村里央北二路",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-06",
+        "date_range": "1150415~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3294608,
+          24.9335192
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153457083",
+        "project_name": "自來水漏水緊急搶修工程(中正三路335巷36之2號)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "鶯歌區",
+        "address": "鶯歌區二橋里村里中正三路335巷36之2號",
+        "start_date": "2026-03-31",
+        "end_date": "2026-05-10",
+        "date_range": "1150331~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6506516,
+          25.0743595
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153629675",
+        "project_name": "(1260263)4C2395B-新北市政府交通局申請用電",
+        "organizer": "台灣電力股份有限公司基隆區營業處",
+        "district": "汐止區",
+        "address": "汐止區江北里村里汐萬路一段284號",
+        "start_date": "2026-04-10",
+        "end_date": "2026-05-07",
+        "date_range": "1150410~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4146998,
+          24.9812318
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153431278",
+        "project_name": "樹林服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區東陽里村里東榮街147巷19號",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-09",
+        "date_range": "1150401~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.349876,
+          24.9543772
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153457192",
+        "project_name": "自來水漏水緊急搶修工程(南雅路9號)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "鶯歌區",
+        "address": "鶯歌區南鶯里村里南雅路9號",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-10",
+        "date_range": "1150401~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6353421,
+          25.0656701
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153629670",
+        "project_name": "(1260433)4C2576B-台灣普克二四股份有限公司申請用電",
+        "organizer": "台灣電力股份有限公司基隆區營業處",
+        "district": "汐止區",
+        "address": "汐止區福德里村里福德一路186號",
+        "start_date": "2026-04-03",
+        "end_date": "2026-05-07",
+        "date_range": "1150403~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6315176,
+          25.0627498
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153629674",
+        "project_name": "(1260340)4C2514B-新北市政府水利局申請用電",
+        "organizer": "台灣電力股份有限公司基隆區營業處",
+        "district": "汐止區",
+        "address": "汐止區中興里村里環河街1-1號",
+        "start_date": "2026-04-03",
+        "end_date": "2026-05-07",
+        "date_range": "1150403~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4091834,
+          25.1582793
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153756402",
+        "project_name": "B14A5366B台電台北西區申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "八里區",
+        "address": "八里區頂罟里村里文昌路91號",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-04",
+        "date_range": "1150420~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4378555,
+          25.0833501
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154652433號",
+        "project_name": "B14A5369B台電台北西區申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "五股區",
+        "address": "五股區五股里村里成泰路二段51-1號",
+        "start_date": "2026-04-30",
+        "end_date": "2026-05-08",
+        "date_range": "1150430~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5291999,
+          24.9615424
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154647397號",
+        "project_name": "TPC(35749-1)-孔蓋提升及周邊加固工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區頂城里村里安康路一段35號",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-07",
+        "date_range": "1150416~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3871464,
+          25.0902249
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153728912號",
+        "project_name": "林口區湖北里2~7鄰汰換管線工程(M04-M06)",
+        "organizer": "台灣自來水公司第二區管理處林口服務所",
+        "district": "林口區",
+        "address": "林口區湖北里村里湖子路17號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-18",
+        "date_range": "1150413~1150518",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.509518,
+          25.0159082
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153118902",
+        "project_name": "36000-漢皇開發股份有限公司-線路遷移工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "永和區",
+        "address": "永和區文化里村里保安路80號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4676415,
+          25.0825656
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389549號",
+        "project_name": "蘆洲服務所114-115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "蘆洲區",
+        "address": "蘆洲區中華里村里光華路87巷",
+        "start_date": "2026-04-02",
+        "end_date": "2026-05-09",
+        "date_range": "1150402~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4620555,
+          25.0252175
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153026282",
+        "project_name": "護板支114-017瓦斯管線埋設工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "板橋區",
+        "address": "板橋區新翠里村里英士路5、17號",
+        "start_date": "2026-04-10",
+        "end_date": "2026-05-15",
+        "date_range": "1150410~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4959583,
+          25.0801122
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115東區4-2",
+        "project_name": "護工本115-004瓦斯管線汰換埋設工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "三重區",
+        "address": "三重區五常里村里五華街3巷1~7號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-13",
+        "date_range": "1150413~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5190771,
+          25.0098113
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153118605",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-1標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區豫溪里村里豫溪街",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-31",
+        "date_range": "1150407~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4272396,
+          25.0293294
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153244699",
+        "project_name": "B15D5046B台電線路改善工程",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區福營里村里福營路224巷",
+        "start_date": "2026-04-22",
+        "end_date": "2026-07-31",
+        "date_range": "1150422~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5153194,
+          25.0096832
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153118606",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-1標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區豫溪里村里豫溪街26號",
+        "start_date": "2026-04-11",
+        "end_date": "2026-06-30",
+        "date_range": "1150411~1150630",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4145508,
+          25.02567
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153244763",
+        "project_name": "新莊服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處新莊服務所",
+        "district": "新莊區",
+        "address": "新莊區雙鳳里村里天泉二街26巷2號",
+        "start_date": "2026-04-03",
+        "end_date": "2026-05-15",
+        "date_range": "1150403~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4720695,
+          25.0520071
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115西區4-1",
+        "project_name": "B14D5523B台電饋線改善管挖及孔蓋提升工程",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三重區",
+        "address": "三重區谷王里村里光復路一段99巷",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-08",
+        "date_range": "1150416~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4263545,
+          25.0285464
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153244215",
+        "project_name": "B14D5469B新北市政府交通局(智慧型站牌)用電新設",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區福營里村里建福路32號",
+        "start_date": "2026-04-17",
+        "end_date": "2026-07-17",
+        "date_range": "1150417~1150717",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3328985,
+          24.9599715
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153457517",
+        "project_name": "/孔蓋提升工程G515341",
+        "organizer": "中華電信股份有限公司新北營運處第一客戶網路中心",
+        "district": "鶯歌區",
+        "address": "鶯歌區鳳祥里村里德昌街74號",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-08",
+        "date_range": "1150416~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4097387,
+          25.0327084
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153244218",
+        "project_name": "新莊區壽山路及青山路等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處新莊服務所",
+        "district": "新莊區",
+        "address": "新莊區丹鳳里村里壽山路61號",
+        "start_date": "2026-04-14",
+        "end_date": "2026-05-11",
+        "date_range": "1150414~1150511",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4849658,
+          24.9992087
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153184663",
+        "project_name": "自來水漏水緊急搶修工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區平河里村里中正路733號",
+        "start_date": "2026-04-06",
+        "end_date": "2026-05-03",
+        "date_range": "1150406~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4139926,
+          24.9815151
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153431279",
+        "project_name": "樹林服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區東陽里村里東榮街202號",
+        "start_date": "2026-04-07",
+        "end_date": "2026-05-09",
+        "date_range": "1150407~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.378469,
+          24.9633847
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153457516",
+        "project_name": "/孔蓋提升工程G515211",
+        "organizer": "中華電信股份有限公司新北營運處第一客戶網路中心",
+        "district": "鶯歌區",
+        "address": "鶯歌區建德里村里中正一路",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-08",
+        "date_range": "1150416~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3369294,
+          24.9402386
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153457518",
+        "project_name": "/孔蓋提升工程G515331",
+        "organizer": "中華電信股份有限公司新北營運處第一客戶網路中心",
+        "district": "鶯歌區",
+        "address": "鶯歌區二橋里村里中正三路151號",
+        "start_date": "2026-04-14",
+        "end_date": "2026-05-08",
+        "date_range": "1150414~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4637534,
+          24.9959153
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153026972",
+        "project_name": "19303良將建設有限公司-孔蓋提升及周邊加固",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區廣福里村里和平路222號",
+        "start_date": "2026-04-21",
+        "end_date": "2026-05-15",
+        "date_range": "1150421~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4970581,
+          25.0608286
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115南區4-1",
+        "project_name": "護三支115-008瓦斯管線埋設工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "三重區",
+        "address": "三重區仁德里村里正義南路37巷",
+        "start_date": "2026-04-14",
+        "end_date": "2026-05-12",
+        "date_range": "1150414~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4151851,
+          24.9811271
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153431370",
+        "project_name": "樹林服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區東陽里村里東華街70巷2號",
+        "start_date": "2026-04-08",
+        "end_date": "2026-05-09",
+        "date_range": "1150408~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5044165,
+          24.9837552
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153185033",
+        "project_name": "自來水漏水緊急搶修工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區壽南里村里興南路二段124號",
+        "start_date": "2026-04-08",
+        "end_date": "2026-05-03",
+        "date_range": "1150408~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4162575,
+          25.0082184
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1150668102",
+        "project_name": "樹林服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區獇寮里村里中正路421-2號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-16",
+        "date_range": "1150413~1150516",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4763044,
+          24.9444752
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153305618",
+        "project_name": "台電北南區處營業處(35988-2)-電纜直埋改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區日興里村里安康路三段660巷1號",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-20",
+        "date_range": "1150416~1150520",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4971092,
+          25.0834538
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115東區4-4",
+        "project_name": "B14A5245B台電台北西區申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三重區",
+        "address": "三重區五福里村里自強路五段",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-07",
+        "date_range": "1150420~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5174912,
+          25.0096157
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153118681",
+        "project_name": "新北市永和地區污水下水道系統第二期第五-1標工程",
+        "organizer": "新北市政府水利局污水下水道工程科",
+        "district": "永和區",
+        "address": "永和區豫溪里村里中正路680巷",
+        "start_date": "2026-04-09",
+        "end_date": "2026-05-31",
+        "date_range": "1150409~1150531",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.427049,
+          25.0245228
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153244700",
+        "project_name": "B15D5053B宏柏建設有限公司孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區建安里村里建安街62巷",
+        "start_date": "2026-04-22",
+        "end_date": "2026-06-13",
+        "date_range": "1150422~1150613",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5394336,
+          24.9782367
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153305617",
+        "project_name": "TPC(35949)-路基改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "新店區",
+        "address": "新店區明德里村里建國路",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-12",
+        "date_range": "1150416~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3729186,
+          24.9361661
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153500532號",
+        "project_name": "自來水漏水緊急搶修工程(文化路44號)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "三峽區",
+        "address": "三峽區永舘里村里文化路44號",
+        "start_date": "2026-04-09",
+        "end_date": "2026-05-10",
+        "date_range": "1150409~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4412839,
+          25.0479239
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154648910號",
+        "project_name": "泰山營運所115年度管線設備維修工程(泰林路一段路燈編號355180對面)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區義仁里村里泰林路一段",
+        "start_date": "2026-04-10",
+        "end_date": "2026-05-03",
+        "date_range": "1150410~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4175892,
+          25.0245711
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153245237",
+        "project_name": "新莊服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處新莊服務所",
+        "district": "新莊區",
+        "address": "新莊區裕民里村里裕民街54巷27號",
+        "start_date": "2026-04-10",
+        "end_date": "2026-05-15",
+        "date_range": "1150410~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4493398,
+          25.1039877
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153656851",
+        "project_name": "B14A5371B新北市五股區公所申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "五股區",
+        "address": "五股區集賢里村里天乙路50巷3弄1號",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-04",
+        "date_range": "1150420~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5109061,
+          24.9614732
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153306581",
+        "project_name": "114西區A管網改善工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "新店區",
+        "address": "新店區安昌里村里安德街71巷",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-22",
+        "date_range": "1150420~1150522",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4558043,
+          25.0411873
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153245242號",
+        "project_name": "114年乙工區人手孔蓋升降及周邊加固工作",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區中美里村里長青街37巷22弄2號",
+        "start_date": "2026-04-11",
+        "end_date": "2026-06-27",
+        "date_range": "1150411~1150627",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44516,
+          25.0463947
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153245187號",
+        "project_name": "B15D5012B台電孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區立基里村里中平路89號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-07-04",
+        "date_range": "1150427~1150704",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.448237,
+          24.9882887
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "346897",
+        "project_name": "53682-新北市政府交通局-申請新設智慧型站牌用電工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區貨饒里村里裕民路31號",
+        "start_date": "2026-04-22",
+        "end_date": "2026-05-12",
+        "date_range": "1150422~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4524374,
+          25.0212602
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153027547",
+        "project_name": "19292-簡O銘-申請新設用電工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區中正里村里永翠路",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4549254,
+          25.0503764
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153245625號",
+        "project_name": "B15D5057B-6台電變電所新增饋線孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區信義里村里幸福路64巷",
+        "start_date": "2026-04-25",
+        "end_date": "2026-07-31",
+        "date_range": "1150425~1150731",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4006495,
+          24.9712787
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153431369",
+        "project_name": "樹林服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區山佳里村里新興街37巷12弄22號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-09",
+        "date_range": "1150413~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4924941,
+          25.0005411
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153185748",
+        "project_name": "28695旭電馳科研股份有限公司-新設用電",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "中和區",
+        "address": "中和區碧河里村里板南路",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3735347,
+          25.0866622
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北林工字第1153730802號",
+        "project_name": "機房設施管道工程",
+        "organizer": "新世紀資通股份有限公司(北二維運部)",
+        "district": "林口區",
+        "address": "林口區湖南里村里文化北路二段",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-07",
+        "date_range": "1150429~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4456183,
+          25.0936054
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153657375",
+        "project_name": "泰山營運所115年度管線設備維修工程(成泰路三段221巷20號)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "五股區",
+        "address": "五股區成功里村里成泰路三段221巷20號",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-03",
+        "date_range": "1150415~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4590266,
+          24.9797764
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "347008",
+        "project_name": "54311台電-淺埋改善",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區青雲里村里青雲路256號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3740351,
+          24.9014531
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153500533號",
+        "project_name": "自來水漏水緊急搶修工程(添福111-8號)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "三峽區",
+        "address": "三峽區添福里村里添福111-8號號",
+        "start_date": "2026-04-13",
+        "end_date": "2026-05-10",
+        "date_range": "1150413~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.477432,
+          25.0751305
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115東區4-8",
+        "project_name": "115年北區A管線設備維修工程",
+        "organizer": "臺北自來水事業處北區營業分處",
+        "district": "三重區",
+        "address": "三重區永順里村里永安北路一段17巷24號",
+        "start_date": "2026-04-14",
+        "end_date": "2026-05-06",
+        "date_range": "1150414~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4168015,
+          24.9537998
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153351740",
+        "project_name": "54321-1-TPC-捷運三鶯線新建工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區祖田里村里福田路",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4254067,
+          25.0159965
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153246196號",
+        "project_name": "新莊服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處新莊服務所",
+        "district": "新莊區",
+        "address": "新莊區光明里村里民安西路172巷9號",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-15",
+        "date_range": "1150415~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3814466,
+          25.1388932
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153757001",
+        "project_name": "八里區中山路三段下罟子等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處蘆洲服務所",
+        "district": "八里區",
+        "address": "八里區下罟里村里中山路三段221號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-24",
+        "date_range": "1150427~1150524",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5480454,
+          24.9757978
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153306839",
+        "project_name": "115年南區A管線設備維修工程採購(開口契約含後續擴充)",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區張北里村里中興路二段236巷2-1號",
+        "start_date": "2026-04-14",
+        "end_date": "2026-05-03",
+        "date_range": "1150414~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4197294,
+          24.9579531
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "347057",
+        "project_name": "土城服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處土城服務所",
+        "district": "土城區",
+        "address": "土城區頂埔里村里科技路",
+        "start_date": "2026-04-21",
+        "end_date": "2026-05-19",
+        "date_range": "1150421~1150519",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.422522,
+          24.9601733
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "347058",
+        "project_name": "土城服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處土城服務所",
+        "district": "土城區",
+        "address": "土城區頂埔里村里科技路33號",
+        "start_date": "2026-04-24",
+        "end_date": "2026-05-19",
+        "date_range": "1150424~1150519",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3762384,
+          24.9366171
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北峽工字第1153500534號",
+        "project_name": "自來水漏水緊急搶修工程(民生街19巷口)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "三峽區",
+        "address": "三峽區龍埔里村里民生街19巷",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-10",
+        "date_range": "1150415~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6329817,
+          25.2252568
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153875092",
+        "project_name": "紅樹林管道工程",
+        "organizer": "紅樹林有線電視股份有限公司",
+        "district": "金山區",
+        "address": "金山區美田里村里中山路401巷5號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4627818,
+          25.1359585
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153552599號",
+        "project_name": "A250421台電",
+        "organizer": "台灣電力股份有限公司台北北區營業處",
+        "district": "淡水區",
+        "address": "淡水區民生里村里民生路45號",
+        "start_date": "2026-04-23",
+        "end_date": "2026-05-13",
+        "date_range": "1150423~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4608309,
+          25.1286326
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北新工字第1155140400號",
+        "project_name": "A250421台電",
+        "organizer": "台灣電力股份有限公司台北北區營業處",
+        "district": "淡水區",
+        "address": "淡水區民權里村里民權路217號",
+        "start_date": "2026-04-23",
+        "end_date": "2026-05-06",
+        "date_range": "1150423~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4401187,
+          24.9719645
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153351741",
+        "project_name": "54332新北市土城區公所-孔蓋提升及周邊加固",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區員仁里村里中央路二段348號",
+        "start_date": "2026-04-24",
+        "end_date": "2026-05-08",
+        "date_range": "1150424~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4402555,
+          24.9723998
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153351742",
+        "project_name": "54333新北市土城區公所-孔蓋提升及周邊加固",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區員仁里村里中央路二段328號",
+        "start_date": "2026-04-24",
+        "end_date": "2026-05-08",
+        "date_range": "1150424~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4669551,
+          25.1616988
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153552600號",
+        "project_name": "C250004雲水綠境管理委員會",
+        "organizer": "台灣電力股份有限公司台北北區營業處",
+        "district": "淡水區",
+        "address": "淡水區竿蓁里村里坪頂路147-1號",
+        "start_date": "2026-04-23",
+        "end_date": "2026-05-13",
+        "date_range": "1150423~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.518031,
+          25.0158749
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153119485",
+        "project_name": "天然氣管線汰換工程(永和區博愛街1號-53號)",
+        "organizer": "欣欣天然氣股份有限公司",
+        "district": "永和區",
+        "address": "永和區光復里村里博愛街1號",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-18",
+        "date_range": "1150420~1150518",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.533689,
+          24.9834603
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115 3307920",
+        "project_name": "115年南區A管線設備維修工程採購(開口契約含後續擴充)",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區復興里村里中正路499號",
+        "start_date": "2026-04-15",
+        "end_date": "2026-05-10",
+        "date_range": "1150415~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5171165,
+          24.9932625
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153186276",
+        "project_name": "自來水漏水緊急搶修",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區秀明里村里大勇街25巷2號",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-03",
+        "date_range": "1150416~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4743924,
+          25.0451153
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115西區4-19",
+        "project_name": "新莊服務所115年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處新莊服務所",
+        "district": "三重區",
+        "address": "三重區五谷里村里五谷王南街46巷6號",
+        "start_date": "2026-04-17",
+        "end_date": "2026-05-15",
+        "date_range": "1150417~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5107638,
+          24.9916171
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153186275",
+        "project_name": "自來水漏水緊急搶修",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "中和區",
+        "address": "中和區景新里村里景新街298巷8號",
+        "start_date": "2026-04-16",
+        "end_date": "2026-05-03",
+        "date_range": "1150416~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4114394,
+          25.0275205
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153246050",
+        "project_name": "B15C5044B-3饋線改善工程孔蓋提升",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "新莊區",
+        "address": "新莊區雙鳳里村里青山路一段12號",
+        "start_date": "2026-04-29",
+        "end_date": "2026-07-30",
+        "date_range": "1150429~1150730",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3845547,
+          24.9397904
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1150780526",
+        "project_name": "B14B5329B榮工工程股份有限公司申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "三峽區",
+        "address": "三峽區龍埔里村里龍埔路",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-08",
+        "date_range": "1150427~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4855776,
+          24.9965417
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153186017",
+        "project_name": "台固管道工程",
+        "organizer": "台灣固網股份有限公司",
+        "district": "中和區",
+        "address": "中和區平河里村里中正路712號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-05",
+        "date_range": "1150427~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4070507,
+          25.0385874
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北莊工字第1153245911號",
+        "project_name": "新莊區壽山路及青山路等汰換管線工程",
+        "organizer": "台灣自來水公司第十二區管理處新莊服務所",
+        "district": "新莊區",
+        "address": "新莊區丹鳳里村里壽山路103號",
+        "start_date": "2026-04-24",
+        "end_date": "2026-05-15",
+        "date_range": "1150424~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4843432,
+          25.0781215
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115東區4-5",
+        "project_name": "三重區三和路四段123號~161號前瓦斯管線汰換埋設工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "三重區",
+        "address": "三重區福樂里村里三和路四段123~161號",
+        "start_date": "2026-04-22",
+        "end_date": "2026-05-20",
+        "date_range": "1150422~1150520",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4978852,
+          25.0646232
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115北區4-7",
+        "project_name": "三重區文化里信義西街54號前",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "三重區",
+        "address": "三重區文化里村里信義西街54號",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-15",
+        "date_range": "1150420~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4369158,
+          25.0855745
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153657376",
+        "project_name": "泰山營運所115年度管線設備維修工程(工商路109號)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "五股區",
+        "address": "五股區五股里村里工商路109號",
+        "start_date": "2026-04-18",
+        "end_date": "2026-05-03",
+        "date_range": "1150418~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3345579,
+          24.9389857
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153458284",
+        "project_name": "地下消防栓盒周邊破損改善工程(中正三路235號)",
+        "organizer": "台灣自來水公司第十二區管理處鶯歌服務所",
+        "district": "鶯歌區",
+        "address": "鶯歌區二橋里村里中正三路235號",
+        "start_date": "2026-04-18",
+        "end_date": "2026-05-10",
+        "date_range": "1150418~1150510",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4595202,
+          24.9872079
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "347231",
+        "project_name": "(南R)115-024社區中壓B管線遭鑽損漏氣道路開挖夾氣緊急搶修汰換作業",
+        "organizer": "欣泰石油氣股份有限公司",
+        "district": "土城區",
+        "address": "土城區青雲里村里青雲路70-2號",
+        "start_date": "2026-04-18",
+        "end_date": "2026-05-09",
+        "date_range": "1150418~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5104887,
+          24.9898607
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153186658",
+        "project_name": "28705-新北市政府工務局養護工程處-人行道拓寬改善工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "中和區",
+        "address": "中和區興南里村里興南路一段",
+        "start_date": "2026-04-28",
+        "end_date": "2026-05-06",
+        "date_range": "1150428~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4675958,
+          25.0884595
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北蘆工字第1153389520號",
+        "project_name": "B14A5390B蘆洲區公所申請用電",
+        "organizer": "台灣電力股份有限公司台北西區營業處",
+        "district": "蘆洲區",
+        "address": "蘆洲區保佑里村里中正路192巷2弄2號",
+        "start_date": "2026-04-28",
+        "end_date": "2026-05-12",
+        "date_range": "1150428~1150512",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4240833,
+          24.9989526
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153430585",
+        "project_name": "樹林服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區文林里村里潭興街107巷21弄14號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-07",
+        "date_range": "1150427~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4589943,
+          24.9791651
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "347268",
+        "project_name": "54312台電-淺埋改善",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "土城區",
+        "address": "土城區清水里村里青雲路309號",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-07",
+        "date_range": "1150429~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4337642,
+          25.0596828
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153687518",
+        "project_name": "泰山營運所115年度管線設備維修工程(福泰街34號)",
+        "organizer": "台灣自來水公司第十二區管理處泰山營運所",
+        "district": "泰山區",
+        "address": "泰山區福泰里村里福泰街34號",
+        "start_date": "2026-04-23",
+        "end_date": "2026-05-05",
+        "date_range": "1150423~1150505",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4825061,
+          25.0272465
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153029479",
+        "project_name": "19300-林O生-電桿拆除工程",
+        "organizer": "台灣電力股份有限公司台北南區營業處",
+        "district": "板橋區",
+        "address": "板橋區港嘴里村里萬板路812號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-04",
+        "date_range": "1150427~1150504",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.374139,
+          25.0867556
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北工養字第1154650875號",
+        "project_name": "機房設施管道工程",
+        "organizer": "新世紀資通股份有限公司(北二維運部)",
+        "district": "林口區",
+        "address": "林口區湖南里村里中山路837號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-06",
+        "date_range": "1150427~1150506",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4983868,
+          25.0645221
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "115北區4-5",
+        "project_name": "護三支113-013瓦斯管線汰換埋設工程",
+        "organizer": "新海瓦斯股份有限公司",
+        "district": "三重區",
+        "address": "三重區文化里村里文化北路26巷1~35號",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-07",
+        "date_range": "1150429~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5190127,
+          25.0159201
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153120201",
+        "project_name": "114西區A管網改善工程",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "永和區",
+        "address": "永和區光復里村里博愛街26號",
+        "start_date": "2026-04-28",
+        "end_date": "2026-05-26",
+        "date_range": "1150428~1150526",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4218297,
+          25.182817
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "新北淡工字第1153553475號",
+        "project_name": "3260304交通部公路局北區公路新建工程分局",
+        "organizer": "台灣電力股份有限公司台北北區營業處",
+        "district": "淡水區",
+        "address": "淡水區大庄里村里淡海路111號",
+        "start_date": "2026-04-30",
+        "end_date": "2026-05-13",
+        "date_range": "1150430~1150513",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4275968,
+          24.985815
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153029975",
+        "project_name": "板新給水廠113-114年度管線設備維修工程",
+        "organizer": "台灣自來水公司第十二區管理處板新給水廠",
+        "district": "板橋區",
+        "address": "板橋區溪福里村里篤行路三段",
+        "start_date": "2026-04-22",
+        "end_date": "2026-05-03",
+        "date_range": "1150422~1150503",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.6482806,
+          25.0098167
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1154652143",
+        "project_name": "自來水漏水緊急搶修",
+        "organizer": "台灣自來水股份有限公司第一區管理處文山營運所",
+        "district": "石碇區",
+        "address": "石碇區隆盛里村里靜安路一段",
+        "start_date": "2026-04-23",
+        "end_date": "2026-05-19",
+        "date_range": "1150423~1150519",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5294433,
+          24.9502163
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153308191",
+        "project_name": "自來水用戶新設給水接管",
+        "organizer": "臺北自來水事業處西區營業分處",
+        "district": "新店區",
+        "address": "新店區美城里村里華潭街",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-09",
+        "date_range": "1150429~1150509",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5381946,
+          24.9542508
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153308768",
+        "project_name": "115年南區A管線設備維修工程採購(開口契約含後續擴充)",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區國校里村里國校路44號",
+        "start_date": "2026-04-24",
+        "end_date": "2026-05-15",
+        "date_range": "1150424~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4263243,
+          24.9791518
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153430909",
+        "project_name": "樹林服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區彭福里村里水源路220號",
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-08",
+        "date_range": "1150427~1150508",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.5451852,
+          24.9695281
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153308767",
+        "project_name": "115年南區A管線配合工程採購(開口契約含後續擴充)",
+        "organizer": "臺北自來水事業處南區營業分處",
+        "district": "新店區",
+        "address": "新店區五峯里村里中正路27號",
+        "start_date": "2026-04-24",
+        "end_date": "2026-05-15",
+        "date_range": "1150424~1150515",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3899188,
+          24.9801082
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153431121",
+        "project_name": "樹林服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區中山里村里德和街60號",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-07",
+        "date_range": "1150429~1150507",
+        "status": "已核發許可證"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3967105,
+          24.9693741
+        ]
+      },
+      "properties": {
+        "source_city": "新北市",
+        "source": "新北市政府道路挖掘資訊",
+        "case_no": "1153431120",
+        "project_name": "樹林服務所用戶用水設備新(改)裝工作勞務採購114年度(開口契約)",
+        "organizer": "台灣自來水公司第十二區管理處樹林服務所",
+        "district": "樹林區",
+        "address": "樹林區山佳里村里八德街642之1號",
+        "start_date": "2026-04-29",
+        "end_date": "2026-05-07",
+        "date_range": "1150429~1150507",
+        "status": "已核發許可證"
+      }
     }
   ]
 }
