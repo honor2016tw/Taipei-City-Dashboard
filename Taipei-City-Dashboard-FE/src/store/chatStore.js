@@ -3,6 +3,114 @@ import { defineStore } from 'pinia'
 import http from "../router/axios";
 import { useAuthStore } from "./authStore";
 
+const AI_TOOLS = [
+	{
+		type: 'function',
+		function: {
+			name: 'get_current_time',
+			description: '取得目前台北時間（Asia/Taipei）',
+			parameters: { type: 'object', properties: {} },
+		},
+	},
+	{
+		type: 'function',
+		function: {
+			name: 'get_population_summary',
+			description: '查詢台北市或新北市指定年份的人口年齡結構（幼年、青壯年、老年人口）',
+			parameters: {
+				type: 'object',
+				properties: {
+					city: { type: 'string', enum: ['taipei', 'new_taipei'], description: '城市：taipei=台北市，new_taipei=新北市' },
+					year: { type: 'integer', description: '西元年份，例如 2023' },
+				},
+				required: ['city', 'year'],
+			},
+		},
+	},
+	{
+		type: 'function',
+		function: {
+			name: 'query_youbike_realtime',
+			description: '查詢台北市或新北市 YouBike 即時可借車 / 可還空位最多的站點',
+			parameters: {
+				type: 'object',
+				properties: {
+					city: { type: 'string', enum: ['taipei', 'new_taipei'], description: '城市' },
+					mode: { type: 'string', enum: ['borrow', 'return'], description: 'borrow=找可借車的站，return=找可還車的站' },
+					limit: { type: 'integer', description: '回傳前 N 筆，預設 5', default: 5 },
+				},
+				required: ['city', 'mode'],
+			},
+		},
+	},
+	{
+		type: 'function',
+		function: {
+			name: 'query_youbike_peak_analysis',
+			description: '查詢 YouBike 尖峰時段借還車失衡嚴重的站點，可依城市、行政區、站點角色篩選',
+			parameters: {
+				type: 'object',
+				properties: {
+					city: { type: 'string', enum: ['taipei', 'new_taipei', 'all'], description: '城市，all=大台北地區' },
+					area: { type: 'string', description: '行政區，例如「大安區」，空字串=不限' },
+					role: { type: 'string', enum: ['all', '借車壓力站', '還車壓力站', '均衡站'], description: '站點角色' },
+					limit: { type: 'integer', description: '回傳前 N 筆，預設 5', default: 5 },
+				},
+				required: [],
+			},
+		},
+	},
+	{
+		type: 'function',
+		function: {
+			name: 'query_parking_availability',
+			description: '查詢停車場即時剩餘車位，可依城市與行政區篩選',
+			parameters: {
+				type: 'object',
+				properties: {
+					city: { type: 'string', enum: ['taipei', 'new_taipei'], description: '城市' },
+					district: { type: 'string', description: '行政區，例如「信義區」，空字串=不限' },
+					limit: { type: 'integer', description: '回傳前 N 筆，預設 5', default: 5 },
+				},
+				required: ['city'],
+			},
+		},
+	},
+	{
+		type: 'function',
+		function: {
+			name: 'query_construction_works',
+			description: '查詢大台北地區目前進行中的道路施工，可依城市與行政區篩選',
+			parameters: {
+				type: 'object',
+				properties: {
+					city: { type: 'string', enum: ['taipei', 'new_taipei', 'all'], description: '城市，all=全區' },
+					district: { type: 'string', description: '行政區，例如「大安區」，空字串=不限' },
+					limit: { type: 'integer', description: '回傳前 N 筆，預設 10', default: 10 },
+				},
+				required: [],
+			},
+		},
+	},
+	{
+		type: 'function',
+		function: {
+			name: 'query_metro_last_mile',
+			description: '查詢捷運站最後一哩路服務健康狀況（YouBike 可借量、公車站數、等車時間、服務分數）',
+			parameters: {
+				type: 'object',
+				properties: {
+					city: { type: 'string', enum: ['taipei', 'new_taipei', 'all'], description: '城市' },
+					status_filter: { type: 'string', enum: ['all', 'good', 'watch', 'alert'], description: '服務狀態篩選' },
+					sort_by: { type: 'string', enum: ['risk', 'service'], description: 'risk=最需改善，service=最穩定' },
+					limit: { type: 'integer', description: '回傳前 N 筆，預設 5', default: 5 },
+				},
+				required: [],
+			},
+		},
+	},
+]
+
 export const useChatStore = defineStore('chat', () => {
   	// 預設訊息
   	const defaultChatData = [
@@ -130,6 +238,8 @@ export const useChatStore = defineStore('chat', () => {
 					messages: aiMessages.value,
 					session_id: aiSessionId.value,
 					stream: true,
+					tools: AI_TOOLS,
+					tool_choice: 'auto',
 				}),
 			})
 

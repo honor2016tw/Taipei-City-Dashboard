@@ -14,9 +14,13 @@ type ToolFunc func(ctx context.Context, args string) (string, error)
 var registry = make(map[string]ToolFunc)
 
 func init() {
-	// Register demo tools
 	Register("get_current_time", GetCurrentTime)
 	Register("get_population_summary", GetPopulationSummary)
+	Register("query_youbike_realtime", QueryYouBikeRealtime)
+	Register("query_youbike_peak_analysis", QueryYouBikePeakAnalysis)
+	Register("query_parking_availability", QueryParkingAvailability)
+	Register("query_construction_works", QueryConstructionWorks)
+	Register("query_metro_last_mile", QueryMetroLastMile)
 }
 
 // Register adds a tool to the registry
