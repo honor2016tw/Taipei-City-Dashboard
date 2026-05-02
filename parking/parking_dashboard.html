@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Realtime Parking Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.49.1"></script>
+
+  <style>
+    :root {
+      --bg: #eef4f7;
+      --panel: rgba(255, 255, 255, 0.9);
+      --ink: #13242f;
+      --muted: #5f7584;
+      --line: rgba(17, 45, 61, 0.1);
+      --tpe: #0b7fab;
+      --ntpc: #ef6a36;
+      --good: #1b998b;
+      --mid: #f3a530;
+      --bad: #dd2d4a;
+      --shadow: 0 22px 60px rgba(18, 38, 54, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(11, 127, 171, 0.12), transparent 25%),
+        radial-gradient(circle at top right, rgba(239, 106, 54, 0.12), transparent 28%),
+        linear-gradient(180deg, #f4f8fb 0%, #eef4f7 100%);
+    }
+
+    .shell {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-copy {
+      padding: 26px 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      bottom: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(11, 127, 171, 0.12), transparent 72%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      border-radius: 999px;
+      background: rgba(11, 127, 171, 0.08);
+      color: var(--tpe);
+      padding: 8px 12px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(34px, 4.6vw, 58px);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .lede {
+      margin: 0;
+      max-width: 68ch;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .mini-card {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      padding: 16px;
+      min-height: 108px;
+    }
+
+    .mini-card .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .mini-card .value {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .mini-card .hint {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .kpi {
+      padding: 18px;
+    }
+
+    .kpi .city {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .kpi .metric {
+      margin-top: 10px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .kpi .sub {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(380px, 0.95fr);
+      gap: 18px;
+    }
+
+    .map-panel {
+      padding: 18px;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 14px;
+    }
+
+    .panel-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .panel-sub {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .switches {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .switches button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      color: var(--muted);
+      font: inherit;
+      font-size: 12px;
+      padding: 10px 14px;
+      cursor: pointer;
+      transition: 180ms ease;
+    }
+
+    .switches button.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: white;
+    }
+
+    #map {
+      height: 780px;
+      border-radius: 22px;
+      overflow: hidden;
+    }
+
+    .legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      padding: 18px;
+    }
+
+    .chart {
+      height: 280px;
+    }
+
+    .chart-tall {
+      height: 340px;
+    }
+
+    .toplist {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .topitem {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.66);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .topitem .name {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .topitem .meta {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .badge {
+      min-width: 72px;
+      text-align: center;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 14px;
+      color: white;
+    }
+
+    code {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 12px;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      padding: 3px 6px;
+    }
+
+    @media (max-width: 1240px) {
+      .hero, .content { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      #map { height: 620px; }
+    }
+
+    @media (max-width: 760px) {
+      .shell { padding: 16px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns: 1fr; }
+      h1 { font-size: 36px; }
+      #map { height: 520px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="panel hero-copy">
+        <div class="eyebrow">Realtime Parking / Taipei + New Taipei</div>
+        <h1>雙北即時剩餘停車位，先看壓力區塊，再看單點明細。</h1>
+        <p class="lede">
+          這頁只比較雙北都能完整對齊的即時資料：路外汽車停車場剩餘車位。
+          地圖主視圖不再用大小圓點，而是改成格網壓力圖與立體區塊，遠看先知道哪一片區域緊張，放大後才檢查單一停車場。
+        </p>
+      </div>
+
+      <div class="panel hero-grid">
+        <div class="mini-card">
+          <div class="label">資料範圍</div>
+          <div class="value">路外汽車</div>
+          <div class="hint">為了讓台北與新北可直接並排比較，本頁只使用兩市都有的即時路外停車場資料。</div>
+        </div>
+        <div class="mini-card">
+          <div class="label">台北動態更新</div>
+          <div class="value" id="meta-tpe-time">-</div>
+          <div class="hint">台北來自官方 TCMSV 動態剩餘車位 JSON。</div>
+        </div>
+        <div class="mini-card">
+          <div class="label">新北即時頻率</div>
+          <div class="value">3 min</div>
+          <div class="hint">新北資料平台頁面標示每 3 分鐘更新 1 次。</div>
+        </div>
+        <div class="mini-card">
+          <div class="label">重新整理方式</div>
+          <div class="value">Python</div>
+          <div class="hint">執行 <code>python PARKING_DASHBOARD/build_parking_dashboard.py</code> 即可更新快照。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="panel kpi">
+        <div class="city">Taipei / 即時可用車位</div>
+        <div class="metric" id="kpi-tpe-available">-</div>
+        <div class="sub" id="kpi-tpe-available-sub">-</div>
+      </div>
+      <div class="panel kpi">
+        <div class="city">New Taipei / 即時可用車位</div>
+        <div class="metric" id="kpi-ntpc-available">-</div>
+        <div class="sub" id="kpi-ntpc-available-sub">-</div>
+      </div>
+      <div class="panel kpi">
+        <div class="city">Taipei / 緊張或滿車</div>
+        <div class="metric" id="kpi-tpe-tight">-</div>
+        <div class="sub" id="kpi-tpe-tight-sub">-</div>
+      </div>
+      <div class="panel kpi">
+        <div class="city">New Taipei / 緊張或滿車</div>
+        <div class="metric" id="kpi-ntpc-tight">-</div>
+        <div class="sub" id="kpi-ntpc-tight-sub">-</div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="panel map-panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-title">雙北停車壓力地圖</div>
+            <div class="panel-sub">
+              格網顏色看整體停車壓力，立體高度看當下可用車位總量。只有縮放到近距離時，才會露出單一停車場點位。
+            </div>
+          </div>
+          <div class="switches">
+            <button class="active" data-filter="ALL">雙北</button>
+            <button data-filter="TPE">台北</button>
+            <button data-filter="NTPC">新北</button>
+          </div>
+        </div>
+        <div id="map"></div>
+        <div class="legend">
+          <span><i class="dot" style="background:#1b998b"></i>寬鬆區塊</span>
+          <span><i class="dot" style="background:#ffd166"></i>中等區塊</span>
+          <span><i class="dot" style="background:#f3a530"></i>偏高區塊</span>
+          <span><i class="dot" style="background:#dd2d4a"></i>高壓區塊</span>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="panel card">
+          <div class="panel-title">狀態分布</div>
+          <div class="panel-sub">把兩市停車場切成四種最直觀的狀態，快速看出哪邊更容易接近滿車。</div>
+          <div id="chart-status" class="chart"></div>
+        </div>
+
+        <div class="panel card">
+          <div class="panel-title">行政區停車壓力</div>
+          <div class="panel-sub">只看各城市總車位數最高的行政區，壓力越高代表即時可用率越低。</div>
+          <div id="chart-areas" class="chart"></div>
+        </div>
+
+        <div class="panel card">
+          <div class="panel-title">容量 vs 剩餘率</div>
+          <div class="panel-sub">右下角是大容量且還很空，左上角則是容量不小但已經接近滿場的高壓停車場。</div>
+          <div id="chart-bubble" class="chart-tall"></div>
+        </div>
+
+        <div class="panel card">
+          <div class="panel-title">最滿與最空</div>
+          <div class="panel-sub">先看最滿場，再看最有餘裕的停車場。</div>
+          <div class="toplist" id="top-fullest"></div>
+          <div class="toplist" id="top-emptiest"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const MAPBOX_TOKEN = window.MAPBOX_TOKEN || "YOUR_MAPBOX_TOKEN_HERE";
+    const CITY_LABEL = { TPE: "台北", NTPC: "新北" };
+    const STATUS_ORDER = ["充足", "偏滿", "緊張", "滿車", "無即時"];
+    const STATUS_COLORS = {
+      "充足": "#1b998b",
+      "偏滿": "#f3a530",
+      "緊張": "#dd2d4a",
+      "滿車": "#8b1e38",
+      "無即時": "#98a6af",
+    };
+
+    const fmt = (value, digits = 0) => {
+      if (value === null || value === undefined || value === "") return "-";
+      const num = Number(value);
+      if (!Number.isFinite(num)) return String(value);
+      return num.toLocaleString(undefined, {
+        minimumFractionDigits: digits,
+        maximumFractionDigits: digits,
+      });
+    };
+
+    const pct = (value) => `${fmt(value * 100, 1)}%`;
+
+    async function loadJSON(path) {
+      const res = await fetch(path, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+      return await res.json();
+    }
+
+    function setMeta(data) {
+      document.getElementById("meta-tpe-time").textContent = data.sources.TPE.dynamicUpdateTime || "-";
+    }
+
+    function setKpis(data) {
+      const tpe = data.citySummary.find((item) => item.city === "TPE");
+      const ntpc = data.citySummary.find((item) => item.city === "NTPC");
+
+      const tightCount = (row) => (row.statusCounts["緊張"] || 0) + (row.statusCounts["滿車"] || 0);
+      const setRow = (prefix, row) => {
+        document.getElementById(`kpi-${prefix}-available`).textContent = fmt(row.totalAvailable, 0);
+        document.getElementById(`kpi-${prefix}-available-sub`).textContent =
+          `${fmt(row.realtimeLotCount, 0)} 座即時停車場，整體使用率 ${row.utilization === null ? "-" : pct(row.utilization)}`;
+        document.getElementById(`kpi-${prefix}-tight`).textContent = fmt(tightCount(row), 0);
+        document.getElementById(`kpi-${prefix}-tight-sub`).textContent =
+          `${fmt(row.lotCount, 0)} 座中，有 ${fmt(row.noRealtimeLotCount, 0)} 座沒有即時數字`;
+      };
+      setRow("tpe", tpe);
+      setRow("ntpc", ntpc);
+    }
+
+    function buildStatusChart(data) {
+      const series = STATUS_ORDER.map((status) => ({
+        name: status,
+        data: data.citySummary.map((row) => (row.statusCounts || {})[status] || 0),
+      }));
+
+      return new ApexCharts(document.querySelector("#chart-status"), {
+        chart: { type: "bar", stacked: true, height: "100%", toolbar: { show: false } },
+        series,
+        colors: STATUS_ORDER.map((status) => STATUS_COLORS[status]),
+        xaxis: { categories: ["台北", "新北"] },
+        plotOptions: { bar: { horizontal: true, borderRadius: 7, barHeight: "55%" } },
+        dataLabels: { enabled: false },
+        legend: { position: "bottom" },
+        grid: { borderColor: "rgba(17, 45, 61, 0.08)" },
+        tooltip: { y: { formatter: (v) => `${fmt(v, 0)} 座` } },
+      });
+    }
+
+    function buildAreaChart(data) {
+      const rows = [];
+      data.citySummary.forEach((cityRow) => {
+        cityRow.topAreas.slice(0, 6).forEach((area) => {
+          if (area.utilization !== null) {
+            rows.push({
+              x: `${CITY_LABEL[cityRow.city]} ${area.area}`,
+              y: Number((area.utilization * 100).toFixed(1)),
+              fillColor: cityRow.city === "TPE" ? "#0b7fab" : "#ef6a36",
+            });
+          }
+        });
+      });
+      rows.sort((a, b) => b.y - a.y);
+
+      return new ApexCharts(document.querySelector("#chart-areas"), {
+        chart: { type: "bar", height: "100%", toolbar: { show: false } },
+        series: [{ name: "使用率", data: rows }],
+        plotOptions: { bar: { horizontal: true, borderRadius: 6, distributed: true } },
+        xaxis: { max: 100 },
+        dataLabels: { enabled: false },
+        legend: { show: false },
+        grid: { borderColor: "rgba(17, 45, 61, 0.08)" },
+        tooltip: { y: { formatter: (v) => `${fmt(v, 1)}%` } },
+      });
+    }
+
+    function buildBubbleChart(geojson) {
+      const grouped = { TPE: [], NTPC: [] };
+      geojson.features
+        .filter((feature) => feature.properties.availability_rate !== null)
+        .sort((a, b) => b.properties.total_car - a.properties.total_car)
+        .slice(0, 160)
+        .forEach((feature) => {
+          const props = feature.properties;
+          grouped[props.city].push({
+            x: props.total_car,
+            y: Number((props.availability_rate * 100).toFixed(1)),
+            z: Math.max(8, Math.min(34, props.available_car / 8 + 8)),
+            name: props.name,
+          });
+        });
+
+      return new ApexCharts(document.querySelector("#chart-bubble"), {
+        chart: { type: "bubble", height: "100%", toolbar: { show: false } },
+        series: [
+          { name: "台北", data: grouped.TPE },
+          { name: "新北", data: grouped.NTPC },
+        ],
+        colors: ["#0b7fab", "#ef6a36"],
+        fill: { opacity: 0.72 },
+        dataLabels: { enabled: false },
+        xaxis: { title: { text: "總汽車車位數" } },
+        yaxis: { title: { text: "目前剩餘率" }, max: 100, min: 0 },
+        legend: { position: "bottom" },
+        grid: { borderColor: "rgba(17, 45, 61, 0.08)" },
+        tooltip: {
+          custom: ({ seriesIndex, dataPointIndex, w }) => {
+            const point = w.config.series[seriesIndex].data[dataPointIndex];
+            return `
+              <div style="padding:10px 12px;font-family:'Noto Sans TC',sans-serif;">
+                <div style="font-weight:700;margin-bottom:4px;">${point.name}</div>
+                <div style="font-size:12px;color:#425564;">
+                  總車位: ${fmt(point.x, 0)}<br/>
+                  剩餘率: ${fmt(point.y, 1)}%
+                </div>
+              </div>
+            `;
+          }
+        },
+      });
+    }
+
+    function renderTopList(containerId, title, items, color, formatter) {
+      const host = document.getElementById(containerId);
+      const heading = document.createElement("div");
+      heading.style.fontWeight = "700";
+      heading.style.fontSize = "13px";
+      heading.style.color = "#31434f";
+      heading.textContent = title;
+      host.appendChild(heading);
+
+      items.forEach((item) => {
+        const el = document.createElement("div");
+        el.className = "topitem";
+        el.innerHTML = `
+          <div>
+            <div class="name">${item.name}</div>
+            <div class="meta">
+              ${CITY_LABEL[item.city]} ${item.area ? "｜ " + item.area : ""} ｜ 總車位 ${fmt(item.total_car, 0)} ｜ 剩餘 ${item.available_car === null ? "-" : fmt(item.available_car, 0)}
+            </div>
+          </div>
+          <div class="badge" style="background:${color};">${formatter(item)}</div>
+        `;
+        host.appendChild(el);
+      });
+    }
+
+    function lotPopupHtml(props) {
+      const ratio = props.availability_rate === null ? "-" : `${fmt(props.availability_rate * 100, 1)}%`;
+      return `
+        <div style="min-width:240px;font-family:'Noto Sans TC',sans-serif;">
+          <div style="font-weight:700;font-size:15px;margin-bottom:6px;">${props.name}</div>
+          <div style="font-size:12px;color:#445866;line-height:1.65;">
+            ${CITY_LABEL[props.city]} ${props.area ? "｜ " + props.area : ""}<br/>
+            地址：${props.address || "-"}<br/>
+            總汽車車位：${fmt(props.total_car, 0)}<br/>
+            剩餘汽車車位：${props.available_car === null ? "-" : fmt(props.available_car, 0)}<br/>
+            剩餘率：${ratio}<br/>
+            狀態：${props.status}
+          </div>
+        </div>
+      `;
+    }
+
+    function gridPopupHtml(props) {
+      const util = props.utilization === null ? "-" : `${fmt(props.utilization * 100, 1)}%`;
+      return `
+        <div style="min-width:220px;font-family:'Noto Sans TC',sans-serif;">
+          <div style="font-weight:700;font-size:15px;margin-bottom:6px;">${props.area || "區塊摘要"}</div>
+          <div style="font-size:12px;color:#445866;line-height:1.65;">
+            主城市：${CITY_LABEL[props.city] || "-"}<br/>
+            區塊停車場數：${fmt(props.lot_count, 0)}<br/>
+            有即時資料：${fmt(props.realtime_lot_count, 0)}<br/>
+            即時可用車位：${fmt(props.total_available, 0)}<br/>
+            區塊使用率：${util}<br/>
+            狀態：${props.pressure_label}
+          </div>
+        </div>
+      `;
+    }
+
+    function applyCityFilter(map, city) {
+      const filter = city === "ALL" ? null : ["==", ["get", "city"], city];
+      ["parking-grid-fill", "parking-grid-3d", "parking-grid-outline", "parking-grid-label", "parking-lot-points"].forEach((layerId) => {
+        if (map.getLayer(layerId)) {
+          map.setFilter(layerId, filter);
+        }
+      });
+    }
+
+    function initButtons(map) {
+      document.querySelectorAll("[data-filter]").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-filter]").forEach((el) => el.classList.remove("active"));
+          button.classList.add("active");
+          applyCityFilter(map, button.dataset.filter);
+        });
+      });
+    }
+
+    async function init() {
+      const [data, geojson, gridGeojson] = await Promise.all([
+        loadJSON("./dashboard_data.json"),
+        loadJSON("./parking_lots.geojson"),
+        loadJSON("./parking_grid.geojson"),
+      ]);
+
+      setMeta(data);
+      setKpis(data);
+
+      const statusChart = buildStatusChart(data);
+      const areaChart = buildAreaChart(data);
+      const bubbleChart = buildBubbleChart(geojson);
+      [statusChart, areaChart, bubbleChart].forEach((chart) => chart.render());
+
+      const mergedFullest = data.citySummary.flatMap((row) => row.fullestLots.slice(0, 4));
+      mergedFullest.sort((a, b) => {
+        const ar = a.availability_rate === null ? 999 : a.availability_rate;
+        const br = b.availability_rate === null ? 999 : b.availability_rate;
+        return ar - br;
+      });
+
+      const mergedEmptiest = data.citySummary.flatMap((row) => row.emptiestLots.slice(0, 4));
+      mergedEmptiest.sort((a, b) => (b.availability_rate || 0) - (a.availability_rate || 0));
+
+      renderTopList("top-fullest", "最滿 Top 6", mergedFullest.slice(0, 6), "#dd2d4a", (item) =>
+        item.availability_rate === null ? "-" : `${fmt(item.availability_rate * 100, 0)}%`
+      );
+      renderTopList("top-emptiest", "最空 Top 6", mergedEmptiest.slice(0, 6), "#1b998b", (item) =>
+        item.availability_rate === null ? "-" : `${fmt(item.availability_rate * 100, 0)}%`
+      );
+
+      mapboxgl.accessToken = MAPBOX_TOKEN;
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/light-v11",
+        center: [121.54, 25.05],
+        zoom: 10.2,
+        pitch: 42,
+        bearing: -8,
+        antialias: true,
+      });
+      map.addControl(new mapboxgl.NavigationControl(), "top-right");
+
+      map.on("load", () => {
+        map.addSource("parking", { type: "geojson", data: geojson });
+        map.addSource("parking-grid", { type: "geojson", data: gridGeojson });
+
+        map.addLayer({
+          id: "parking-grid-fill",
+          type: "fill",
+          source: "parking-grid",
+          paint: {
+            "fill-color": [
+              "case",
+              ["==", ["get", "pressure_label"], "高壓"], "#dd2d4a",
+              ["==", ["get", "pressure_label"], "偏高"], "#f3a530",
+              ["==", ["get", "pressure_label"], "中等"], "#ffd166",
+              ["==", ["get", "pressure_label"], "寬鬆"], "#1b998b",
+              "#98a6af"
+            ],
+            "fill-opacity": [
+              "interpolate", ["linear"], ["zoom"],
+              8, 0.74,
+              11.5, 0.42,
+              13, 0.22
+            ]
+          }
+        });
+
+        map.addLayer({
+          id: "parking-grid-3d",
+          type: "fill-extrusion",
+          source: "parking-grid",
+          minzoom: 9,
+          paint: {
+            "fill-extrusion-color": [
+              "case",
+              ["==", ["get", "pressure_label"], "高壓"], "#dd2d4a",
+              ["==", ["get", "pressure_label"], "偏高"], "#f3a530",
+              ["==", ["get", "pressure_label"], "中等"], "#ffd166",
+              ["==", ["get", "pressure_label"], "寬鬆"], "#1b998b",
+              "#98a6af"
+            ],
+            "fill-extrusion-height": [
+              "interpolate", ["linear"], ["coalesce", ["get", "total_available"], 0],
+              0, 0,
+              80, 180,
+              300, 620,
+              800, 1400,
+              1800, 2600,
+              4000, 4200
+            ],
+            "fill-extrusion-base": 0,
+            "fill-extrusion-opacity": 0.46
+          }
+        });
+
+        map.addLayer({
+          id: "parking-grid-outline",
+          type: "line",
+          source: "parking-grid",
+          paint: {
+            "line-color": "rgba(19,36,47,0.16)",
+            "line-width": [
+              "interpolate", ["linear"], ["zoom"],
+              8, 0.5,
+              12, 1,
+              14, 1.2
+            ]
+          }
+        });
+
+        map.addLayer({
+          id: "parking-grid-label",
+          type: "symbol",
+          source: "parking-grid",
+          minzoom: 10.7,
+          layout: {
+            "text-field": ["to-string", ["coalesce", ["get", "total_available"], 0]],
+            "text-size": [
+              "interpolate", ["linear"], ["zoom"],
+              10.7, 10,
+              13, 14
+            ],
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+          },
+          paint: {
+            "text-color": "#10222d",
+            "text-halo-color": "rgba(255,255,255,0.95)",
+            "text-halo-width": 1.2
+          }
+        });
+
+        map.addLayer({
+          id: "parking-lot-points",
+          type: "circle",
+          source: "parking",
+          minzoom: 12.2,
+          paint: {
+            "circle-radius": 4.6,
+            "circle-color": [
+              "case",
+              ["==", ["get", "status"], "滿車"], "#8b1e38",
+              ["==", ["get", "status"], "緊張"], "#dd2d4a",
+              ["==", ["get", "status"], "偏滿"], "#f3a530",
+              ["==", ["get", "status"], "充足"], "#1b998b",
+              "#98a6af"
+            ],
+            "circle-stroke-width": 1,
+            "circle-stroke-color": "rgba(255,255,255,0.92)",
+            "circle-opacity": 0.92
+          }
+        });
+
+        const popup = new mapboxgl.Popup({ closeButton: false, closeOnClick: false, offset: 12 });
+
+        ["parking-grid-fill", "parking-lot-points"].forEach((layerId) => {
+          map.on("mouseenter", layerId, () => { map.getCanvas().style.cursor = "pointer"; });
+          map.on("mouseleave", layerId, () => {
+            map.getCanvas().style.cursor = "";
+            popup.remove();
+          });
+        });
+
+        map.on("mousemove", "parking-grid-fill", (event) => {
+          const feature = event.features && event.features[0];
+          if (!feature) return;
+          popup.setLngLat(event.lngLat).setHTML(gridPopupHtml(feature.properties)).addTo(map);
+        });
+
+        map.on("mousemove", "parking-lot-points", (event) => {
+          const feature = event.features && event.features[0];
+          if (!feature) return;
+          popup.setLngLat(feature.geometry.coordinates).setHTML(lotPopupHtml(feature.properties)).addTo(map);
+        });
+
+        const bounds = new mapboxgl.LngLatBounds();
+        geojson.features.forEach((feature) => bounds.extend(feature.geometry.coordinates));
+        if (!bounds.isEmpty()) {
+          map.fitBounds(bounds, { padding: 40, maxZoom: 11.8 });
+        }
+
+        initButtons(map);
+      });
+    }
+
+    init().catch((error) => {
+      console.error(error);
+      document.body.insertAdjacentHTML("afterbegin", `
+        <div style="margin:20px;padding:16px;border-radius:16px;background:#fff4f1;color:#8a2b1d;border:1px solid rgba(138,43,29,0.12);font-family:'Noto Sans TC',sans-serif;">
+          載入 Parking Dashboard 失敗。請用本機 HTTP 開啟，例如 <code>python -m http.server 8000</code>，
+          然後開 <code>http://localhost:8000/PARKING_DASHBOARD/output/parking_dashboard.html</code>。
+        </div>
+      `);
+    });
+  </script>
+</body>
+</html>

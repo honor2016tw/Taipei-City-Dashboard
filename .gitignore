@@ -29,6 +29,7 @@ dist.tar.gz
 *.sh
 !Taipei-City-Dashboard-DE/docker/develop/gitsync.sh
 !Taipei-City-Dashboard-DE/docker/prod/gitsync.sh
+!/db/migrations/parking/apply_parking_migrations.sh
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -73,3 +74,8 @@ Taipei-City-Dashboard-DE/docker/prod/.env
 *.py[cod]
 
 *.env
+
+# Parking：本機 DB 憑證（run_parking_load.ps1 / run_parking_manager_sql.ps1）
+db/migrations/parking/dashboard/.env.parking
+
+/Taipei-City-Dashboard-FE_2/
