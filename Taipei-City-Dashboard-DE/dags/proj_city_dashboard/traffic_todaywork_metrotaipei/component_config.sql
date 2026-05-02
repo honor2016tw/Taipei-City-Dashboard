@@ -40,7 +40,7 @@ VALUES (
     '{"color": null, "range": ["quarter_ago", "halfyear_ago", "year_ago"], "unit": "件"}'::json,
     NULL,
     NULL,
-    '2026-05-02T00:00:00+08:00',
+    'current',
     NULL,
     10,
     'minute',
