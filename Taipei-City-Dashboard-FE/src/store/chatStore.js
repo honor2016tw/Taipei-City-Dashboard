@@ -152,14 +152,12 @@ export const useChatStore = defineStore('chat', () => {
 				buffer = lines.pop() // 保留未完成的行
 
 				for (const line of lines) {
-					console.log('[SSE raw line]', JSON.stringify(line))
 					if (!line.startsWith('data:')) continue
 					const raw = line.slice(5).trim()
 					if (raw === '[DONE]') continue
 					try {
 						const parsed = JSON.parse(raw)
-						console.log('[SSE parsed]', parsed)
-						const delta = parsed.choices?.[0]?.delta?.content ?? ''
+						const delta = parsed.generated_text ?? parsed.choices?.[0]?.delta?.content ?? ''
 						fullContent += delta
 						chatData.value[placeholderIdx].content = fullContent
 					} catch {}
