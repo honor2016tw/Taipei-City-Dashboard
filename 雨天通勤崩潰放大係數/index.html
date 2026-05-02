@@ -34,9 +34,9 @@
         <main class="main-content">
             <header class="page-header" id="overview">
                 <div>
-                    <p class="eyebrow">雙北 41 行政區 · 真實資料觀測</p>
+                    <p class="eyebrow">雙北捷運站周邊 · 真實資料觀測</p>
                     <h1>雨天通勤崩潰放大係數</h1>
-                    <p class="subtitle">以逐時降雨與 YouBike 即時可借可還狀態，觀測雨天對雙北通勤韌性的放大壓力。</p>
+                    <p class="subtitle">以同站點、同星期、同時段的非雨天基準，觀測雨天對公車接駁與 YouBike 轉乘壓力的放大程度。</p>
                 </div>
                 <div class="update-panel">
                     <span class="live-dot"></span>
@@ -50,7 +50,7 @@
             <section class="metric-grid" aria-label="關鍵指標">
                 <article class="metric-card">
                     <div class="metric-title">
-                        <span>雙北平均 CBMF</span>
+                        <span>平均放大係數</span>
                         <i data-lucide="activity"></i>
                     </div>
                     <strong id="cbmfValue">--</strong>
@@ -58,19 +58,19 @@
                 </article>
                 <article class="metric-card">
                     <div class="metric-title">
-                        <span>平均延遲估計</span>
+                        <span>目前通勤壓力</span>
                         <i data-lucide="clock-3"></i>
                     </div>
                     <strong id="delayValue">--</strong>
-                    <p>以 28 分鐘基準通勤時間估算</p>
+                    <p>公車 ETA 與 YouBike 失敗率合成</p>
                 </article>
                 <article class="metric-card">
                     <div class="metric-title">
-                        <span>高壓行政區</span>
+                        <span>baseline ready</span>
                         <i data-lucide="triangle-alert"></i>
                     </div>
                     <strong id="hotspotValue">--</strong>
-                    <p>CBMF 達 1.55 以上</p>
+                    <p>同星期同時段非雨樣本達門檻</p>
                 </article>
                 <article class="metric-card">
                     <div class="metric-title">
@@ -88,8 +88,8 @@
                 <article class="panel map-panel">
                     <div class="panel-header">
                         <div>
-                            <h2>行政區空間分布</h2>
-                            <p>同一公式、同一空間粒度：雙北 41 行政區。</p>
+                            <h2>捷運站周邊分布</h2>
+                            <p>同一公式、同一空間粒度：站點周邊 500 公尺。</p>
                         </div>
                         <div class="segmented" role="group" aria-label="城市篩選">
                             <button class="active" data-city="all">雙北</button>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="map-layout">
                         <div class="map-frame">
-                            <svg id="districtMap" viewBox="0 0 1000 820" role="img" aria-label="雙北 CBMF 行政區圖"></svg>
+                            <svg id="districtMap" viewBox="0 0 1000 820" role="img" aria-label="雙北捷運站周邊 CBMF 圖"></svg>
                             <div class="map-legend">
                                 <span>低</span>
                                 <div></div>
@@ -109,7 +109,7 @@
                         <aside class="district-detail" id="districtDetail">
                             <span class="detail-label">選取行政區</span>
                             <strong>滑過或點選地圖</strong>
-                            <p>檢視降雨、YouBike 壓力與 CBMF。</p>
+                    <p>檢視降雨、公車 ETA、YouBike 失敗率與 baseline。</p>
                         </aside>
                     </div>
                 </article>
@@ -117,8 +117,8 @@
                 <article class="panel rank-panel">
                     <div class="panel-header">
                         <div>
-                            <h2>崩潰壓力排行</h2>
-                            <p>依 CBMF 由高到低排序。</p>
+                            <h2>放大風險排行</h2>
+                            <p>優先依放大係數，其次依目前壓力排序。</p>
                         </div>
                     </div>
                     <ol class="rank-list" id="rankList"></ol>
@@ -129,8 +129,8 @@
                 <article class="panel wide">
                     <div class="panel-header">
                         <div>
-                            <h2>同一時間軸趨勢</h2>
-                            <p id="timeAxisNote">逐時降雨趨勢與即時快照對齊中。</p>
+                            <h2>目前壓力 Top 10</h2>
+                            <p id="timeAxisNote">站點周邊資料對齊中。</p>
                         </div>
                     </div>
                     <div class="chart-body tall">
@@ -142,7 +142,7 @@
                     <div class="panel-header">
                         <div>
                             <h2>臺北 / 新北比較</h2>
-                            <p>城市平均 CBMF 與資料覆蓋。</p>
+                            <p>城市平均壓力與 baseline 覆蓋。</p>
                         </div>
                     </div>
                     <div class="chart-body">

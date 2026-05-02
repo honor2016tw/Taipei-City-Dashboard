@@ -366,6 +366,24 @@ h3 {
     transition: opacity 0.18s ease, stroke 0.18s ease;
 }
 
+.district-outline {
+    fill: rgba(255, 255, 255, 0.025);
+    stroke: rgba(255, 255, 255, 0.16);
+    stroke-width: 1.1;
+}
+
+.station-point {
+    stroke: #101318;
+    stroke-width: 2.2;
+    cursor: pointer;
+    transition: r 0.18s ease, stroke 0.18s ease, opacity 0.18s ease;
+}
+
+.station-point:hover,
+.station-point.active {
+    stroke: var(--text);
+}
+
 .district-path:hover,
 .district-path.active {
     stroke: var(--text);

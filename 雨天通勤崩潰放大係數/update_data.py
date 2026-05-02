@@ -10,35 +10,23 @@ from datetime import datetime, timezone
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
-DISTRICT_GEOJSON = os.path.join(
-    ROOT_DIR, "Taipei-City-Dashboard-FE", "public", "mapData", "metrotaipei_town.geojson"
-)
 OUTPUT_FILE = os.path.join(BASE_DIR, "current_data.json")
-
-TAIPEI_DISTRICTS = {
-    "北投區",
-    "士林區",
-    "內湖區",
-    "南港區",
-    "松山區",
-    "信義區",
-    "中山區",
-    "大同區",
-    "中正區",
-    "萬華區",
-    "大安區",
-    "文山區",
-}
+HISTORY_FILE = os.path.join(BASE_DIR, "pressure_history.jsonl")
 
 TDX_TOKEN_URL = "https://apiatis.ntpc.gov.tw/ntpc-api/TDX/Token"
+TDX_METRO_STATIONS = "https://tdx.transportdata.tw/api/basic/v2/Rail/Metro/Station/TRTC?$format=JSON"
 TDX_BIKE_STATION = "https://tdx.transportdata.tw/api/basic/v2/Bike/Station/City/{city}?$format=JSON"
 TDX_BIKE_AVAILABILITY = "https://tdx.transportdata.tw/api/basic/v2/Bike/Availability/City/{city}?$format=JSON"
+TDX_BUS_STOPS = "https://tdx.transportdata.tw/api/basic/v2/Bus/Stop/City/{city}?$format=JSON"
+TDX_BUS_ETA = "https://tdx.transportdata.tw/api/basic/v2/Bus/EstimatedTimeOfArrival/City/{city}?$format=JSON"
 OPEN_METEO_URL = "https://api.open-meteo.com/v1/forecast"
 
+STATION_RADIUS_M = 500
+BASELINE_MIN_SAMPLES = 3
 
-def fetch_json(url, headers=None, timeout=30):
-    req = urllib.request.Request(url, headers=headers or {"User-Agent": "codefest-cbmf/1.0"})
+
+def fetch_json(url, headers=None, timeout=45):
+    req = urllib.request.Request(url, headers=headers or {"User-Agent": "codefest-cbmf/2.0"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as response:
             return json.loads(response.read().decode("utf-8"))
@@ -50,342 +38,399 @@ def fetch_json(url, headers=None, timeout=30):
             return json.loads(response.read().decode("utf-8"))
 
 
-def flatten_rings(geometry):
-    if geometry["type"] == "Polygon":
-        return geometry["coordinates"]
-    if geometry["type"] == "MultiPolygon":
-        rings = []
-        for polygon in geometry["coordinates"]:
-            rings.extend(polygon)
-        return rings
-    return []
-
-
-def polygon_centroid(ring):
-    points = ring[:-1] if ring and ring[0] == ring[-1] else ring
-    if not points:
-        return None
-    area = 0
-    cx = 0
-    cy = 0
-    for i, point in enumerate(points):
-        x1, y1 = point[0], point[1]
-        x2, y2 = points[(i + 1) % len(points)][0], points[(i + 1) % len(points)][1]
-        cross = x1 * y2 - x2 * y1
-        area += cross
-        cx += (x1 + x2) * cross
-        cy += (y1 + y2) * cross
-    if abs(area) < 0.0000001:
-        return {
-            "lon": sum(point[0] for point in points) / len(points),
-            "lat": sum(point[1] for point in points) / len(points),
-        }
-    area *= 0.5
-    return {"lon": cx / (6 * area), "lat": cy / (6 * area)}
-
-
-def point_in_ring(lon, lat, ring):
-    inside = False
-    points = ring[:-1] if ring and ring[0] == ring[-1] else ring
-    j = len(points) - 1
-    for i, point in enumerate(points):
-        xi, yi = point[0], point[1]
-        xj, yj = points[j][0], points[j][1]
-        intersects = (yi > lat) != (yj > lat) and lon < (xj - xi) * (lat - yi) / ((yj - yi) or 1e-12) + xi
-        if intersects:
-            inside = not inside
-        j = i
-    return inside
-
-
-def point_in_geometry(lon, lat, geometry):
-    if geometry["type"] == "Polygon":
-        polygons = [geometry["coordinates"]]
-    elif geometry["type"] == "MultiPolygon":
-        polygons = geometry["coordinates"]
-    else:
-        return False
-
-    for polygon in polygons:
-        outer = polygon[0]
-        holes = polygon[1:]
-        if point_in_ring(lon, lat, outer) and not any(point_in_ring(lon, lat, hole) for hole in holes):
-            return True
-    return False
-
-
-def load_districts():
-    with open(DISTRICT_GEOJSON, "r", encoding="utf-8") as file:
-        geojson = json.load(file)
-
-    districts = []
-    for feature in geojson["features"]:
-        props = feature["properties"]
-        rings = flatten_rings(feature["geometry"])
-        centroid = polygon_centroid(max(rings, key=len))
-        districts.append(
-            {
-                "name": props["TNAME"],
-                "city": props["PNAME"],
-                "city_short": "臺北" if props["TNAME"] in TAIPEI_DISTRICTS else "新北",
-                "centroid": centroid,
-                "geometry": feature["geometry"],
-            }
-        )
-    return districts
-
-
 def get_tdx_headers():
     token_payload = fetch_json(TDX_TOKEN_URL)
     token = token_payload.get("token")
     if not token:
         raise RuntimeError("TDX token response does not include token")
-    return {"Authorization": f"Bearer {token}", "User-Agent": "codefest-cbmf/1.0"}
+    return {"Authorization": f"Bearer {token}", "User-Agent": "codefest-cbmf/2.0"}
+
+
+def city_short(value):
+    if value in ("臺北市", "台北市", "Taipei", "TPE"):
+        return "臺北"
+    if value in ("新北市", "NewTaipei", "NWT"):
+        return "新北"
+    return value or "未知"
+
+
+def haversine_m(lon1, lat1, lon2, lat2):
+    radius = 6371000
+    p1 = math.radians(lat1)
+    p2 = math.radians(lat2)
+    dp = math.radians(lat2 - lat1)
+    dl = math.radians(lon2 - lon1)
+    a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * radius * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
+def fetch_metro_stations(headers):
+    rows = fetch_json(TDX_METRO_STATIONS, headers=headers)
+    seen = {}
+    for row in rows:
+        pos = row.get("StationPosition") or {}
+        name = row.get("StationName", {}).get("Zh_tw")
+        lon = pos.get("PositionLon")
+        lat = pos.get("PositionLat")
+        if not name or lon is None or lat is None:
+            continue
+        key = f"{name}-{round(float(lon), 4)}-{round(float(lat), 4)}"
+        if key in seen:
+            seen[key]["lines"].append(row.get("StationID", "")[:2])
+            continue
+        city = city_short(row.get("LocationCity") or row.get("LocationCityCode"))
+        if city not in ("臺北", "新北"):
+            continue
+        seen[key] = {
+            "id": row["StationUID"],
+            "name": name,
+            "city": city,
+            "town": row.get("LocationTown") or "",
+            "lon": float(lon),
+            "lat": float(lat),
+            "lines": [row.get("StationID", "")[:2]],
+        }
+    return list(seen.values())
 
 
 def fetch_bike_city(city, headers):
     stations = fetch_json(TDX_BIKE_STATION.format(city=city), headers=headers)
     availability = fetch_json(TDX_BIKE_AVAILABILITY.format(city=city), headers=headers)
-    availability_by_uid = {item["StationUID"]: item for item in availability}
-    merged = []
+    live_by_uid = {item["StationUID"]: item for item in availability}
+    rows = []
     for station in stations:
-        live = availability_by_uid.get(station["StationUID"])
-        if not live:
+        live = live_by_uid.get(station["StationUID"])
+        pos = station.get("StationPosition") or {}
+        if not live or pos.get("PositionLon") is None or pos.get("PositionLat") is None:
             continue
-        pos = station.get("StationPosition", {})
-        merged.append(
+        rows.append(
             {
                 "uid": station["StationUID"],
                 "name": station.get("StationName", {}).get("Zh_tw", station["StationUID"]),
-                "lon": float(pos.get("PositionLon", 0)),
-                "lat": float(pos.get("PositionLat", 0)),
+                "city": city_short(city),
+                "lon": float(pos["PositionLon"]),
+                "lat": float(pos["PositionLat"]),
                 "capacity": int(station.get("BikesCapacity") or 0),
                 "rent": int(live.get("AvailableRentBikes") or 0),
                 "return": int(live.get("AvailableReturnBikes") or 0),
                 "service": int(live.get("ServiceStatus") or 0),
-                "src_update_time": live.get("SrcUpdateTime"),
                 "update_time": live.get("UpdateTime"),
             }
         )
-    return merged
+    return rows
 
 
-def assign_bikes_to_districts(districts, bikes):
-    district_stats = {
-        district["name"]: {
-            "bike_station_count": 0,
-            "bike_capacity": 0,
-            "available_rent_bikes": 0,
-            "available_return_bikes": 0,
-            "low_bike_station_count": 0,
-            "offline_station_count": 0,
-            "bike_update_times": [],
-        }
-        for district in districts
-    }
-
-    for station in bikes:
-        matched = None
-        for district in districts:
-            if point_in_geometry(station["lon"], station["lat"], district["geometry"]):
-                matched = district["name"]
-                break
-        if not matched:
+def fetch_bus_city(city, headers):
+    stops = fetch_json(TDX_BUS_STOPS.format(city=city), headers=headers)
+    eta = fetch_json(TDX_BUS_ETA.format(city=city), headers=headers)
+    stop_by_uid = {}
+    for stop in stops:
+        pos = stop.get("StopPosition") or {}
+        if pos.get("PositionLon") is None or pos.get("PositionLat") is None:
             continue
+        stop_by_uid[stop["StopUID"]] = {
+            "uid": stop["StopUID"],
+            "name": stop.get("StopName", {}).get("Zh_tw", stop["StopUID"]),
+            "city": city_short(stop.get("LocationCityCode") or city),
+            "lon": float(pos["PositionLon"]),
+            "lat": float(pos["PositionLat"]),
+            "eta_seconds": [],
+            "status_total": 0,
+            "status_bad": 0,
+            "update_times": [],
+        }
+    for item in eta:
+        stop = stop_by_uid.get(item.get("StopUID"))
+        if not stop:
+            continue
+        stop["status_total"] += 1
+        if item.get("StopStatus") != 0:
+            stop["status_bad"] += 1
+        estimate = item.get("EstimateTime")
+        if isinstance(estimate, int) and 0 <= estimate <= 3600:
+            stop["eta_seconds"].append(estimate)
+        if item.get("UpdateTime"):
+            stop["update_times"].append(item["UpdateTime"])
+    return list(stop_by_uid.values())
 
-        stats = district_stats[matched]
-        stats["bike_station_count"] += 1
-        stats["bike_capacity"] += station["capacity"]
-        stats["available_rent_bikes"] += station["rent"]
-        stats["available_return_bikes"] += station["return"]
-        if station["service"] != 1:
-            stats["offline_station_count"] += 1
-        if station["rent"] <= 2 or station["return"] <= 2:
-            stats["low_bike_station_count"] += 1
-        if station["update_time"]:
-            stats["bike_update_times"].append(station["update_time"])
 
-    return district_stats
+def fetch_weather(units):
+    weather = []
+    for start in range(0, len(units), 50):
+        chunk = units[start : start + 50]
+        params = {
+            "latitude": ",".join(f'{unit["lat"]:.5f}' for unit in chunk),
+            "longitude": ",".join(f'{unit["lon"]:.5f}' for unit in chunk),
+            "current": "precipitation,rain,weather_code",
+            "hourly": "precipitation",
+            "past_days": "1",
+            "forecast_days": "1",
+            "timezone": "Asia/Taipei",
+        }
+        payload = fetch_json(OPEN_METEO_URL + "?" + urllib.parse.urlencode(params))
+        weather.extend(payload if isinstance(payload, list) else [payload])
+    return weather
 
 
-def fetch_weather(districts):
-    latitudes = ",".join(f'{district["centroid"]["lat"]:.5f}' for district in districts)
-    longitudes = ",".join(f'{district["centroid"]["lon"]:.5f}' for district in districts)
-    params = {
-        "latitude": latitudes,
-        "longitude": longitudes,
-        "current": "precipitation,rain,weather_code",
-        "hourly": "precipitation",
-        "past_days": "1",
-        "forecast_days": "1",
-        "timezone": "Asia/Taipei",
+def nearby(items, unit, radius_m=STATION_RADIUS_M):
+    lat_delta = radius_m / 111320
+    lon_delta = radius_m / (111320 * max(0.2, math.cos(math.radians(unit["lat"]))))
+    return [
+        item
+        for item in items
+        if item["city"] == unit["city"]
+        and abs(item["lat"] - unit["lat"]) <= lat_delta
+        and abs(item["lon"] - unit["lon"]) <= lon_delta
+        and haversine_m(unit["lon"], unit["lat"], item["lon"], item["lat"]) <= radius_m
+    ]
+
+
+def bike_failure_score(stations):
+    if not stations:
+        return 0, {"bike_station_count": 0, "no_bike_rate": 0, "no_return_rate": 0, "offline_rate": 0}
+    no_bike = len([station for station in stations if station["rent"] <= 2]) / len(stations)
+    no_return = len([station for station in stations if station["return"] <= 2]) / len(stations)
+    offline = len([station for station in stations if station["service"] != 1]) / len(stations)
+    return max(no_bike, no_return) + 0.25 * offline, {
+        "bike_station_count": len(stations),
+        "no_bike_rate": round(no_bike, 3),
+        "no_return_rate": round(no_return, 3),
+        "offline_rate": round(offline, 3),
+        "available_rent_bikes": sum(station["rent"] for station in stations),
+        "available_return_bikes": sum(station["return"] for station in stations),
     }
-    url = OPEN_METEO_URL + "?" + urllib.parse.urlencode(params)
-    payload = fetch_json(url)
-    return payload if isinstance(payload, list) else [payload]
 
 
-def calc_bike_stress(stats):
-    station_count = stats["bike_station_count"]
-    if station_count == 0 or stats["bike_capacity"] == 0:
-        return 0
-    rent_ratio = stats["available_rent_bikes"] / stats["bike_capacity"]
-    return_ratio = stats["available_return_bikes"] / stats["bike_capacity"]
-    imbalance = min(1, abs(rent_ratio - return_ratio) * 1.4)
-    low_station_rate = stats["low_bike_station_count"] / station_count
-    offline_rate = stats["offline_station_count"] / station_count
-    return min(1, 0.55 * low_station_rate + 0.3 * imbalance + 0.15 * offline_rate)
+def bus_delay_score(stops):
+    active = [stop for stop in stops if stop["eta_seconds"]]
+    if not stops:
+        return 0, {"bus_stop_count": 0, "median_eta_min": None, "bus_issue_rate": 0}
+    all_eta = [seconds / 60 for stop in active for seconds in stop["eta_seconds"]]
+    median_eta = statistics.median(all_eta) if all_eta else None
+    issue_total = sum(stop["status_total"] for stop in stops)
+    issue_bad = sum(stop["status_bad"] for stop in stops)
+    issue_rate = issue_bad / issue_total if issue_total else 0
+    eta_score = min(2, (median_eta or 20) / 15)
+    return eta_score + issue_rate, {
+        "bus_stop_count": len(stops),
+        "bus_eta_sample_count": len(all_eta),
+        "median_eta_min": round(median_eta, 1) if median_eta is not None else None,
+        "bus_issue_rate": round(issue_rate, 3),
+    }
 
 
-def calc_cbmf(rain_mm, bike_stress):
-    rain_stress = min(1.6, rain_mm / 10)
-    return round(1 + 0.62 * rain_stress + 0.58 * bike_stress, 2)
+def rain_level(mm):
+    if mm >= 15:
+        return 4
+    if mm >= 7.5:
+        return 3
+    if mm >= 2.5:
+        return 2
+    if mm >= 0.5:
+        return 1
+    return 0
 
 
-def severity(cbmf):
-    if cbmf >= 2:
-        return "severe"
-    if cbmf >= 1.55:
-        return "high"
-    if cbmf >= 1.25:
-        return "medium"
-    return "normal"
+def current_weather(weather):
+    all_times = weather["hourly"]["time"]
+    now_hour = datetime.now().replace(minute=0, second=0, microsecond=0).isoformat(timespec="minutes")
+    if now_hour in all_times:
+        idx = all_times.index(now_hour)
+    else:
+        idx = min(range(len(all_times)), key=lambda index: abs(datetime.fromisoformat(all_times[index]) - datetime.now()))
+    rain = float(weather.get("current", {}).get("precipitation") or weather["hourly"]["precipitation"][idx] or 0)
+    return rain, idx, all_times
+
+
+def commute_pressure(bus_score, bike_score):
+    return round(0.58 * bus_score + 0.42 * bike_score, 3)
+
+
+def load_history():
+    if not os.path.exists(HISTORY_FILE):
+        return []
+    rows = []
+    with open(HISTORY_FILE, "r", encoding="utf-8") as file:
+        for line in file:
+            try:
+                rows.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+    return rows
+
+
+def baseline_for(unit_id, now, history, current_pressure=None, current_rain_level=None):
+    samples = [
+        row["pressure"]
+        for row in history
+        if row.get("unit_id") == unit_id
+        and row.get("weekday") == now.weekday()
+        and row.get("hour") == now.hour
+        and row.get("rain_level") == 0
+    ]
+    status = "historical"
+    if not samples and current_rain_level == 0 and current_pressure is not None:
+        samples = [current_pressure]
+        status = "seeded_from_current_dry"
+    if not samples:
+        return None, 0, "collecting"
+    return round(statistics.median(samples), 3), len(samples), status if len(samples) < BASELINE_MIN_SAMPLES else "ready"
+
+
+def append_history(rows, now):
+    with open(HISTORY_FILE, "a", encoding="utf-8") as file:
+        for row in rows:
+            file.write(
+                json.dumps(
+                    {
+                        "time": now.isoformat(timespec="seconds"),
+                        "unit_id": row["id"],
+                        "weekday": now.weekday(),
+                        "hour": now.hour,
+                        "rain_level": row["rain_level"],
+                        "pressure": row["current_pressure"],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n"
+            )
 
 
 def build_result():
-    districts = load_districts()
+    now = datetime.now().astimezone()
     headers = get_tdx_headers()
-    bike_stations = fetch_bike_city("Taipei", headers) + fetch_bike_city("NewTaipei", headers)
-    bike_stats = assign_bikes_to_districts(districts, bike_stations)
-    weather_points = fetch_weather(districts)
+    units = fetch_metro_stations(headers)
+    bikes = fetch_bike_city("Taipei", headers) + fetch_bike_city("NewTaipei", headers)
+    bus_stops = fetch_bus_city("Taipei", headers) + fetch_bus_city("NewTaipei", headers)
+    weather_points = fetch_weather(units)
+    history = load_history()
 
-    all_times = weather_points[0]["hourly"]["time"]
-    now_hour = datetime.now().replace(minute=0, second=0, microsecond=0).isoformat(timespec="minutes")
-    if now_hour in all_times:
-        current_idx = all_times.index(now_hour)
-    else:
-        current_idx = min(range(len(all_times)), key=lambda index: abs(datetime.fromisoformat(all_times[index]) - datetime.now()))
-    trend_indexes = list(range(max(0, current_idx - 11), current_idx + 1))
-    time_axis = [all_times[index] for index in trend_indexes]
-
-    district_rows = []
-    city_groups = {"臺北": [], "新北": []}
-    bike_update_times = []
-
-    for district, weather in zip(districts, weather_points):
-        stats = bike_stats[district["name"]]
-        hourly_rain = weather["hourly"]["precipitation"]
-        current_rain = float(weather.get("current", {}).get("precipitation") or hourly_rain[current_idx] or 0)
-        bike_stress = calc_bike_stress(stats)
-        cbmf = calc_cbmf(current_rain, bike_stress)
-        row = {
-            "name": district["name"],
-            "city": district["city_short"],
-            "lon": round(district["centroid"]["lon"], 6),
-            "lat": round(district["centroid"]["lat"], 6),
-            "cbmf": cbmf,
-            "severity": severity(cbmf),
-            "rain_mm": round(current_rain, 2),
-            "bike_stress": round(bike_stress, 3),
-            "bike_station_count": stats["bike_station_count"],
-            "bike_capacity": stats["bike_capacity"],
-            "available_rent_bikes": stats["available_rent_bikes"],
-            "available_return_bikes": stats["available_return_bikes"],
-            "low_bike_station_count": stats["low_bike_station_count"],
-            "offline_station_count": stats["offline_station_count"],
-            "delay_min": round((cbmf - 1) * 28),
-            "trend_values": [calc_cbmf(float(hourly_rain[index] or 0), bike_stress) for index in trend_indexes],
+    rows = []
+    for unit, weather in zip(units, weather_points):
+        rain_mm, current_idx, all_times = current_weather(weather)
+        bikes_nearby = nearby(bikes, unit)
+        stops_nearby = nearby(bus_stops, unit)
+        bike_score, bike_detail = bike_failure_score(bikes_nearby)
+        bus_score, bus_detail = bus_delay_score(stops_nearby)
+        pressure = commute_pressure(bus_score, bike_score)
+        level = rain_level(rain_mm)
+        baseline, sample_count, baseline_status = baseline_for(unit["id"], now, history, pressure, level)
+        amplification = round(pressure / baseline, 2) if baseline and baseline > 0 else None
+        road = None
+        incident = None
+        components = {
+            "bus": round(0.58 * bus_score, 3),
+            "bike": round(0.42 * bike_score, 3),
+            "road": road,
+            "incident": incident,
         }
-        district_rows.append(row)
-        city_groups[district["city_short"]].append(row)
-        bike_update_times.extend(stats["bike_update_times"])
-
-    trend_values = [
-        round(statistics.mean(row["trend_values"][i] for row in district_rows), 2)
-        for i in range(len(time_axis))
-    ]
-
-    city_summary = []
-    for city, rows in city_groups.items():
-        city_summary.append(
+        available_components = {key: value for key, value in components.items() if isinstance(value, (int, float))}
+        total = sum(available_components.values()) or 1
+        contribution = {key: round(value / total, 3) for key, value in available_components.items()}
+        rows.append(
             {
-                "city": city,
-                "cbmf": round(statistics.mean(row["cbmf"] for row in rows), 2),
-                "rain_mm": round(statistics.mean(row["rain_mm"] for row in rows), 2),
-                "bike_stress": round(statistics.mean(row["bike_stress"] for row in rows), 3),
-                "district_count": len(rows),
-                "bike_station_count": sum(row["bike_station_count"] for row in rows),
-                "low_bike_station_count": sum(row["low_bike_station_count"] for row in rows),
+                "id": unit["id"],
+                "name": unit["name"],
+                "city": unit["city"],
+                "town": unit["town"],
+                "lon": round(unit["lon"], 6),
+                "lat": round(unit["lat"], 6),
+                "lines": sorted(set(line for line in unit["lines"] if line)),
+                "rain_mm": round(rain_mm, 2),
+                "rain_level": level,
+                "current_pressure": pressure,
+                "baseline_pressure": baseline,
+                "baseline_samples": sample_count,
+                "baseline_status": baseline_status,
+                "amplification": amplification,
+                "severity": severity(amplification),
+                "components": components,
+                "contribution": contribution,
+                **bike_detail,
+                **bus_detail,
             }
         )
 
-    overall_cbmf = round(statistics.mean(row["cbmf"] for row in district_rows), 2)
-    rank_data = sorted(district_rows, key=lambda row: row["cbmf"], reverse=True)
-    data = {
-        "metric_name": "雨天通勤崩潰放大係數",
-        "cbmf": overall_cbmf,
-        "avg_rain": round(statistics.mean(row["rain_mm"] for row in district_rows), 2),
-        "avg_bike_stress": round(statistics.mean(row["bike_stress"] for row in district_rows), 3),
-        "delay": round((overall_cbmf - 1) * 28),
-        "hotspots": len([row for row in district_rows if row["cbmf"] >= 1.55]),
-        "district_count": len(district_rows),
-        "city_summary": city_summary,
-        "rank_data": [
+    append_history(rows, now)
+    scored = [row for row in rows if row["amplification"] is not None]
+    ranking_key = lambda row: row["amplification"] if row["amplification"] is not None else row["current_pressure"]
+    rank_data = sorted(rows, key=ranking_key, reverse=True)[:10]
+    city_summary = []
+    for city in ("臺北", "新北"):
+        group = [row for row in rows if row["city"] == city]
+        scored_group = [row for row in group if row["amplification"] is not None]
+        city_summary.append(
             {
-                "name": row["name"],
-                "city": row["city"],
-                "score": row["cbmf"],
-                "rain_mm": row["rain_mm"],
-                "bike_stress": row["bike_stress"],
-                "delay_min": row["delay_min"],
+                "city": city,
+                "unit_count": len(group),
+                "avg_amplification": round(statistics.mean(row["amplification"] for row in scored_group), 2)
+                if scored_group
+                else None,
+                "avg_pressure": round(statistics.mean(row["current_pressure"] for row in group), 2) if group else None,
+                "baseline_ready_count": len([row for row in group if row["baseline_status"] == "ready"]),
             }
-            for row in rank_data[:10]
-        ],
-        "districts": district_rows,
-        "trend_labels": [label[11:16] for label in time_axis],
-        "trend_values": trend_values,
-        "time_axis": time_axis,
-        "update_time": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
-        "data_time": {
-            "weather_hour": all_times[current_idx],
-            "bike_latest_update": max(bike_update_times) if bike_update_times else None,
-        },
+        )
+
+    avg_amplification = round(statistics.mean(row["amplification"] for row in scored), 2) if scored else None
+    avg_pressure = round(statistics.mean(row["current_pressure"] for row in rows), 2)
+    return {
+        "metric_name": "雨天通勤崩潰放大係數",
+        "unit_name": "捷運站周邊",
+        "radius_m": STATION_RADIUS_M,
+        "amplification": avg_amplification,
+        "current_pressure": avg_pressure,
+        "baseline_ready_count": len([row for row in rows if row["baseline_status"] == "ready"]),
+        "unit_count": len(rows),
+        "avg_rain": round(statistics.mean(row["rain_mm"] for row in rows), 2),
+        "rain_level": max(row["rain_level"] for row in rows),
+        "update_time": now.isoformat(timespec="seconds"),
+        "city_summary": city_summary,
+        "rank_data": rank_data,
+        "units": rows,
         "alignment": {
-            "spatial_unit": "雙北 41 行政區",
-            "time_unit": "逐時降雨趨勢；YouBike 為同批次即時快照",
-            "formula": "CBMF = 1 + 0.62 * min(1.6, rain_mm / 10) + 0.58 * bike_stress",
+            "spatial_unit": f"捷運站周邊 {STATION_RADIUS_M} 公尺",
+            "time_unit": "即時交通壓力；baseline 為同星期、同時段、非雨天本機歷史快照中位數",
+            "formula": "RainAmplification(i,t) = CurrentPressure(i,t) / MedianPressure(i,same weekday/hour,no-rain)",
         },
         "sources": [
-            {
-                "name": "TDX YouBike Station/Availability - Taipei",
-                "url": "https://tdx.transportdata.tw/api/basic/v2/Bike/Station/City/Taipei",
-            },
-            {
-                "name": "TDX YouBike Station/Availability - NewTaipei",
-                "url": "https://tdx.transportdata.tw/api/basic/v2/Bike/Station/City/NewTaipei",
-            },
-            {
-                "name": "Open-Meteo Forecast API precipitation",
-                "url": "https://open-meteo.com/",
-            },
-            {
-                "name": "Taipei City Dashboard metrotaipei_town.geojson",
-                "url": "../Taipei-City-Dashboard-FE/public/mapData/metrotaipei_town.geojson",
-            },
+            {"name": "TDX TRTC Metro Station", "url": TDX_METRO_STATIONS},
+            {"name": "TDX Bus Stop / EstimatedTimeOfArrival - Taipei", "url": TDX_BUS_ETA.format(city="Taipei")},
+            {"name": "TDX Bus Stop / EstimatedTimeOfArrival - NewTaipei", "url": TDX_BUS_ETA.format(city="NewTaipei")},
+            {"name": "TDX YouBike Station/Availability - Taipei", "url": TDX_BIKE_STATION.format(city="Taipei")},
+            {"name": "TDX YouBike Station/Availability - NewTaipei", "url": TDX_BIKE_STATION.format(city="NewTaipei")},
+            {"name": "Open-Meteo Forecast API precipitation", "url": "https://open-meteo.com/"},
         ],
         "notes": [
-            "主排名只使用臺北市與新北市皆可取得且可對齊到行政區的資料。",
-            "道路即時速率目前 TDX Live API 支援臺北市但不接受 NewTaipei，因此未納入主 CBMF 排名。",
+            "本版主指標改為放大係數：目前通勤壓力除以同星期、同時段、非雨天 baseline。",
+            "若 baseline 樣本不足，頁面會顯示基準累積中，不硬產生看似精準的雨天倍率。",
+            "道路與事故/施工資料尚未納入主指標，因目前可用即時道路資料無法對臺北與新北做一致覆蓋。",
+            "雨量目前使用 Open-Meteo 逐時降雨；若接上 10/30/60 分鐘雨量站資料，可直接替換 RainLevel。",
         ],
     }
-    return data
+
+
+def severity(amplification):
+    if amplification is None:
+        return "collecting"
+    if amplification > 2:
+        return "severe"
+    if amplification >= 1.6:
+        return "high"
+    if amplification >= 1.3:
+        return "medium"
+    if amplification >= 1.1:
+        return "low"
+    return "normal"
 
 
 def main():
     data = build_result()
     with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=2)
-    print(f"Data saved: CBMF={data['cbmf']} districts={data['district_count']} updated={data['update_time']}")
+    print(
+        "Data saved: "
+        f"units={data['unit_count']} pressure={data['current_pressure']} amplification={data['amplification']}"
+    )
 
 
 if __name__ == "__main__":
