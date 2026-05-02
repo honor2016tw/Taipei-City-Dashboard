@@ -3,7 +3,7 @@
   "unit_name": "捷運站周邊",
   "radius_m": 500,
   "amplification": 1.0,
-  "current_pressure": 0.88,
+  "current_pressure": 0.25,
   "baseline_ready_count": 0,
   "unit_count": 110,
   "avg_rain": 0.0,
@@ -14,407 +14,467 @@
       "city": "臺北",
       "unit_count": 75,
       "avg_amplification": 1.0,
-      "avg_pressure": 0.88,
+      "avg_pressure": 0.25,
       "baseline_ready_count": 0
     },
     {
       "city": "新北",
       "unit_count": 35,
       "avg_amplification": 1.0,
-      "avg_pressure": 0.87,
+      "avg_pressure": 0.24,
       "baseline_ready_count": 0
     }
   ],
   "rank_data": [
     {
-      "id": "TRTC-BL01",
-      "name": "頂埔",
-      "city": "新北",
-      "town": "土城區",
-      "lon": 121.418744,
-      "lat": 24.959351,
+      "id": "TRTC-G08",
+      "name": "台電大樓",
+      "city": "臺北",
+      "town": "大安區",
+      "lon": 121.528143,
+      "lat": 25.020733,
       "lines": [
-        "BL"
+        "G0"
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.794,
-      "baseline_pressure": 0.794,
+      "current_pressure": 0.254,
+      "baseline_pressure": 0.715,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
+      "amplification": 0.36,
       "severity": "normal",
       "components": {
-        "bus": 0.794,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.2,
+        "bike_return": 0.2,
+        "bus_delay": 0.5127499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.219,
+        "bike_return": 0.219,
+        "bus_delay": 0.562,
+        "walk_rain": 0.0
       },
-      "bike_station_count": 5,
-      "no_bike_rate": 0.0,
-      "no_return_rate": 0.0,
+      "bike_station_count": 20,
+      "no_bike_rate": 0.2,
+      "no_return_rate": 0.2,
       "offline_rate": 0.0,
-      "available_rent_bikes": 60,
-      "available_return_bikes": 135,
-      "bus_stop_count": 50,
-      "bus_eta_sample_count": 29,
-      "median_eta_min": 13.6,
-      "bus_issue_rate": 0.46
+      "available_rent_bikes": 199,
+      "available_return_bikes": 174,
+      "bus_stop_count": 180,
+      "bus_eta_sample_count": 124,
+      "median_eta_min": 11.6,
+      "bus_issue_rate": 0.311,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
-      "id": "TRTC-BL02",
-      "name": "永寧",
+      "id": "TRTC-O04",
+      "name": "頂溪",
       "city": "新北",
-      "town": "土城區",
-      "lon": 121.43613,
-      "lat": 24.96682,
+      "town": "永和區",
+      "lon": 121.515398,
+      "lat": 25.01308,
       "lines": [
-        "BL"
+        "O0"
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.998,
-      "baseline_pressure": 0.998,
+      "current_pressure": 0.372,
+      "baseline_pressure": 1.028,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
+      "amplification": 0.36,
       "severity": "normal",
       "components": {
-        "bus": 0.998,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.6,
+        "bike_return": 0.1,
+        "bus_delay": 0.64075,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
-      },
-      "bike_station_count": 8,
-      "no_bike_rate": 0.0,
-      "no_return_rate": 0.0,
-      "offline_rate": 0.0,
-      "available_rent_bikes": 101,
-      "available_return_bikes": 128,
-      "bus_stop_count": 89,
-      "bus_eta_sample_count": 58,
-      "median_eta_min": 18.4,
-      "bus_issue_rate": 0.494
-    },
-    {
-      "id": "TRTC-BL03",
-      "name": "土城",
-      "city": "新北",
-      "town": "土城區",
-      "lon": 121.44432,
-      "lat": 24.97313,
-      "lines": [
-        "BL"
-      ],
-      "rain_mm": 0.0,
-      "rain_level": 0,
-      "current_pressure": 1.165,
-      "baseline_pressure": 1.165,
-      "baseline_samples": 1,
-      "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
-      "severity": "normal",
-      "components": {
-        "bus": 1.039,
-        "bike": 0.126,
-        "road": null,
-        "incident": null
-      },
-      "contribution": {
-        "bus": 0.892,
-        "bike": 0.108
+        "bike_pickup": 0.448,
+        "bike_return": 0.075,
+        "bus_delay": 0.478,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
-      "no_bike_rate": 0.3,
-      "no_return_rate": 0.0,
-      "offline_rate": 0.0,
-      "available_rent_bikes": 73,
-      "available_return_bikes": 176,
-      "bus_stop_count": 61,
-      "bus_eta_sample_count": 39,
-      "median_eta_min": 19.7,
-      "bus_issue_rate": 0.475
-    },
-    {
-      "id": "TRTC-BL04",
-      "name": "海山",
-      "city": "新北",
-      "town": "土城區",
-      "lon": 121.448787,
-      "lat": 24.985348,
-      "lines": [
-        "BL"
-      ],
-      "rain_mm": 0.0,
-      "rain_level": 0,
-      "current_pressure": 1.038,
-      "baseline_pressure": 1.038,
-      "baseline_samples": 1,
-      "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
-      "severity": "normal",
-      "components": {
-        "bus": 0.814,
-        "bike": 0.224,
-        "road": null,
-        "incident": null
-      },
-      "contribution": {
-        "bus": 0.784,
-        "bike": 0.216
-      },
-      "bike_station_count": 15,
-      "no_bike_rate": 0.533,
-      "no_return_rate": 0.0,
-      "offline_rate": 0.0,
-      "available_rent_bikes": 118,
-      "available_return_bikes": 403,
-      "bus_stop_count": 105,
-      "bus_eta_sample_count": 73,
-      "median_eta_min": 14.5,
-      "bus_issue_rate": 0.438
-    },
-    {
-      "id": "TRTC-BL05",
-      "name": "亞東醫院",
-      "city": "新北",
-      "town": "板橋區",
-      "lon": 121.452465,
-      "lat": 24.99828,
-      "lines": [
-        "BL"
-      ],
-      "rain_mm": 0.0,
-      "rain_level": 0,
-      "current_pressure": 0.772,
-      "baseline_pressure": 0.772,
-      "baseline_samples": 1,
-      "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
-      "severity": "normal",
-      "components": {
-        "bus": 0.73,
-        "bike": 0.042,
-        "road": null,
-        "incident": null
-      },
-      "contribution": {
-        "bus": 0.946,
-        "bike": 0.054
-      },
-      "bike_station_count": 10,
-      "no_bike_rate": 0.1,
-      "no_return_rate": 0.0,
-      "offline_rate": 0.0,
-      "available_rent_bikes": 162,
-      "available_return_bikes": 236,
-      "bus_stop_count": 118,
-      "bus_eta_sample_count": 80,
-      "median_eta_min": 13.2,
-      "bus_issue_rate": 0.381
-    },
-    {
-      "id": "TRTC-BL06",
-      "name": "府中",
-      "city": "新北",
-      "town": "板橋區",
-      "lon": 121.459276,
-      "lat": 25.008465,
-      "lines": [
-        "BL"
-      ],
-      "rain_mm": 0.0,
-      "rain_level": 0,
-      "current_pressure": 0.765,
-      "baseline_pressure": 0.765,
-      "baseline_samples": 1,
-      "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
-      "severity": "normal",
-      "components": {
-        "bus": 0.723,
-        "bike": 0.042,
-        "road": null,
-        "incident": null
-      },
-      "contribution": {
-        "bus": 0.945,
-        "bike": 0.055
-      },
-      "bike_station_count": 10,
-      "no_bike_rate": 0.1,
+      "no_bike_rate": 0.6,
       "no_return_rate": 0.1,
       "offline_rate": 0.0,
-      "available_rent_bikes": 254,
-      "available_return_bikes": 204,
-      "bus_stop_count": 218,
-      "bus_eta_sample_count": 171,
-      "median_eta_min": 14.3,
-      "bus_issue_rate": 0.294
+      "available_rent_bikes": 54,
+      "available_return_bikes": 133,
+      "bus_stop_count": 165,
+      "bus_eta_sample_count": 108,
+      "median_eta_min": 14.7,
+      "bus_issue_rate": 0.358,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
-      "id": "TRTC-BL07",
-      "name": "板橋",
+      "id": "TRTC-O53",
+      "name": "三民高中",
       "city": "新北",
-      "town": "板橋區",
-      "lon": 121.462671,
-      "lat": 25.014098,
+      "town": "蘆洲區",
+      "lon": 121.473365,
+      "lat": 25.085425,
       "lines": [
-        "BL"
+        "O5"
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.683,
-      "baseline_pressure": 0.683,
+      "current_pressure": 0.399,
+      "baseline_pressure": 1.12,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
+      "amplification": 0.36,
       "severity": "normal",
       "components": {
-        "bus": 0.683,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.545,
+        "bike_return": 0.182,
+        "bus_delay": 0.7079999999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.38,
+        "bike_return": 0.127,
+        "bus_delay": 0.493,
+        "walk_rain": 0.0
       },
-      "bike_station_count": 12,
-      "no_bike_rate": 0.0,
-      "no_return_rate": 0.0,
+      "bike_station_count": 11,
+      "no_bike_rate": 0.545,
+      "no_return_rate": 0.182,
+      "offline_rate": 0.091,
+      "available_rent_bikes": 45,
+      "available_return_bikes": 227,
+      "bus_stop_count": 237,
+      "bus_eta_sample_count": 131,
+      "median_eta_min": 15.7,
+      "bus_issue_rate": 0.477,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
+    },
+    {
+      "id": "TRTC-BR10",
+      "name": "忠孝復興",
+      "city": "臺北",
+      "town": "大安區",
+      "lon": 121.543703,
+      "lat": 25.041104,
+      "lines": [
+        "BR"
+      ],
+      "rain_mm": 0.0,
+      "rain_level": 0,
+      "current_pressure": 0.285,
+      "baseline_pressure": 0.811,
+      "baseline_samples": 1,
+      "baseline_status": "seeded_from_current_dry",
+      "amplification": 0.35,
+      "severity": "normal",
+      "components": {
+        "bike_pickup": 0.111,
+        "bike_return": 0.333,
+        "bus_delay": 0.5807499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
+      },
+      "contribution": {
+        "bike_pickup": 0.108,
+        "bike_return": 0.325,
+        "bus_delay": 0.567,
+        "walk_rain": 0.0
+      },
+      "bike_station_count": 18,
+      "no_bike_rate": 0.111,
+      "no_return_rate": 0.333,
       "offline_rate": 0.0,
-      "available_rent_bikes": 342,
-      "available_return_bikes": 393,
-      "bus_stop_count": 230,
-      "bus_eta_sample_count": 175,
-      "median_eta_min": 13.5,
-      "bus_issue_rate": 0.278
+      "available_rent_bikes": 323,
+      "available_return_bikes": 217,
+      "bus_stop_count": 139,
+      "bus_eta_sample_count": 109,
+      "median_eta_min": 14.0,
+      "bus_issue_rate": 0.223,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
-      "id": "TRTC-BL08",
-      "name": "新埔",
-      "city": "新北",
-      "town": "板橋區",
-      "lon": 121.468363,
-      "lat": 25.023736,
+      "id": "TRTC-BL15",
+      "name": "忠孝復興",
+      "city": "臺北",
+      "town": "大安區",
+      "lon": 121.543769,
+      "lat": 25.041633,
       "lines": [
         "BL"
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.831,
-      "baseline_pressure": 0.831,
+      "current_pressure": 0.279,
+      "baseline_pressure": 0.81,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
+      "amplification": 0.34,
       "severity": "normal",
       "components": {
-        "bus": 0.803,
-        "bike": 0.028,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.105,
+        "bike_return": 0.316,
+        "bus_delay": 0.5832499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.966,
-        "bike": 0.034
+        "bike_pickup": 0.105,
+        "bike_return": 0.315,
+        "bus_delay": 0.581,
+        "walk_rain": 0.0
+      },
+      "bike_station_count": 19,
+      "no_bike_rate": 0.105,
+      "no_return_rate": 0.316,
+      "offline_rate": 0.0,
+      "available_rent_bikes": 352,
+      "available_return_bikes": 218,
+      "bus_stop_count": 120,
+      "bus_eta_sample_count": 93,
+      "median_eta_min": 14.0,
+      "bus_issue_rate": 0.233,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
+    },
+    {
+      "id": "TRTC-BL16",
+      "name": "忠孝敦化",
+      "city": "臺北",
+      "town": "大安區",
+      "lon": 121.55045,
+      "lat": 25.041505,
+      "lines": [
+        "BL"
+      ],
+      "rain_mm": 0.0,
+      "rain_level": 0,
+      "current_pressure": 0.269,
+      "baseline_pressure": 0.798,
+      "baseline_samples": 1,
+      "baseline_status": "seeded_from_current_dry",
+      "amplification": 0.34,
+      "severity": "normal",
+      "components": {
+        "bike_pickup": 0.267,
+        "bike_return": 0.133,
+        "bus_delay": 0.56925,
+        "walk_rain": 0.0,
+        "road_interference": null
+      },
+      "contribution": {
+        "bike_pickup": 0.275,
+        "bike_return": 0.137,
+        "bus_delay": 0.587,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
-      "no_bike_rate": 0.067,
-      "no_return_rate": 0.0,
-      "offline_rate": 0.0,
-      "available_rent_bikes": 156,
-      "available_return_bikes": 544,
-      "bus_stop_count": 193,
-      "bus_eta_sample_count": 131,
-      "median_eta_min": 15.9,
-      "bus_issue_rate": 0.326
+      "no_bike_rate": 0.267,
+      "no_return_rate": 0.133,
+      "offline_rate": 0.067,
+      "available_rent_bikes": 186,
+      "available_return_bikes": 191,
+      "bus_stop_count": 287,
+      "bus_eta_sample_count": 196,
+      "median_eta_min": 13.3,
+      "bus_issue_rate": 0.282,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
-      "id": "TRTC-BL09",
-      "name": "江子翠",
-      "city": "新北",
-      "town": "板橋區",
-      "lon": 121.47257,
-      "lat": 25.030265,
-      "lines": [
-        "BL"
-      ],
-      "rain_mm": 0.0,
-      "rain_level": 0,
-      "current_pressure": 0.789,
-      "baseline_pressure": 0.789,
-      "baseline_samples": 1,
-      "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
-      "severity": "normal",
-      "components": {
-        "bus": 0.641,
-        "bike": 0.148,
-        "road": null,
-        "incident": null
-      },
-      "contribution": {
-        "bus": 0.812,
-        "bike": 0.188
-      },
-      "bike_station_count": 17,
-      "no_bike_rate": 0.353,
-      "no_return_rate": 0.0,
-      "offline_rate": 0.0,
-      "available_rent_bikes": 81,
-      "available_return_bikes": 424,
-      "bus_stop_count": 86,
-      "bus_eta_sample_count": 65,
-      "median_eta_min": 12.4,
-      "bus_issue_rate": 0.279
-    },
-    {
-      "id": "TRTC-BL10",
-      "name": "龍山寺",
+      "id": "TRTC-BR02",
+      "name": "木柵",
       "city": "臺北",
-      "town": "萬華區",
-      "lon": 121.500325,
-      "lat": 25.03528,
+      "town": "文山區",
+      "lon": 121.573127,
+      "lat": 24.99824,
       "lines": [
-        "BL"
+        "BR"
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.687,
-      "baseline_pressure": 0.687,
+      "current_pressure": 0.452,
+      "baseline_pressure": 1.333,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
-      "amplification": 1.0,
+      "amplification": 0.34,
       "severity": "normal",
       "components": {
-        "bus": 0.601,
-        "bike": 0.086,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.8,
+        "bike_return": 0.0,
+        "bus_delay": 0.8280000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.875,
-        "bike": 0.125
+        "bike_pickup": 0.491,
+        "bike_return": 0.0,
+        "bus_delay": 0.509,
+        "walk_rain": 0.0
       },
-      "bike_station_count": 17,
-      "no_bike_rate": 0.176,
-      "no_return_rate": 0.059,
-      "offline_rate": 0.118,
-      "available_rent_bikes": 282,
-      "available_return_bikes": 300,
-      "bus_stop_count": 269,
-      "bus_eta_sample_count": 189,
-      "median_eta_min": 11.3,
-      "bus_issue_rate": 0.283
+      "bike_station_count": 5,
+      "no_bike_rate": 0.8,
+      "no_return_rate": 0.0,
+      "offline_rate": 0.0,
+      "available_rent_bikes": 6,
+      "available_return_bikes": 155,
+      "bus_stop_count": 246,
+      "bus_eta_sample_count": 169,
+      "median_eta_min": 19.1,
+      "bus_issue_rate": 0.447,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
+    },
+    {
+      "id": "TRTC-BR03",
+      "name": "萬芳社區",
+      "city": "臺北",
+      "town": "文山區",
+      "lon": 121.568088,
+      "lat": 24.99857,
+      "lines": [
+        "BR"
+      ],
+      "rain_mm": 0.0,
+      "rain_level": 0,
+      "current_pressure": 0.38,
+      "baseline_pressure": 1.126,
+      "baseline_samples": 1,
+      "baseline_status": "seeded_from_current_dry",
+      "amplification": 0.34,
+      "severity": "normal",
+      "components": {
+        "bike_pickup": 0.667,
+        "bike_return": 0.0,
+        "bus_delay": 0.70275,
+        "walk_rain": 0.0,
+        "road_interference": null
+      },
+      "contribution": {
+        "bike_pickup": 0.487,
+        "bike_return": 0.0,
+        "bus_delay": 0.513,
+        "walk_rain": 0.0
+      },
+      "bike_station_count": 3,
+      "no_bike_rate": 0.667,
+      "no_return_rate": 0.0,
+      "offline_rate": 0.0,
+      "available_rent_bikes": 8,
+      "available_return_bikes": 89,
+      "bus_stop_count": 134,
+      "bus_eta_sample_count": 109,
+      "median_eta_min": 16.2,
+      "bus_issue_rate": 0.381,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
+    },
+    {
+      "id": "TRTC-BR12",
+      "name": "中山國中",
+      "city": "臺北",
+      "town": "中山區",
+      "lon": 121.544215,
+      "lat": 25.06085,
+      "lines": [
+        "BR"
+      ],
+      "rain_mm": 0.0,
+      "rain_level": 0,
+      "current_pressure": 0.265,
+      "baseline_pressure": 0.77,
+      "baseline_samples": 1,
+      "baseline_status": "seeded_from_current_dry",
+      "amplification": 0.34,
+      "severity": "normal",
+      "components": {
+        "bike_pickup": 0.389,
+        "bike_return": 0.056,
+        "bus_delay": 0.5075000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
+      },
+      "contribution": {
+        "bike_pickup": 0.408,
+        "bike_return": 0.059,
+        "bus_delay": 0.533,
+        "walk_rain": 0.0
+      },
+      "bike_station_count": 18,
+      "no_bike_rate": 0.389,
+      "no_return_rate": 0.056,
+      "offline_rate": 0.0,
+      "available_rent_bikes": 119,
+      "available_return_bikes": 417,
+      "bus_stop_count": 219,
+      "bus_eta_sample_count": 161,
+      "median_eta_min": 11.8,
+      "bus_issue_rate": 0.26,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
+    },
+    {
+      "id": "TRTC-BR20",
+      "name": "大湖公園",
+      "city": "臺北",
+      "town": "內湖區",
+      "lon": 121.602214,
+      "lat": 25.083805,
+      "lines": [
+        "BR"
+      ],
+      "rain_mm": 0.0,
+      "rain_level": 0,
+      "current_pressure": 0.352,
+      "baseline_pressure": 1.041,
+      "baseline_samples": 1,
+      "baseline_status": "seeded_from_current_dry",
+      "amplification": 0.34,
+      "severity": "normal",
+      "components": {
+        "bike_pickup": 0.667,
+        "bike_return": 0.0,
+        "bus_delay": 0.6012500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
+      },
+      "contribution": {
+        "bike_pickup": 0.526,
+        "bike_return": 0.0,
+        "bus_delay": 0.474,
+        "walk_rain": 0.0
+      },
+      "bike_station_count": 3,
+      "no_bike_rate": 0.667,
+      "no_return_rate": 0.0,
+      "offline_rate": 0.0,
+      "available_rent_bikes": 7,
+      "available_return_bikes": 82,
+      "bus_stop_count": 116,
+      "bus_eta_sample_count": 77,
+      "median_eta_min": 13.1,
+      "bus_issue_rate": 0.44,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     }
   ],
   "units": [
@@ -430,21 +490,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.794,
-      "baseline_pressure": 0.794,
+      "current_pressure": 0.174,
+      "baseline_pressure": 0.174,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.794,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.625,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.0,
@@ -455,7 +518,10 @@
       "bus_stop_count": 50,
       "bus_eta_sample_count": 29,
       "median_eta_min": 13.6,
-      "bus_issue_rate": 0.46
+      "bus_issue_rate": 0.46,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL02",
@@ -469,21 +535,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.998,
-      "baseline_pressure": 0.998,
+      "current_pressure": 0.226,
+      "baseline_pressure": 0.226,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.998,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.8134999999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.0,
@@ -494,7 +563,10 @@
       "bus_stop_count": 89,
       "bus_eta_sample_count": 58,
       "median_eta_min": 18.4,
-      "bus_issue_rate": 0.494
+      "bus_issue_rate": 0.494,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL03",
@@ -508,21 +580,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.165,
-      "baseline_pressure": 1.165,
+      "current_pressure": 0.322,
+      "baseline_pressure": 0.322,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.039,
-        "bike": 0.126,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.3,
+        "bike_return": 0.0,
+        "bus_delay": 0.8575,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.892,
-        "bike": 0.108
+        "bike_pickup": 0.259,
+        "bike_return": 0.0,
+        "bus_delay": 0.741,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.3,
@@ -533,7 +608,10 @@
       "bus_stop_count": 61,
       "bus_eta_sample_count": 39,
       "median_eta_min": 19.7,
-      "bus_issue_rate": 0.475
+      "bus_issue_rate": 0.475,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL04",
@@ -547,21 +625,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.038,
-      "baseline_pressure": 1.038,
+      "current_pressure": 0.33,
+      "baseline_pressure": 0.33,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.814,
-        "bike": 0.224,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.533,
+        "bike_return": 0.0,
+        "bus_delay": 0.65325,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.784,
-        "bike": 0.216
+        "bike_pickup": 0.449,
+        "bike_return": 0.0,
+        "bus_delay": 0.551,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
       "no_bike_rate": 0.533,
@@ -572,7 +653,10 @@
       "bus_stop_count": 105,
       "bus_eta_sample_count": 73,
       "median_eta_min": 14.5,
-      "bus_issue_rate": 0.438
+      "bus_issue_rate": 0.438,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL05",
@@ -586,21 +670,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.772,
-      "baseline_pressure": 0.772,
+      "current_pressure": 0.192,
+      "baseline_pressure": 0.192,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.73,
-        "bike": 0.042,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.1,
+        "bike_return": 0.0,
+        "bus_delay": 0.5902499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.946,
-        "bike": 0.054
+        "bike_pickup": 0.145,
+        "bike_return": 0.0,
+        "bus_delay": 0.855,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.1,
@@ -611,7 +698,10 @@
       "bus_stop_count": 118,
       "bus_eta_sample_count": 80,
       "median_eta_min": 13.2,
-      "bus_issue_rate": 0.381
+      "bus_issue_rate": 0.381,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL06",
@@ -625,21 +715,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.765,
-      "baseline_pressure": 0.765,
+      "current_pressure": 0.225,
+      "baseline_pressure": 0.225,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.723,
-        "bike": 0.042,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.1,
+        "bike_return": 0.1,
+        "bus_delay": 0.6097500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.945,
-        "bike": 0.055
+        "bike_pickup": 0.123,
+        "bike_return": 0.123,
+        "bus_delay": 0.753,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.1,
@@ -650,7 +743,10 @@
       "bus_stop_count": 218,
       "bus_eta_sample_count": 171,
       "median_eta_min": 14.3,
-      "bus_issue_rate": 0.294
+      "bus_issue_rate": 0.294,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL07",
@@ -664,21 +760,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.683,
-      "baseline_pressure": 0.683,
+      "current_pressure": 0.16,
+      "baseline_pressure": 0.16,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.683,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.5757500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 12,
       "no_bike_rate": 0.0,
@@ -689,7 +788,10 @@
       "bus_stop_count": 230,
       "bus_eta_sample_count": 175,
       "median_eta_min": 13.5,
-      "bus_issue_rate": 0.278
+      "bus_issue_rate": 0.278,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL08",
@@ -703,21 +805,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.831,
-      "baseline_pressure": 0.831,
+      "current_pressure": 0.207,
+      "baseline_pressure": 0.207,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.803,
-        "bike": 0.028,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.067,
+        "bike_return": 0.0,
+        "bus_delay": 0.6777500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.966,
-        "bike": 0.034
+        "bike_pickup": 0.09,
+        "bike_return": 0.0,
+        "bus_delay": 0.91,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
       "no_bike_rate": 0.067,
@@ -728,7 +833,10 @@
       "bus_stop_count": 193,
       "bus_eta_sample_count": 131,
       "median_eta_min": 15.9,
-      "bus_issue_rate": 0.326
+      "bus_issue_rate": 0.326,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL09",
@@ -742,21 +850,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.789,
-      "baseline_pressure": 0.789,
+      "current_pressure": 0.247,
+      "baseline_pressure": 0.247,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.641,
-        "bike": 0.148,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.353,
+        "bike_return": 0.0,
+        "bus_delay": 0.53475,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.812,
-        "bike": 0.188
+        "bike_pickup": 0.398,
+        "bike_return": 0.0,
+        "bus_delay": 0.602,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.353,
@@ -767,7 +878,10 @@
       "bus_stop_count": 86,
       "bus_eta_sample_count": 65,
       "median_eta_min": 12.4,
-      "bus_issue_rate": 0.279
+      "bus_issue_rate": 0.279,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL10",
@@ -781,21 +895,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.687,
-      "baseline_pressure": 0.687,
+      "current_pressure": 0.203,
+      "baseline_pressure": 0.203,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.601,
-        "bike": 0.086,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.176,
+        "bike_return": 0.059,
+        "bus_delay": 0.49450000000000005,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.875,
-        "bike": 0.125
+        "bike_pickup": 0.241,
+        "bike_return": 0.081,
+        "bus_delay": 0.678,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.176,
@@ -806,7 +923,10 @@
       "bus_stop_count": 269,
       "bus_eta_sample_count": 189,
       "median_eta_min": 11.3,
-      "bus_issue_rate": 0.283
+      "bus_issue_rate": 0.283,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL11",
@@ -821,21 +941,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.713,
-      "baseline_pressure": 0.713,
+      "current_pressure": 0.174,
+      "baseline_pressure": 0.174,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.681,
-        "bike": 0.032,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.077,
+        "bus_delay": 0.5509999999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.955,
-        "bike": 0.045
+        "bike_pickup": 0.0,
+        "bike_return": 0.123,
+        "bus_delay": 0.877,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.0,
@@ -846,7 +969,10 @@
       "bus_stop_count": 422,
       "bus_eta_sample_count": 279,
       "median_eta_min": 12.4,
-      "bus_issue_rate": 0.344
+      "bus_issue_rate": 0.344,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL12",
@@ -861,21 +987,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.768,
-      "baseline_pressure": 0.768,
+      "current_pressure": 0.219,
+      "baseline_pressure": 0.219,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.736,
-        "bike": 0.032,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.077,
+        "bike_return": 0.077,
+        "bus_delay": 0.6355,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.958,
-        "bike": 0.042
+        "bike_pickup": 0.098,
+        "bike_return": 0.098,
+        "bus_delay": 0.805,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.077,
@@ -886,7 +1015,10 @@
       "bus_stop_count": 308,
       "bus_eta_sample_count": 234,
       "median_eta_min": 15.3,
-      "bus_issue_rate": 0.247
+      "bus_issue_rate": 0.247,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL13",
@@ -900,21 +1032,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.897,
-      "baseline_pressure": 0.897,
+      "current_pressure": 0.234,
+      "baseline_pressure": 0.234,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.877,
-        "bike": 0.02,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.048,
+        "bike_return": 0.048,
+        "bus_delay": 0.7462500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.978,
-        "bike": 0.022
+        "bike_pickup": 0.057,
+        "bike_return": 0.057,
+        "bus_delay": 0.886,
+        "walk_rain": 0.0
       },
       "bike_station_count": 21,
       "no_bike_rate": 0.048,
@@ -925,7 +1060,10 @@
       "bus_stop_count": 203,
       "bus_eta_sample_count": 131,
       "median_eta_min": 17.7,
-      "bus_issue_rate": 0.33
+      "bus_issue_rate": 0.33,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL14",
@@ -939,21 +1077,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.738,
-      "baseline_pressure": 0.738,
+      "current_pressure": 0.202,
+      "baseline_pressure": 0.202,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.698,
-        "bike": 0.04,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.095,
+        "bike_return": 0.048,
+        "bus_delay": 0.58375,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.946,
-        "bike": 0.054
+        "bike_pickup": 0.131,
+        "bike_return": 0.066,
+        "bus_delay": 0.803,
+        "walk_rain": 0.0
       },
       "bike_station_count": 21,
       "no_bike_rate": 0.095,
@@ -964,7 +1105,10 @@
       "bus_stop_count": 183,
       "bus_eta_sample_count": 127,
       "median_eta_min": 13.6,
-      "bus_issue_rate": 0.295
+      "bus_issue_rate": 0.295,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL15",
@@ -978,21 +1122,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.81,
-      "baseline_pressure": 0.81,
+      "current_pressure": 0.279,
+      "baseline_pressure": 0.279,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.677,
-        "bike": 0.133,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.105,
+        "bike_return": 0.316,
+        "bus_delay": 0.5832499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.836,
-        "bike": 0.164
+        "bike_pickup": 0.105,
+        "bike_return": 0.315,
+        "bus_delay": 0.581,
+        "walk_rain": 0.0
       },
       "bike_station_count": 19,
       "no_bike_rate": 0.105,
@@ -1003,7 +1150,10 @@
       "bus_stop_count": 120,
       "bus_eta_sample_count": 93,
       "median_eta_min": 14.0,
-      "bus_issue_rate": 0.233
+      "bus_issue_rate": 0.233,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL16",
@@ -1017,21 +1167,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.798,
-      "baseline_pressure": 0.798,
+      "current_pressure": 0.269,
+      "baseline_pressure": 0.269,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.679,
-        "bike": 0.119,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.267,
+        "bike_return": 0.133,
+        "bus_delay": 0.56925,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.851,
-        "bike": 0.149
+        "bike_pickup": 0.275,
+        "bike_return": 0.137,
+        "bus_delay": 0.587,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
       "no_bike_rate": 0.267,
@@ -1042,7 +1195,10 @@
       "bus_stop_count": 287,
       "bus_eta_sample_count": 196,
       "median_eta_min": 13.3,
-      "bus_issue_rate": 0.282
+      "bus_issue_rate": 0.282,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL17",
@@ -1056,21 +1212,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.861,
-      "baseline_pressure": 0.861,
+      "current_pressure": 0.246,
+      "baseline_pressure": 0.246,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.764,
-        "bike": 0.097,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.231,
+        "bus_delay": 0.653,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.887,
-        "bike": 0.113
+        "bike_pickup": 0.0,
+        "bike_return": 0.261,
+        "bus_delay": 0.739,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.0,
@@ -1081,7 +1240,10 @@
       "bus_stop_count": 143,
       "bus_eta_sample_count": 100,
       "median_eta_min": 15.5,
-      "bus_issue_rate": 0.287
+      "bus_issue_rate": 0.287,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL18",
@@ -1095,21 +1257,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.912,
-      "baseline_pressure": 0.912,
+      "current_pressure": 0.253,
+      "baseline_pressure": 0.253,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.839,
-        "bike": 0.073,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.077,
+        "bike_return": 0.154,
+        "bus_delay": 0.67825,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.92,
-        "bike": 0.08
+        "bike_pickup": 0.085,
+        "bike_return": 0.169,
+        "bus_delay": 0.746,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.077,
@@ -1120,7 +1285,10 @@
       "bus_stop_count": 203,
       "bus_eta_sample_count": 116,
       "median_eta_min": 15.2,
-      "bus_issue_rate": 0.433
+      "bus_issue_rate": 0.433,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL19",
@@ -1134,21 +1302,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.759,
-      "baseline_pressure": 0.759,
+      "current_pressure": 0.206,
+      "baseline_pressure": 0.206,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.675,
-        "bike": 0.084,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.2,
+        "bike_return": 0.0,
+        "bus_delay": 0.54325,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.889,
-        "bike": 0.111
+        "bike_pickup": 0.269,
+        "bike_return": 0.0,
+        "bus_delay": 0.731,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.2,
@@ -1159,7 +1330,10 @@
       "bus_stop_count": 179,
       "bus_eta_sample_count": 118,
       "median_eta_min": 12.1,
-      "bus_issue_rate": 0.358
+      "bus_issue_rate": 0.358,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL20",
@@ -1173,21 +1347,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.763,
-      "baseline_pressure": 0.763,
+      "current_pressure": 0.237,
+      "baseline_pressure": 0.237,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.693,
-        "bike": 0.07,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.167,
+        "bike_return": 0.111,
+        "bus_delay": 0.57525,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.908,
-        "bike": 0.092
+        "bike_pickup": 0.196,
+        "bike_return": 0.13,
+        "bus_delay": 0.674,
+        "walk_rain": 0.0
       },
       "bike_station_count": 18,
       "no_bike_rate": 0.167,
@@ -1198,7 +1375,10 @@
       "bus_stop_count": 144,
       "bus_eta_sample_count": 102,
       "median_eta_min": 13.3,
-      "bus_issue_rate": 0.306
+      "bus_issue_rate": 0.306,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL21",
@@ -1212,21 +1392,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.846,
-      "baseline_pressure": 0.846,
+      "current_pressure": 0.24,
+      "baseline_pressure": 0.24,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.786,
-        "bike": 0.06,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.143,
+        "bike_return": 0.071,
+        "bus_delay": 0.65125,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.929,
-        "bike": 0.071
+        "bike_pickup": 0.165,
+        "bike_return": 0.082,
+        "bus_delay": 0.753,
+        "walk_rain": 0.0
       },
       "bike_station_count": 14,
       "no_bike_rate": 0.143,
@@ -1237,7 +1420,10 @@
       "bus_stop_count": 183,
       "bus_eta_sample_count": 134,
       "median_eta_min": 15.0,
-      "bus_issue_rate": 0.355
+      "bus_issue_rate": 0.355,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL22",
@@ -1251,21 +1437,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.044,
-      "baseline_pressure": 1.044,
+      "current_pressure": 0.333,
+      "baseline_pressure": 0.333,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.915,
-        "bike": 0.129,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.308,
+        "bike_return": 0.154,
+        "bus_delay": 0.73575,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.876,
-        "bike": 0.124
+        "bike_pickup": 0.257,
+        "bike_return": 0.129,
+        "bus_delay": 0.614,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.308,
@@ -1276,7 +1465,10 @@
       "bus_stop_count": 236,
       "bus_eta_sample_count": 158,
       "median_eta_min": 16.4,
-      "bus_issue_rate": 0.483
+      "bus_issue_rate": 0.483,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BL23",
@@ -1291,21 +1483,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.899,
-      "baseline_pressure": 0.899,
+      "current_pressure": 0.213,
+      "baseline_pressure": 0.213,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.867,
-        "bike": 0.032,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.077,
+        "bus_delay": 0.68825,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.964,
-        "bike": 0.036
+        "bike_pickup": 0.0,
+        "bike_return": 0.101,
+        "bus_delay": 0.899,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.0,
@@ -1316,7 +1511,10 @@
       "bus_stop_count": 260,
       "bus_eta_sample_count": 172,
       "median_eta_min": 15.1,
-      "bus_issue_rate": 0.488
+      "bus_issue_rate": 0.488,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR01",
@@ -1330,21 +1528,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.18,
-      "baseline_pressure": 1.18,
+      "current_pressure": 0.351,
+      "baseline_pressure": 0.351,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.943,
-        "bike": 0.236,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.5,
+        "bike_return": 0.0,
+        "bus_delay": 0.7622500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.8,
-        "bike": 0.2
+        "bike_pickup": 0.396,
+        "bike_return": 0.0,
+        "bus_delay": 0.604,
+        "walk_rain": 0.0
       },
       "bike_station_count": 4,
       "no_bike_rate": 0.5,
@@ -1355,7 +1556,10 @@
       "bus_stop_count": 190,
       "bus_eta_sample_count": 117,
       "median_eta_min": 17.1,
-      "bus_issue_rate": 0.484
+      "bus_issue_rate": 0.484,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR02",
@@ -1369,21 +1573,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.333,
-      "baseline_pressure": 1.333,
+      "current_pressure": 0.452,
+      "baseline_pressure": 0.452,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.997,
-        "bike": 0.336,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.8,
+        "bike_return": 0.0,
+        "bus_delay": 0.8280000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.748,
-        "bike": 0.252
+        "bike_pickup": 0.491,
+        "bike_return": 0.0,
+        "bus_delay": 0.509,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.8,
@@ -1394,7 +1601,10 @@
       "bus_stop_count": 246,
       "bus_eta_sample_count": 169,
       "median_eta_min": 19.1,
-      "bus_issue_rate": 0.447
+      "bus_issue_rate": 0.447,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR03",
@@ -1408,21 +1618,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.126,
-      "baseline_pressure": 1.126,
+      "current_pressure": 0.38,
+      "baseline_pressure": 0.38,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.846,
-        "bike": 0.28,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.667,
+        "bike_return": 0.0,
+        "bus_delay": 0.70275,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.751,
-        "bike": 0.249
+        "bike_pickup": 0.487,
+        "bike_return": 0.0,
+        "bus_delay": 0.513,
+        "walk_rain": 0.0
       },
       "bike_station_count": 3,
       "no_bike_rate": 0.667,
@@ -1433,7 +1646,10 @@
       "bus_stop_count": 134,
       "bus_eta_sample_count": 109,
       "median_eta_min": 16.2,
-      "bus_issue_rate": 0.381
+      "bus_issue_rate": 0.381,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR04",
@@ -1447,21 +1663,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.764,
-      "baseline_pressure": 0.764,
+      "current_pressure": 0.171,
+      "baseline_pressure": 0.171,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.764,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.6147499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.0,
@@ -1472,7 +1691,10 @@
       "bus_stop_count": 213,
       "bus_eta_sample_count": 137,
       "median_eta_min": 13.7,
-      "bus_issue_rate": 0.404
+      "bus_issue_rate": 0.404,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR05",
@@ -1486,21 +1708,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.513,
-      "baseline_pressure": 0.513,
+      "current_pressure": 0.099,
+      "baseline_pressure": 0.099,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.513,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.35600000000000004,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 4,
       "no_bike_rate": 0.0,
@@ -1511,7 +1736,10 @@
       "bus_stop_count": 69,
       "bus_eta_sample_count": 31,
       "median_eta_min": 6.5,
-      "bus_issue_rate": 0.449
+      "bus_issue_rate": 0.449,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR06",
@@ -1525,21 +1753,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.899,
-      "baseline_pressure": 0.899,
+      "current_pressure": 0.215,
+      "baseline_pressure": 0.215,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.846,
-        "bike": 0.052,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.125,
+        "bike_return": 0.0,
+        "bus_delay": 0.64875,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.942,
-        "bike": 0.058
+        "bike_pickup": 0.162,
+        "bike_return": 0.0,
+        "bus_delay": 0.838,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.125,
@@ -1550,7 +1781,10 @@
       "bus_stop_count": 110,
       "bus_eta_sample_count": 55,
       "median_eta_min": 13.6,
-      "bus_issue_rate": 0.555
+      "bus_issue_rate": 0.555,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR07",
@@ -1564,21 +1798,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.788,
-      "baseline_pressure": 0.788,
+      "current_pressure": 0.212,
+      "baseline_pressure": 0.212,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.676,
-        "bike": 0.112,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.267,
+        "bike_return": 0.0,
+        "bus_delay": 0.4952500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.858,
-        "bike": 0.142
+        "bike_pickup": 0.35,
+        "bike_return": 0.0,
+        "bus_delay": 0.65,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
       "no_bike_rate": 0.267,
@@ -1589,7 +1826,10 @@
       "bus_stop_count": 188,
       "bus_eta_sample_count": 97,
       "median_eta_min": 9.8,
-      "bus_issue_rate": 0.511
+      "bus_issue_rate": 0.511,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR08",
@@ -1603,21 +1843,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.752,
-      "baseline_pressure": 0.752,
+      "current_pressure": 0.211,
+      "baseline_pressure": 0.211,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.628,
-        "bike": 0.124,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.294,
+        "bus_delay": 0.46625000000000005,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.835,
-        "bike": 0.165
+        "bike_pickup": 0.0,
+        "bike_return": 0.387,
+        "bus_delay": 0.613,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.0,
@@ -1628,7 +1871,10 @@
       "bus_stop_count": 156,
       "bus_eta_sample_count": 80,
       "median_eta_min": 9.4,
-      "bus_issue_rate": 0.455
+      "bus_issue_rate": 0.455,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR09",
@@ -1643,21 +1889,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.425,
-      "baseline_pressure": 0.425,
+      "current_pressure": 0.107,
+      "baseline_pressure": 0.107,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.397,
-        "bike": 0.028,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.067,
+        "bus_delay": 0.31925,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.934,
-        "bike": 0.066
+        "bike_pickup": 0.0,
+        "bike_return": 0.173,
+        "bus_delay": 0.827,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
       "no_bike_rate": 0.0,
@@ -1668,7 +1917,10 @@
       "bus_stop_count": 99,
       "bus_eta_sample_count": 81,
       "median_eta_min": 7.1,
-      "bus_issue_rate": 0.212
+      "bus_issue_rate": 0.212,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR10",
@@ -1682,21 +1934,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.811,
-      "baseline_pressure": 0.811,
+      "current_pressure": 0.285,
+      "baseline_pressure": 0.285,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.671,
-        "bike": 0.14,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.111,
+        "bike_return": 0.333,
+        "bus_delay": 0.5807499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.827,
-        "bike": 0.173
+        "bike_pickup": 0.108,
+        "bike_return": 0.325,
+        "bus_delay": 0.567,
+        "walk_rain": 0.0
       },
       "bike_station_count": 18,
       "no_bike_rate": 0.111,
@@ -1707,7 +1962,10 @@
       "bus_stop_count": 139,
       "bus_eta_sample_count": 109,
       "median_eta_min": 14.0,
-      "bus_issue_rate": 0.223
+      "bus_issue_rate": 0.223,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR11",
@@ -1722,21 +1980,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.775,
-      "baseline_pressure": 0.775,
+      "current_pressure": 0.257,
+      "baseline_pressure": 0.257,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.606,
-        "bike": 0.169,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.389,
+        "bike_return": 0.0,
+        "bus_delay": 0.5345,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.782,
-        "bike": 0.218
+        "bike_pickup": 0.421,
+        "bike_return": 0.0,
+        "bus_delay": 0.579,
+        "walk_rain": 0.0
       },
       "bike_station_count": 18,
       "no_bike_rate": 0.389,
@@ -1747,7 +2008,10 @@
       "bus_stop_count": 173,
       "bus_eta_sample_count": 146,
       "median_eta_min": 13.1,
-      "bus_issue_rate": 0.173
+      "bus_issue_rate": 0.173,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR12",
@@ -1761,21 +2025,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.77,
-      "baseline_pressure": 0.77,
+      "current_pressure": 0.265,
+      "baseline_pressure": 0.265,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.607,
-        "bike": 0.163,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.389,
+        "bike_return": 0.056,
+        "bus_delay": 0.5075000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.788,
-        "bike": 0.212
+        "bike_pickup": 0.408,
+        "bike_return": 0.059,
+        "bus_delay": 0.533,
+        "walk_rain": 0.0
       },
       "bike_station_count": 18,
       "no_bike_rate": 0.389,
@@ -1786,7 +2053,10 @@
       "bus_stop_count": 219,
       "bus_eta_sample_count": 161,
       "median_eta_min": 11.8,
-      "bus_issue_rate": 0.26
+      "bus_issue_rate": 0.26,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR13",
@@ -1800,21 +2070,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.518,
-      "baseline_pressure": 0.518,
+      "current_pressure": 0.124,
+      "baseline_pressure": 0.124,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.518,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.44475000000000003,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.0,
@@ -1825,7 +2098,10 @@
       "bus_stop_count": 127,
       "bus_eta_sample_count": 99,
       "median_eta_min": 10.6,
-      "bus_issue_rate": 0.189
+      "bus_issue_rate": 0.189,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR14",
@@ -1839,21 +2115,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.936,
-      "baseline_pressure": 0.936,
+      "current_pressure": 0.2,
+      "baseline_pressure": 0.2,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.936,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.7200000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.0,
@@ -1864,7 +2143,10 @@
       "bus_stop_count": 165,
       "bus_eta_sample_count": 68,
       "median_eta_min": 15.2,
-      "bus_issue_rate": 0.6
+      "bus_issue_rate": 0.6,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR15",
@@ -1878,21 +2160,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.939,
-      "baseline_pressure": 0.939,
+      "current_pressure": 0.224,
+      "baseline_pressure": 0.224,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.893,
-        "bike": 0.047,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.111,
+        "bus_delay": 0.69425,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.95,
-        "bike": 0.05
+        "bike_pickup": 0.0,
+        "bike_return": 0.138,
+        "bus_delay": 0.862,
+        "walk_rain": 0.0
       },
       "bike_station_count": 9,
       "no_bike_rate": 0.0,
@@ -1903,7 +2188,10 @@
       "bus_stop_count": 201,
       "bus_eta_sample_count": 92,
       "median_eta_min": 14.9,
-      "bus_issue_rate": 0.542
+      "bus_issue_rate": 0.542,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR16",
@@ -1917,21 +2205,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.072,
-      "baseline_pressure": 1.072,
+      "current_pressure": 0.238,
+      "baseline_pressure": 0.238,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.051,
-        "bike": 0.021,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.05,
+        "bike_return": 0.0,
+        "bus_delay": 0.8079999999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.98,
-        "bike": 0.02
+        "bike_pickup": 0.058,
+        "bike_return": 0.0,
+        "bus_delay": 0.942,
+        "walk_rain": 0.0
       },
       "bike_station_count": 20,
       "no_bike_rate": 0.05,
@@ -1942,7 +2233,10 @@
       "bus_stop_count": 446,
       "bus_eta_sample_count": 137,
       "median_eta_min": 17.0,
-      "bus_issue_rate": 0.682
+      "bus_issue_rate": 0.682,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR17",
@@ -1956,21 +2250,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.06,
-      "baseline_pressure": 1.06,
+      "current_pressure": 0.295,
+      "baseline_pressure": 0.295,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.976,
-        "bike": 0.084,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.2,
+        "bike_return": 0.1,
+        "bus_delay": 0.762,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.921,
-        "bike": 0.079
+        "bike_pickup": 0.188,
+        "bike_return": 0.094,
+        "bus_delay": 0.718,
+        "walk_rain": 0.0
       },
       "bike_station_count": 20,
       "no_bike_rate": 0.2,
@@ -1981,7 +2278,10 @@
       "bus_stop_count": 274,
       "bus_eta_sample_count": 111,
       "median_eta_min": 16.4,
-      "bus_issue_rate": 0.588
+      "bus_issue_rate": 0.588,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR18",
@@ -1995,21 +2295,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.074,
-      "baseline_pressure": 1.074,
+      "current_pressure": 0.289,
+      "baseline_pressure": 0.289,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.977,
-        "bike": 0.097,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.231,
+        "bike_return": 0.0,
+        "bus_delay": 0.81075,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.91,
-        "bike": 0.09
+        "bike_pickup": 0.222,
+        "bike_return": 0.0,
+        "bus_delay": 0.778,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.231,
@@ -2020,7 +2323,10 @@
       "bus_stop_count": 144,
       "bus_eta_sample_count": 85,
       "median_eta_min": 18.7,
-      "bus_issue_rate": 0.438
+      "bus_issue_rate": 0.438,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR19",
@@ -2034,21 +2340,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.95,
-      "baseline_pressure": 0.95,
+      "current_pressure": 0.304,
+      "baseline_pressure": 0.304,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.788,
-        "bike": 0.162,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.385,
+        "bike_return": 0.077,
+        "bus_delay": 0.6337499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.829,
-        "bike": 0.171
+        "bike_pickup": 0.351,
+        "bike_return": 0.07,
+        "bus_delay": 0.578,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.385,
@@ -2059,7 +2368,10 @@
       "bus_stop_count": 250,
       "bus_eta_sample_count": 168,
       "median_eta_min": 14.1,
-      "bus_issue_rate": 0.42
+      "bus_issue_rate": 0.42,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR20",
@@ -2073,21 +2385,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.041,
-      "baseline_pressure": 1.041,
+      "current_pressure": 0.352,
+      "baseline_pressure": 0.352,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.761,
-        "bike": 0.28,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.667,
+        "bike_return": 0.0,
+        "bus_delay": 0.6012500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.731,
-        "bike": 0.269
+        "bike_pickup": 0.526,
+        "bike_return": 0.0,
+        "bus_delay": 0.474,
+        "walk_rain": 0.0
       },
       "bike_station_count": 3,
       "no_bike_rate": 0.667,
@@ -2098,7 +2413,10 @@
       "bus_stop_count": 116,
       "bus_eta_sample_count": 77,
       "median_eta_min": 13.1,
-      "bus_issue_rate": 0.44
+      "bus_issue_rate": 0.44,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR21",
@@ -2112,21 +2430,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.778,
-      "baseline_pressure": 0.778,
+      "current_pressure": 0.238,
+      "baseline_pressure": 0.238,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.61,
-        "bike": 0.168,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.4,
+        "bike_return": 0.0,
+        "bus_delay": 0.45525,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.784,
-        "bike": 0.216
+        "bike_pickup": 0.468,
+        "bike_return": 0.0,
+        "bus_delay": 0.532,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
       "no_bike_rate": 0.4,
@@ -2137,7 +2458,10 @@
       "bus_stop_count": 170,
       "bus_eta_sample_count": 99,
       "median_eta_min": 9.2,
-      "bus_issue_rate": 0.441
+      "bus_issue_rate": 0.441,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR22",
@@ -2151,21 +2475,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.812,
-      "baseline_pressure": 0.812,
+      "current_pressure": 0.236,
+      "baseline_pressure": 0.236,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.672,
-        "bike": 0.14,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.333,
+        "bike_return": 0.0,
+        "bus_delay": 0.5155000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.828,
-        "bike": 0.172
+        "bike_pickup": 0.392,
+        "bike_return": 0.0,
+        "bus_delay": 0.608,
+        "walk_rain": 0.0
       },
       "bike_station_count": 12,
       "no_bike_rate": 0.333,
@@ -2176,7 +2503,10 @@
       "bus_stop_count": 138,
       "bus_eta_sample_count": 86,
       "median_eta_min": 10.8,
-      "bus_issue_rate": 0.442
+      "bus_issue_rate": 0.442,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-BR23",
@@ -2190,21 +2520,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.069,
-      "baseline_pressure": 1.069,
+      "current_pressure": 0.285,
+      "baseline_pressure": 0.285,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.964,
-        "bike": 0.105,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.25,
+        "bus_delay": 0.7745,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.902,
-        "bike": 0.098
+        "bike_pickup": 0.0,
+        "bike_return": 0.244,
+        "bus_delay": 0.756,
+        "walk_rain": 0.0
       },
       "bike_station_count": 12,
       "no_bike_rate": 0.0,
@@ -2215,7 +2548,10 @@
       "bus_stop_count": 141,
       "bus_eta_sample_count": 82,
       "median_eta_min": 17.2,
-      "bus_issue_rate": 0.518
+      "bus_issue_rate": 0.518,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G01",
@@ -2229,21 +2565,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.693,
-      "baseline_pressure": 0.693,
+      "current_pressure": 0.193,
+      "baseline_pressure": 0.193,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.588,
-        "bike": 0.105,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.25,
+        "bike_return": 0.0,
+        "bus_delay": 0.4437499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.848,
-        "bike": 0.152
+        "bike_pickup": 0.36,
+        "bike_return": 0.0,
+        "bus_delay": 0.64,
+        "walk_rain": 0.0
       },
       "bike_station_count": 4,
       "no_bike_rate": 0.25,
@@ -2254,7 +2593,10 @@
       "bus_stop_count": 122,
       "bus_eta_sample_count": 79,
       "median_eta_min": 9.1,
-      "bus_issue_rate": 0.41
+      "bus_issue_rate": 0.41,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G02",
@@ -2268,21 +2610,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.678,
-      "baseline_pressure": 0.678,
+      "current_pressure": 0.207,
+      "baseline_pressure": 0.207,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.625,
-        "bike": 0.052,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.125,
+        "bike_return": 0.125,
+        "bus_delay": 0.494,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.923,
-        "bike": 0.077
+        "bike_pickup": 0.168,
+        "bike_return": 0.168,
+        "bus_delay": 0.664,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.125,
@@ -2293,7 +2638,10 @@
       "bus_stop_count": 284,
       "bus_eta_sample_count": 194,
       "median_eta_min": 10.8,
-      "bus_issue_rate": 0.356
+      "bus_issue_rate": 0.356,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G03",
@@ -2307,21 +2655,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.852,
-      "baseline_pressure": 0.852,
+      "current_pressure": 0.289,
+      "baseline_pressure": 0.289,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.623,
-        "bike": 0.229,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.545,
+        "bike_return": 0.0,
+        "bus_delay": 0.49575,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.731,
-        "bike": 0.269
+        "bike_pickup": 0.524,
+        "bike_return": 0.0,
+        "bus_delay": 0.476,
+        "walk_rain": 0.0
       },
       "bike_station_count": 11,
       "no_bike_rate": 0.545,
@@ -2332,7 +2683,10 @@
       "bus_stop_count": 305,
       "bus_eta_sample_count": 208,
       "median_eta_min": 10.9,
-      "bus_issue_rate": 0.348
+      "bus_issue_rate": 0.348,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G04",
@@ -2346,21 +2700,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.722,
-      "baseline_pressure": 0.722,
+      "current_pressure": 0.238,
+      "baseline_pressure": 0.238,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.628,
-        "bike": 0.093,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.222,
+        "bike_return": 0.111,
+        "bus_delay": 0.5235,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.871,
-        "bike": 0.129
+        "bike_pickup": 0.259,
+        "bike_return": 0.13,
+        "bus_delay": 0.611,
+        "walk_rain": 0.0
       },
       "bike_station_count": 9,
       "no_bike_rate": 0.222,
@@ -2371,7 +2728,10 @@
       "bus_stop_count": 208,
       "bus_eta_sample_count": 155,
       "median_eta_min": 12.1,
-      "bus_issue_rate": 0.279
+      "bus_issue_rate": 0.279,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G05",
@@ -2385,21 +2745,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.805,
-      "baseline_pressure": 0.805,
+      "current_pressure": 0.249,
+      "baseline_pressure": 0.249,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.643,
-        "bike": 0.162,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.385,
+        "bike_return": 0.0,
+        "bus_delay": 0.5105,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.799,
-        "bike": 0.201
+        "bike_pickup": 0.43,
+        "bike_return": 0.0,
+        "bus_delay": 0.57,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.385,
@@ -2410,7 +2773,10 @@
       "bus_stop_count": 196,
       "bus_eta_sample_count": 146,
       "median_eta_min": 11.2,
-      "bus_issue_rate": 0.362
+      "bus_issue_rate": 0.362,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G06",
@@ -2424,21 +2790,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.669,
-      "baseline_pressure": 0.669,
+      "current_pressure": 0.17,
+      "baseline_pressure": 0.17,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.616,
-        "bike": 0.052,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.125,
+        "bike_return": 0.0,
+        "bus_delay": 0.48675,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.922,
-        "bike": 0.078
+        "bike_pickup": 0.204,
+        "bike_return": 0.0,
+        "bus_delay": 0.796,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.125,
@@ -2449,7 +2818,10 @@
       "bus_stop_count": 196,
       "bus_eta_sample_count": 133,
       "median_eta_min": 10.6,
-      "bus_issue_rate": 0.357
+      "bus_issue_rate": 0.357,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G07",
@@ -2463,21 +2835,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.77,
-      "baseline_pressure": 0.77,
+      "current_pressure": 0.214,
+      "baseline_pressure": 0.214,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.716,
-        "bike": 0.054,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.073,
+        "bike_return": 0.122,
+        "bus_delay": 0.577,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.93,
-        "bike": 0.07
+        "bike_pickup": 0.095,
+        "bike_return": 0.158,
+        "bus_delay": 0.747,
+        "walk_rain": 0.0
       },
       "bike_station_count": 41,
       "no_bike_rate": 0.073,
@@ -2488,7 +2863,10 @@
       "bus_stop_count": 209,
       "bus_eta_sample_count": 133,
       "median_eta_min": 12.9,
-      "bus_issue_rate": 0.373
+      "bus_issue_rate": 0.373,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G08",
@@ -2502,21 +2880,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.715,
-      "baseline_pressure": 0.715,
+      "current_pressure": 0.254,
+      "baseline_pressure": 0.254,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.631,
-        "bike": 0.084,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.2,
+        "bike_return": 0.2,
+        "bus_delay": 0.5127499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.883,
-        "bike": 0.117
+        "bike_pickup": 0.219,
+        "bike_return": 0.219,
+        "bus_delay": 0.562,
+        "walk_rain": 0.0
       },
       "bike_station_count": 20,
       "no_bike_rate": 0.2,
@@ -2527,7 +2908,10 @@
       "bus_stop_count": 180,
       "bus_eta_sample_count": 124,
       "median_eta_min": 11.6,
-      "bus_issue_rate": 0.311
+      "bus_issue_rate": 0.311,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G09",
@@ -2542,21 +2926,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.774,
-      "baseline_pressure": 0.774,
+      "current_pressure": 0.198,
+      "baseline_pressure": 0.198,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.743,
-        "bike": 0.031,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.059,
+        "bike_return": 0.059,
+        "bus_delay": 0.59575,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.96,
-        "bike": 0.04
+        "bike_pickup": 0.083,
+        "bike_return": 0.083,
+        "bus_delay": 0.835,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.059,
@@ -2567,7 +2954,10 @@
       "bus_stop_count": 226,
       "bus_eta_sample_count": 131,
       "median_eta_min": 13.2,
-      "bus_issue_rate": 0.403
+      "bus_issue_rate": 0.403,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G10",
@@ -2582,21 +2972,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.748,
-      "baseline_pressure": 0.748,
+      "current_pressure": 0.238,
+      "baseline_pressure": 0.238,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.651,
-        "bike": 0.097,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.231,
+        "bike_return": 0.077,
+        "bus_delay": 0.549,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.87,
-        "bike": 0.13
+        "bike_pickup": 0.27,
+        "bike_return": 0.09,
+        "bus_delay": 0.641,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.231,
@@ -2607,7 +3000,10 @@
       "bus_stop_count": 138,
       "bus_eta_sample_count": 102,
       "median_eta_min": 12.9,
-      "bus_issue_rate": 0.261
+      "bus_issue_rate": 0.261,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G11",
@@ -2621,21 +3017,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.668,
-      "baseline_pressure": 0.668,
+      "current_pressure": 0.184,
+      "baseline_pressure": 0.184,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.64,
-        "bike": 0.028,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.067,
+        "bike_return": 0.067,
+        "bus_delay": 0.528,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.958,
-        "bike": 0.042
+        "bike_pickup": 0.101,
+        "bike_return": 0.101,
+        "bus_delay": 0.798,
+        "walk_rain": 0.0
       },
       "bike_station_count": 15,
       "no_bike_rate": 0.067,
@@ -2646,7 +3045,10 @@
       "bus_stop_count": 212,
       "bus_eta_sample_count": 149,
       "median_eta_min": 12.1,
-      "bus_issue_rate": 0.297
+      "bus_issue_rate": 0.297,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G13",
@@ -2660,21 +3062,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.913,
-      "baseline_pressure": 0.913,
+      "current_pressure": 0.314,
+      "baseline_pressure": 0.314,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.808,
-        "bike": 0.105,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.231,
+        "bike_return": 0.231,
+        "bus_delay": 0.66775,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.885,
-        "bike": 0.115
+        "bike_pickup": 0.204,
+        "bike_return": 0.204,
+        "bus_delay": 0.591,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.231,
@@ -2685,7 +3090,10 @@
       "bus_stop_count": 258,
       "bus_eta_sample_count": 162,
       "median_eta_min": 15.3,
-      "bus_issue_rate": 0.376
+      "bus_issue_rate": 0.376,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G14",
@@ -2700,21 +3108,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.982,
-      "baseline_pressure": 0.982,
+      "current_pressure": 0.329,
+      "baseline_pressure": 0.329,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.799,
-        "bike": 0.184,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.083,
+        "bike_return": 0.417,
+        "bus_delay": 0.6835000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.813,
-        "bike": 0.187
+        "bike_pickup": 0.07,
+        "bike_return": 0.352,
+        "bus_delay": 0.578,
+        "walk_rain": 0.0
       },
       "bike_station_count": 12,
       "no_bike_rate": 0.083,
@@ -2725,7 +3136,10 @@
       "bus_stop_count": 159,
       "bus_eta_sample_count": 115,
       "median_eta_min": 16.3,
-      "bus_issue_rate": 0.289
+      "bus_issue_rate": 0.289,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G15",
@@ -2740,21 +3154,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.743,
-      "baseline_pressure": 0.743,
+      "current_pressure": 0.226,
+      "baseline_pressure": 0.226,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.655,
-        "bike": 0.087,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.208,
+        "bike_return": 0.042,
+        "bus_delay": 0.5637500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.883,
-        "bike": 0.117
+        "bike_pickup": 0.256,
+        "bike_return": 0.052,
+        "bus_delay": 0.693,
+        "walk_rain": 0.0
       },
       "bike_station_count": 24,
       "no_bike_rate": 0.208,
@@ -2765,7 +3182,10 @@
       "bus_stop_count": 243,
       "bus_eta_sample_count": 182,
       "median_eta_min": 13.5,
-      "bus_issue_rate": 0.23
+      "bus_issue_rate": 0.23,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G17",
@@ -2779,21 +3199,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.682,
-      "baseline_pressure": 0.682,
+      "current_pressure": 0.194,
+      "baseline_pressure": 0.194,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.597,
-        "bike": 0.085,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.188,
+        "bike_return": 0.0,
+        "bus_delay": 0.51,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.875,
-        "bike": 0.125
+        "bike_pickup": 0.269,
+        "bike_return": 0.0,
+        "bus_delay": 0.731,
+        "walk_rain": 0.0
       },
       "bike_station_count": 16,
       "no_bike_rate": 0.188,
@@ -2804,7 +3227,10 @@
       "bus_stop_count": 209,
       "bus_eta_sample_count": 163,
       "median_eta_min": 12.1,
-      "bus_issue_rate": 0.225
+      "bus_issue_rate": 0.225,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G18",
@@ -2818,21 +3244,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.96,
-      "baseline_pressure": 0.96,
+      "current_pressure": 0.319,
+      "baseline_pressure": 0.319,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.773,
-        "bike": 0.187,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.444,
+        "bike_return": 0.056,
+        "bus_delay": 0.64775,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.805,
-        "bike": 0.195
+        "bike_pickup": 0.387,
+        "bike_return": 0.049,
+        "bus_delay": 0.564,
+        "walk_rain": 0.0
       },
       "bike_station_count": 18,
       "no_bike_rate": 0.444,
@@ -2843,7 +3272,10 @@
       "bus_stop_count": 178,
       "bus_eta_sample_count": 122,
       "median_eta_min": 15.1,
-      "bus_issue_rate": 0.326
+      "bus_issue_rate": 0.326,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G19",
@@ -2857,21 +3289,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.859,
-      "baseline_pressure": 0.859,
+      "current_pressure": 0.271,
+      "baseline_pressure": 0.271,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.743,
-        "bike": 0.117,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.111,
+        "bike_return": 0.278,
+        "bus_delay": 0.58675,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.864,
-        "bike": 0.136
+        "bike_pickup": 0.114,
+        "bike_return": 0.285,
+        "bus_delay": 0.601,
+        "walk_rain": 0.0
       },
       "bike_station_count": 18,
       "no_bike_rate": 0.111,
@@ -2882,7 +3317,10 @@
       "bus_stop_count": 199,
       "bus_eta_sample_count": 111,
       "median_eta_min": 12.8,
-      "bus_issue_rate": 0.427
+      "bus_issue_rate": 0.427,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-G03A",
@@ -2896,21 +3334,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.832,
-      "baseline_pressure": 0.832,
+      "current_pressure": 0.26,
+      "baseline_pressure": 0.26,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.692,
-        "bike": 0.14,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.333,
+        "bike_return": 0.0,
+        "bus_delay": 0.6045,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.832,
-        "bike": 0.168
+        "bike_pickup": 0.355,
+        "bike_return": 0.0,
+        "bus_delay": 0.645,
+        "walk_rain": 0.0
       },
       "bike_station_count": 6,
       "no_bike_rate": 0.333,
@@ -2921,7 +3362,10 @@
       "bus_stop_count": 47,
       "bus_eta_sample_count": 35,
       "median_eta_min": 14.7,
-      "bus_issue_rate": 0.213
+      "bus_issue_rate": 0.213,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O01",
@@ -2935,21 +3379,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.96,
-      "baseline_pressure": 0.96,
+      "current_pressure": 0.314,
+      "baseline_pressure": 0.314,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.75,
-        "bike": 0.21,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.5,
+        "bike_return": 0.0,
+        "bus_delay": 0.6295000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.781,
-        "bike": 0.219
+        "bike_pickup": 0.443,
+        "bike_return": 0.0,
+        "bus_delay": 0.557,
+        "walk_rain": 0.0
       },
       "bike_station_count": 4,
       "no_bike_rate": 0.5,
@@ -2960,7 +3407,10 @@
       "bus_stop_count": 198,
       "bus_eta_sample_count": 140,
       "median_eta_min": 14.7,
-      "bus_issue_rate": 0.313
+      "bus_issue_rate": 0.313,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O02",
@@ -2974,21 +3424,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.7,
-      "baseline_pressure": 0.7,
+      "current_pressure": 0.164,
+      "baseline_pressure": 0.164,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.7,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.5887500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 6,
       "no_bike_rate": 0.0,
@@ -2999,7 +3452,10 @@
       "bus_stop_count": 193,
       "bus_eta_sample_count": 134,
       "median_eta_min": 13.8,
-      "bus_issue_rate": 0.285
+      "bus_issue_rate": 0.285,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O03",
@@ -3013,21 +3469,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.854,
-      "baseline_pressure": 0.854,
+      "current_pressure": 0.228,
+      "baseline_pressure": 0.228,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.801,
-        "bike": 0.052,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.125,
+        "bike_return": 0.0,
+        "bus_delay": 0.6952500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.939,
-        "bike": 0.061
+        "bike_pickup": 0.152,
+        "bike_return": 0.0,
+        "bus_delay": 0.848,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.125,
@@ -3038,7 +3497,10 @@
       "bus_stop_count": 119,
       "bus_eta_sample_count": 86,
       "median_eta_min": 16.8,
-      "bus_issue_rate": 0.261
+      "bus_issue_rate": 0.261,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O04",
@@ -3052,21 +3514,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.028,
-      "baseline_pressure": 1.028,
+      "current_pressure": 0.372,
+      "baseline_pressure": 0.372,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.776,
-        "bike": 0.252,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.6,
+        "bike_return": 0.1,
+        "bus_delay": 0.64075,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.755,
-        "bike": 0.245
+        "bike_pickup": 0.448,
+        "bike_return": 0.075,
+        "bus_delay": 0.478,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.6,
@@ -3077,7 +3542,10 @@
       "bus_stop_count": 165,
       "bus_eta_sample_count": 108,
       "median_eta_min": 14.7,
-      "bus_issue_rate": 0.358
+      "bus_issue_rate": 0.358,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O06",
@@ -3092,21 +3560,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.744,
-      "baseline_pressure": 0.744,
+      "current_pressure": 0.247,
+      "baseline_pressure": 0.247,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.639,
-        "bike": 0.105,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.231,
+        "bike_return": 0.154,
+        "bus_delay": 0.5042500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.859,
-        "bike": 0.141
+        "bike_pickup": 0.26,
+        "bike_return": 0.173,
+        "bus_delay": 0.567,
+        "walk_rain": 0.0
       },
       "bike_station_count": 13,
       "no_bike_rate": 0.231,
@@ -3117,7 +3588,10 @@
       "bus_stop_count": 147,
       "bus_eta_sample_count": 101,
       "median_eta_min": 11.0,
-      "bus_issue_rate": 0.367
+      "bus_issue_rate": 0.367,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O07",
@@ -3131,21 +3605,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.75,
-      "baseline_pressure": 0.75,
+      "current_pressure": 0.205,
+      "baseline_pressure": 0.205,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.708,
-        "bike": 0.042,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.1,
+        "bike_return": 0.05,
+        "bus_delay": 0.58775,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.944,
-        "bike": 0.056
+        "bike_pickup": 0.136,
+        "bike_return": 0.068,
+        "bus_delay": 0.797,
+        "walk_rain": 0.0
       },
       "bike_station_count": 20,
       "no_bike_rate": 0.1,
@@ -3156,7 +3633,10 @@
       "bus_stop_count": 196,
       "bus_eta_sample_count": 133,
       "median_eta_min": 13.6,
-      "bus_issue_rate": 0.311
+      "bus_issue_rate": 0.311,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O09",
@@ -3170,21 +3650,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.761,
-      "baseline_pressure": 0.761,
+      "current_pressure": 0.225,
+      "baseline_pressure": 0.225,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.662,
-        "bike": 0.099,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.235,
+        "bike_return": 0.0,
+        "bus_delay": 0.5745,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.87,
-        "bike": 0.13
+        "bike_pickup": 0.29,
+        "bike_return": 0.0,
+        "bus_delay": 0.71,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.235,
@@ -3195,7 +3678,10 @@
       "bus_stop_count": 202,
       "bus_eta_sample_count": 151,
       "median_eta_min": 13.9,
-      "bus_issue_rate": 0.213
+      "bus_issue_rate": 0.213,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O10",
@@ -3209,21 +3695,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.902,
-      "baseline_pressure": 0.902,
+      "current_pressure": 0.301,
+      "baseline_pressure": 0.301,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.683,
-        "bike": 0.219,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.522,
+        "bike_return": 0.0,
+        "bus_delay": 0.56325,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.757,
-        "bike": 0.243
+        "bike_pickup": 0.481,
+        "bike_return": 0.0,
+        "bus_delay": 0.519,
+        "walk_rain": 0.0
       },
       "bike_station_count": 23,
       "no_bike_rate": 0.522,
@@ -3234,7 +3723,10 @@
       "bus_stop_count": 286,
       "bus_eta_sample_count": 188,
       "median_eta_min": 12.9,
-      "bus_issue_rate": 0.318
+      "bus_issue_rate": 0.318,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O11",
@@ -3249,21 +3741,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.86,
-      "baseline_pressure": 0.86,
+      "current_pressure": 0.274,
+      "baseline_pressure": 0.274,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.684,
-        "bike": 0.177,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.421,
+        "bike_return": 0.0,
+        "bus_delay": 0.5660000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.794,
-        "bike": 0.206
+        "bike_pickup": 0.427,
+        "bike_return": 0.0,
+        "bus_delay": 0.573,
+        "walk_rain": 0.0
       },
       "bike_station_count": 19,
       "no_bike_rate": 0.421,
@@ -3274,7 +3769,10 @@
       "bus_stop_count": 242,
       "bus_eta_sample_count": 162,
       "median_eta_min": 13.0,
-      "bus_issue_rate": 0.314
+      "bus_issue_rate": 0.314,
+      "station_type": "轉乘型站",
+      "network_degree": 2,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O12",
@@ -3288,21 +3786,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.008,
-      "baseline_pressure": 1.008,
+      "current_pressure": 0.314,
+      "baseline_pressure": 0.314,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.853,
-        "bike": 0.155,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.368,
+        "bike_return": 0.0,
+        "bus_delay": 0.7635,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.846,
-        "bike": 0.154
+        "bike_pickup": 0.325,
+        "bike_return": 0.0,
+        "bus_delay": 0.675,
+        "walk_rain": 0.0
       },
       "bike_station_count": 19,
       "no_bike_rate": 0.368,
@@ -3313,7 +3814,10 @@
       "bus_stop_count": 201,
       "bus_eta_sample_count": 155,
       "median_eta_min": 19.0,
-      "bus_issue_rate": 0.204
+      "bus_issue_rate": 0.204,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O13",
@@ -3327,21 +3831,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.661,
-      "baseline_pressure": 0.661,
+      "current_pressure": 0.149,
+      "baseline_pressure": 0.149,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.661,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.538,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.0,
@@ -3352,7 +3859,10 @@
       "bus_stop_count": 239,
       "bus_eta_sample_count": 153,
       "median_eta_min": 12.2,
-      "bus_issue_rate": 0.322
+      "bus_issue_rate": 0.322,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O14",
@@ -3366,21 +3876,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.7,
-      "baseline_pressure": 0.7,
+      "current_pressure": 0.162,
+      "baseline_pressure": 0.162,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.7,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.5827500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 7,
       "no_bike_rate": 0.0,
@@ -3391,7 +3904,10 @@
       "bus_stop_count": 258,
       "bus_eta_sample_count": 178,
       "median_eta_min": 13.5,
-      "bus_issue_rate": 0.306
+      "bus_issue_rate": 0.306,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O15",
@@ -3405,21 +3921,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.838,
-      "baseline_pressure": 0.838,
+      "current_pressure": 0.268,
+      "baseline_pressure": 0.268,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.658,
-        "bike": 0.18,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.429,
+        "bike_return": 0.0,
+        "bus_delay": 0.53525,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.785,
-        "bike": 0.215
+        "bike_pickup": 0.445,
+        "bike_return": 0.0,
+        "bus_delay": 0.555,
+        "walk_rain": 0.0
       },
       "bike_station_count": 7,
       "no_bike_rate": 0.429,
@@ -3430,7 +3949,10 @@
       "bus_stop_count": 92,
       "bus_eta_sample_count": 62,
       "median_eta_min": 12.1,
-      "bus_issue_rate": 0.326
+      "bus_issue_rate": 0.326,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O16",
@@ -3444,21 +3966,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.894,
-      "baseline_pressure": 0.894,
+      "current_pressure": 0.236,
+      "baseline_pressure": 0.236,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.81,
-        "bike": 0.084,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.2,
+        "bike_return": 0.0,
+        "bus_delay": 0.65125,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.906,
-        "bike": 0.094
+        "bike_pickup": 0.235,
+        "bike_return": 0.0,
+        "bus_delay": 0.765,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.2,
@@ -3469,7 +3994,10 @@
       "bus_stop_count": 142,
       "bus_eta_sample_count": 81,
       "median_eta_min": 14.5,
-      "bus_issue_rate": 0.43
+      "bus_issue_rate": 0.43,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O17",
@@ -3483,21 +4011,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.913,
-      "baseline_pressure": 0.913,
+      "current_pressure": 0.265,
+      "baseline_pressure": 0.265,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.86,
-        "bike": 0.052,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.125,
+        "bike_return": 0.125,
+        "bus_delay": 0.7045000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.943,
-        "bike": 0.057
+        "bike_pickup": 0.131,
+        "bike_return": 0.131,
+        "bus_delay": 0.738,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.125,
@@ -3508,7 +4039,10 @@
       "bus_stop_count": 158,
       "bus_eta_sample_count": 89,
       "median_eta_min": 16.0,
-      "bus_issue_rate": 0.418
+      "bus_issue_rate": 0.418,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O18",
@@ -3522,21 +4056,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.961,
-      "baseline_pressure": 0.961,
+      "current_pressure": 0.22,
+      "baseline_pressure": 0.22,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.961,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.7937499999999998,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.0,
@@ -3547,7 +4084,10 @@
       "bus_stop_count": 155,
       "bus_eta_sample_count": 85,
       "median_eta_min": 18.2,
-      "bus_issue_rate": 0.445
+      "bus_issue_rate": 0.445,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O19",
@@ -3561,21 +4101,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.676,
-      "baseline_pressure": 0.676,
+      "current_pressure": 0.143,
+      "baseline_pressure": 0.143,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.676,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.51325,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 2,
       "no_bike_rate": 0.0,
@@ -3586,7 +4129,10 @@
       "bus_stop_count": 108,
       "bus_eta_sample_count": 57,
       "median_eta_min": 10.6,
-      "bus_issue_rate": 0.463
+      "bus_issue_rate": 0.463,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O20",
@@ -3600,21 +4146,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.807,
-      "baseline_pressure": 0.807,
+      "current_pressure": 0.215,
+      "baseline_pressure": 0.215,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.723,
-        "bike": 0.084,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.2,
+        "bike_return": 0.0,
+        "bus_delay": 0.57275,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.896,
-        "bike": 0.104
+        "bike_pickup": 0.259,
+        "bike_return": 0.0,
+        "bus_delay": 0.741,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.2,
@@ -3625,7 +4174,10 @@
       "bus_stop_count": 190,
       "bus_eta_sample_count": 108,
       "median_eta_min": 12.5,
-      "bus_issue_rate": 0.416
+      "bus_issue_rate": 0.416,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O21",
@@ -3639,21 +4191,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.941,
-      "baseline_pressure": 0.941,
+      "current_pressure": 0.215,
+      "baseline_pressure": 0.215,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.941,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.77475,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 3,
       "no_bike_rate": 0.0,
@@ -3664,7 +4219,10 @@
       "bus_stop_count": 90,
       "bus_eta_sample_count": 56,
       "median_eta_min": 17.7,
-      "bus_issue_rate": 0.444
+      "bus_issue_rate": 0.444,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O50",
@@ -3678,21 +4236,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.64,
-      "baseline_pressure": 0.64,
+      "current_pressure": 0.19,
+      "baseline_pressure": 0.19,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.52,
-        "bike": 0.12,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.286,
+        "bike_return": 0.0,
+        "bus_delay": 0.3995000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.812,
-        "bike": 0.188
+        "bike_pickup": 0.417,
+        "bike_return": 0.0,
+        "bus_delay": 0.583,
+        "walk_rain": 0.0
       },
       "bike_station_count": 7,
       "no_bike_rate": 0.286,
@@ -3703,7 +4264,10 @@
       "bus_stop_count": 201,
       "bus_eta_sample_count": 127,
       "median_eta_min": 8.4,
-      "bus_issue_rate": 0.338
+      "bus_issue_rate": 0.338,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O51",
@@ -3717,21 +4281,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.767,
-      "baseline_pressure": 0.767,
+      "current_pressure": 0.251,
+      "baseline_pressure": 0.251,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.609,
-        "bike": 0.158,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.375,
+        "bike_return": 0.062,
+        "bus_delay": 0.4675,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.794,
-        "bike": 0.206
+        "bike_pickup": 0.415,
+        "bike_return": 0.069,
+        "bus_delay": 0.517,
+        "walk_rain": 0.0
       },
       "bike_station_count": 16,
       "no_bike_rate": 0.375,
@@ -3742,7 +4309,10 @@
       "bus_stop_count": 225,
       "bus_eta_sample_count": 138,
       "median_eta_min": 9.8,
-      "bus_issue_rate": 0.4
+      "bus_issue_rate": 0.4,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O52",
@@ -3756,21 +4326,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.824,
-      "baseline_pressure": 0.824,
+      "current_pressure": 0.262,
+      "baseline_pressure": 0.262,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.637,
-        "bike": 0.187,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.444,
+        "bike_return": 0.0,
+        "bus_delay": 0.49799999999999994,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.773,
-        "bike": 0.227
+        "bike_pickup": 0.471,
+        "bike_return": 0.0,
+        "bus_delay": 0.529,
+        "walk_rain": 0.0
       },
       "bike_station_count": 9,
       "no_bike_rate": 0.444,
@@ -3781,7 +4354,10 @@
       "bus_stop_count": 266,
       "bus_eta_sample_count": 168,
       "median_eta_min": 10.7,
-      "bus_issue_rate": 0.387
+      "bus_issue_rate": 0.387,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O53",
@@ -3795,21 +4371,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.12,
-      "baseline_pressure": 1.12,
+      "current_pressure": 0.399,
+      "baseline_pressure": 0.399,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.882,
-        "bike": 0.239,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.545,
+        "bike_return": 0.182,
+        "bus_delay": 0.7079999999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.787,
-        "bike": 0.213
+        "bike_pickup": 0.38,
+        "bike_return": 0.127,
+        "bus_delay": 0.493,
+        "walk_rain": 0.0
       },
       "bike_station_count": 11,
       "no_bike_rate": 0.545,
@@ -3820,7 +4399,10 @@
       "bus_stop_count": 237,
       "bus_eta_sample_count": 131,
       "median_eta_min": 15.7,
-      "bus_issue_rate": 0.477
+      "bus_issue_rate": 0.477,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-O54",
@@ -3834,21 +4416,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.169,
-      "baseline_pressure": 1.169,
+      "current_pressure": 0.388,
+      "baseline_pressure": 0.388,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.875,
-        "bike": 0.294,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.7,
+        "bike_return": 0.0,
+        "bus_delay": 0.69625,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.749,
-        "bike": 0.251
+        "bike_pickup": 0.501,
+        "bike_return": 0.0,
+        "bus_delay": 0.499,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.7,
@@ -3859,7 +4444,10 @@
       "bus_stop_count": 208,
       "bus_eta_sample_count": 128,
       "median_eta_min": 15.3,
-      "bus_issue_rate": 0.49
+      "bus_issue_rate": 0.49,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R02",
@@ -3873,21 +4461,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.914,
-      "baseline_pressure": 0.914,
+      "current_pressure": 0.291,
+      "baseline_pressure": 0.291,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.815,
-        "bike": 0.099,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.235,
+        "bike_return": 0.118,
+        "bus_delay": 0.6957499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.892,
-        "bike": 0.108
+        "bike_pickup": 0.224,
+        "bike_return": 0.113,
+        "bus_delay": 0.663,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.235,
@@ -3898,7 +4489,10 @@
       "bus_stop_count": 130,
       "bus_eta_sample_count": 100,
       "median_eta_min": 16.5,
-      "bus_issue_rate": 0.308
+      "bus_issue_rate": 0.308,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R03",
@@ -3912,21 +4506,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.602,
-      "baseline_pressure": 0.602,
+      "current_pressure": 0.195,
+      "baseline_pressure": 0.195,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.532,
-        "bike": 0.07,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.167,
+        "bike_return": 0.111,
+        "bus_delay": 0.42500000000000004,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.884,
-        "bike": 0.116
+        "bike_pickup": 0.238,
+        "bike_return": 0.158,
+        "bus_delay": 0.605,
+        "walk_rain": 0.0
       },
       "bike_station_count": 18,
       "no_bike_rate": 0.167,
@@ -3937,7 +4534,10 @@
       "bus_stop_count": 186,
       "bus_eta_sample_count": 136,
       "median_eta_min": 9.4,
-      "bus_issue_rate": 0.29
+      "bus_issue_rate": 0.29,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R04",
@@ -3951,21 +4551,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.684,
-      "baseline_pressure": 0.684,
+      "current_pressure": 0.196,
+      "baseline_pressure": 0.196,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.604,
-        "bike": 0.08,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.176,
+        "bike_return": 0.059,
+        "bus_delay": 0.47075,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.883,
-        "bike": 0.117
+        "bike_pickup": 0.249,
+        "bike_return": 0.084,
+        "bus_delay": 0.667,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.176,
@@ -3976,7 +4579,10 @@
       "bus_stop_count": 182,
       "bus_eta_sample_count": 117,
       "median_eta_min": 10.1,
-      "bus_issue_rate": 0.368
+      "bus_issue_rate": 0.368,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R06",
@@ -3990,21 +4596,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.773,
-      "baseline_pressure": 0.773,
+      "current_pressure": 0.177,
+      "baseline_pressure": 0.177,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.773,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.63825,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.0,
@@ -4015,7 +4624,10 @@
       "bus_stop_count": 135,
       "bus_eta_sample_count": 87,
       "median_eta_min": 14.6,
-      "bus_issue_rate": 0.363
+      "bus_issue_rate": 0.363,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R09",
@@ -4029,21 +4641,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.791,
-      "baseline_pressure": 0.791,
+      "current_pressure": 0.244,
+      "baseline_pressure": 0.244,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.665,
-        "bike": 0.126,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.3,
+        "bus_delay": 0.5777499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.841,
-        "bike": 0.159
+        "bike_pickup": 0.0,
+        "bike_return": 0.342,
+        "bus_delay": 0.658,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.0,
@@ -4054,7 +4669,10 @@
       "bus_stop_count": 228,
       "bus_eta_sample_count": 183,
       "median_eta_min": 14.0,
-      "bus_issue_rate": 0.211
+      "bus_issue_rate": 0.211,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R12",
@@ -4068,21 +4686,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.946,
-      "baseline_pressure": 0.946,
+      "current_pressure": 0.288,
+      "baseline_pressure": 0.288,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.816,
-        "bike": 0.13,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.294,
+        "bike_return": 0.059,
+        "bus_delay": 0.6827500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.863,
-        "bike": 0.137
+        "bike_pickup": 0.284,
+        "bike_return": 0.057,
+        "bus_delay": 0.659,
+        "walk_rain": 0.0
       },
       "bike_station_count": 17,
       "no_bike_rate": 0.294,
@@ -4093,7 +4714,10 @@
       "bus_stop_count": 136,
       "bus_eta_sample_count": 89,
       "median_eta_min": 15.9,
-      "bus_issue_rate": 0.346
+      "bus_issue_rate": 0.346,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R14",
@@ -4107,21 +4731,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.864,
-      "baseline_pressure": 0.864,
+      "current_pressure": 0.261,
+      "baseline_pressure": 0.261,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.696,
-        "bike": 0.168,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.4,
+        "bike_return": 0.0,
+        "bus_delay": 0.53925,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.806,
-        "bike": 0.194
+        "bike_pickup": 0.426,
+        "bike_return": 0.0,
+        "bus_delay": 0.574,
+        "walk_rain": 0.0
       },
       "bike_station_count": 20,
       "no_bike_rate": 0.4,
@@ -4132,7 +4759,10 @@
       "bus_stop_count": 220,
       "bus_eta_sample_count": 127,
       "median_eta_min": 11.5,
-      "bus_issue_rate": 0.432
+      "bus_issue_rate": 0.432,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R15",
@@ -4146,21 +4776,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.008,
-      "baseline_pressure": 1.008,
+      "current_pressure": 0.264,
+      "baseline_pressure": 0.264,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.955,
-        "bike": 0.052,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.125,
+        "bike_return": 0.062,
+        "bus_delay": 0.7645000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.948,
-        "bike": 0.052
+        "bike_pickup": 0.131,
+        "bike_return": 0.065,
+        "bus_delay": 0.803,
+        "walk_rain": 0.0
       },
       "bike_station_count": 16,
       "no_bike_rate": 0.125,
@@ -4171,7 +4804,10 @@
       "bus_stop_count": 266,
       "bus_eta_sample_count": 153,
       "median_eta_min": 16.9,
-      "bus_issue_rate": 0.523
+      "bus_issue_rate": 0.523,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R16",
@@ -4185,21 +4821,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.021,
-      "baseline_pressure": 1.021,
+      "current_pressure": 0.298,
+      "baseline_pressure": 0.298,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.928,
-        "bike": 0.093,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.111,
+        "bike_return": 0.222,
+        "bus_delay": 0.7402500000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.909,
-        "bike": 0.091
+        "bike_pickup": 0.103,
+        "bike_return": 0.207,
+        "bus_delay": 0.69,
+        "walk_rain": 0.0
       },
       "bike_station_count": 9,
       "no_bike_rate": 0.111,
@@ -4210,7 +4849,10 @@
       "bus_stop_count": 450,
       "bus_eta_sample_count": 255,
       "median_eta_min": 16.3,
-      "bus_issue_rate": 0.516
+      "bus_issue_rate": 0.516,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R17",
@@ -4224,21 +4866,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.105,
-      "baseline_pressure": 1.105,
+      "current_pressure": 0.358,
+      "baseline_pressure": 0.358,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.853,
-        "bike": 0.252,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.6,
+        "bike_return": 0.0,
+        "bus_delay": 0.6875,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.772,
-        "bike": 0.228
+        "bike_pickup": 0.466,
+        "bike_return": 0.0,
+        "bus_delay": 0.534,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.6,
@@ -4249,7 +4894,10 @@
       "bus_stop_count": 168,
       "bus_eta_sample_count": 97,
       "median_eta_min": 15.4,
-      "bus_issue_rate": 0.44
+      "bus_issue_rate": 0.44,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R18",
@@ -4263,21 +4911,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.003,
-      "baseline_pressure": 1.003,
+      "current_pressure": 0.307,
+      "baseline_pressure": 0.307,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.793,
-        "bike": 0.21,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.5,
+        "bike_return": 0.0,
+        "bus_delay": 0.606,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.791,
-        "bike": 0.209
+        "bike_pickup": 0.452,
+        "bike_return": 0.0,
+        "bus_delay": 0.548,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.5,
@@ -4288,7 +4939,10 @@
       "bus_stop_count": 79,
       "bus_eta_sample_count": 38,
       "median_eta_min": 12.7,
-      "bus_issue_rate": 0.519
+      "bus_issue_rate": 0.519,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R19",
@@ -4302,21 +4956,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.787,
-      "baseline_pressure": 0.787,
+      "current_pressure": 0.219,
+      "baseline_pressure": 0.219,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.682,
-        "bike": 0.105,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.25,
+        "bike_return": 0.0,
+        "bus_delay": 0.53825,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.867,
-        "bike": 0.133
+        "bike_pickup": 0.317,
+        "bike_return": 0.0,
+        "bus_delay": 0.683,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.25,
@@ -4327,7 +4984,10 @@
       "bus_stop_count": 171,
       "bus_eta_sample_count": 116,
       "median_eta_min": 11.7,
-      "bus_issue_rate": 0.398
+      "bus_issue_rate": 0.398,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R20",
@@ -4341,21 +5001,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.298,
-      "baseline_pressure": 1.298,
+      "current_pressure": 0.297,
+      "baseline_pressure": 0.297,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.214,
-        "bike": 0.084,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.2,
+        "bike_return": 0.0,
+        "bus_delay": 0.86925,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.935,
-        "bike": 0.065
+        "bike_pickup": 0.187,
+        "bike_return": 0.0,
+        "bus_delay": 0.813,
+        "walk_rain": 0.0
       },
       "bike_station_count": 10,
       "no_bike_rate": 0.2,
@@ -4366,7 +5029,10 @@
       "bus_stop_count": 111,
       "bus_eta_sample_count": 74,
       "median_eta_min": 24.2,
-      "bus_issue_rate": 0.477
+      "bus_issue_rate": 0.477,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R21",
@@ -4380,21 +5046,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.121,
-      "baseline_pressure": 1.121,
+      "current_pressure": 0.245,
+      "baseline_pressure": 0.245,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.121,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.8835,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 11,
       "no_bike_rate": 0.0,
@@ -4405,7 +5074,10 @@
       "bus_stop_count": 88,
       "bus_eta_sample_count": 48,
       "median_eta_min": 21.0,
-      "bus_issue_rate": 0.534
+      "bus_issue_rate": 0.534,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R22",
@@ -4419,21 +5091,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.141,
-      "baseline_pressure": 1.141,
+      "current_pressure": 0.29,
+      "baseline_pressure": 0.29,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.064,
-        "bike": 0.076,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.182,
+        "bus_delay": 0.8620000000000001,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.933,
-        "bike": 0.067
+        "bike_pickup": 0.0,
+        "bike_return": 0.174,
+        "bus_delay": 0.826,
+        "walk_rain": 0.0
       },
       "bike_station_count": 11,
       "no_bike_rate": 0.0,
@@ -4444,7 +5119,10 @@
       "bus_stop_count": 249,
       "bus_eta_sample_count": 155,
       "median_eta_min": 19.4,
-      "bus_issue_rate": 0.538
+      "bus_issue_rate": 0.538,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R23",
@@ -4458,21 +5136,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.317,
-      "baseline_pressure": 1.317,
+      "current_pressure": 0.241,
+      "baseline_pressure": 0.241,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.317,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.868,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 5,
       "no_bike_rate": 0.0,
@@ -4483,7 +5164,10 @@
       "bus_stop_count": 72,
       "bus_eta_sample_count": 47,
       "median_eta_min": 27.0,
-      "bus_issue_rate": 0.472
+      "bus_issue_rate": 0.472,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R24",
@@ -4497,21 +5181,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.303,
-      "baseline_pressure": 1.303,
+      "current_pressure": 0.241,
+      "baseline_pressure": 0.241,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.303,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.8674999999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 4,
       "no_bike_rate": 0.0,
@@ -4522,7 +5209,10 @@
       "bus_stop_count": 83,
       "bus_eta_sample_count": 50,
       "median_eta_min": 26.7,
-      "bus_issue_rate": 0.47
+      "bus_issue_rate": 0.47,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R25",
@@ -4536,21 +5226,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.174,
-      "baseline_pressure": 1.174,
+      "current_pressure": 0.275,
+      "baseline_pressure": 0.275,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.121,
-        "bike": 0.052,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.125,
+        "bike_return": 0.0,
+        "bus_delay": 0.86475,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.956,
-        "bike": 0.044
+        "bike_pickup": 0.126,
+        "bike_return": 0.0,
+        "bus_delay": 0.874,
+        "walk_rain": 0.0
       },
       "bike_station_count": 8,
       "no_bike_rate": 0.125,
@@ -4561,7 +5254,10 @@
       "bus_stop_count": 159,
       "bus_eta_sample_count": 111,
       "median_eta_min": 22.1,
-      "bus_issue_rate": 0.459
+      "bus_issue_rate": 0.459,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R26",
@@ -4575,21 +5271,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.209,
-      "baseline_pressure": 1.209,
+      "current_pressure": 0.333,
+      "baseline_pressure": 0.333,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.069,
-        "bike": 0.14,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.333,
+        "bike_return": 0.0,
+        "bus_delay": 0.86725,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.884,
-        "bike": 0.116
+        "bike_pickup": 0.277,
+        "bike_return": 0.0,
+        "bus_delay": 0.723,
+        "walk_rain": 0.0
       },
       "bike_station_count": 3,
       "no_bike_rate": 0.333,
@@ -4600,7 +5299,10 @@
       "bus_stop_count": 130,
       "bus_eta_sample_count": 79,
       "median_eta_min": 20.6,
-      "bus_issue_rate": 0.469
+      "bus_issue_rate": 0.469,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R27",
@@ -4614,21 +5316,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.818,
-      "baseline_pressure": 0.818,
+      "current_pressure": 0.177,
+      "baseline_pressure": 0.177,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.818,
-        "bike": 0.0,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 0.6387499999999999,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 1.0,
-        "bike": 0.0
+        "bike_pickup": 0.0,
+        "bike_return": 0.0,
+        "bus_delay": 1.0,
+        "walk_rain": 0.0
       },
       "bike_station_count": 2,
       "no_bike_rate": 0.0,
@@ -4639,7 +5344,10 @@
       "bus_stop_count": 122,
       "bus_eta_sample_count": 65,
       "median_eta_min": 13.7,
-      "bus_issue_rate": 0.5
+      "bus_issue_rate": 0.5,
+      "station_type": "一般接駁型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R28",
@@ -4653,21 +5361,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 1.315,
-      "baseline_pressure": 1.315,
+      "current_pressure": 0.32,
+      "baseline_pressure": 0.32,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 1.21,
-        "bike": 0.105,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.0,
+        "bike_return": 0.25,
+        "bus_delay": 0.9035,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.92,
-        "bike": 0.08
+        "bike_pickup": 0.0,
+        "bike_return": 0.217,
+        "bus_delay": 0.783,
+        "walk_rain": 0.0
       },
       "bike_station_count": 4,
       "no_bike_rate": 0.0,
@@ -4678,7 +5389,10 @@
       "bus_stop_count": 332,
       "bus_eta_sample_count": 173,
       "median_eta_min": 22.1,
-      "bus_issue_rate": 0.614
+      "bus_issue_rate": 0.614,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     },
     {
       "id": "TRTC-R22A",
@@ -4692,21 +5406,24 @@
       ],
       "rain_mm": 0.0,
       "rain_level": 0,
-      "current_pressure": 0.964,
-      "baseline_pressure": 0.964,
+      "current_pressure": 0.27,
+      "baseline_pressure": 0.27,
       "baseline_samples": 1,
       "baseline_status": "seeded_from_current_dry",
       "amplification": 1.0,
       "severity": "normal",
       "components": {
-        "bus": 0.874,
-        "bike": 0.09,
-        "road": null,
-        "incident": null
+        "bike_pickup": 0.214,
+        "bike_return": 0.071,
+        "bus_delay": 0.68775,
+        "walk_rain": 0.0,
+        "road_interference": null
       },
       "contribution": {
-        "bus": 0.907,
-        "bike": 0.093
+        "bike_pickup": 0.22,
+        "bike_return": 0.073,
+        "bus_delay": 0.707,
+        "walk_rain": 0.0
       },
       "bike_station_count": 14,
       "no_bike_rate": 0.214,
@@ -4717,13 +5434,16 @@
       "bus_stop_count": 277,
       "bus_eta_sample_count": 182,
       "median_eta_min": 14.9,
-      "bus_issue_rate": 0.516
+      "bus_issue_rate": 0.516,
+      "station_type": "通勤型站",
+      "network_degree": 1,
+      "avg_transfer_distance_m": 500
     }
   ],
   "alignment": {
     "spatial_unit": "捷運站周邊 500 公尺",
-    "time_unit": "即時交通壓力；baseline 為同星期、同時段、非雨天本機歷史快照中位數",
-    "formula": "RainAmplification(i,t) = CurrentPressure(i,t) / MedianPressure(i,same weekday/hour,no-rain)"
+    "time_unit": "即時最後一哩壓力；baseline 為同星期、同時段、非雨天本機歷史快照中位數",
+    "formula": "RLCAF(s,t) = RainLastMilePressure(s,t) / NonRainBaselinePressure(s,dow,time_slot)"
   },
   "sources": [
     {
@@ -4752,9 +5472,939 @@
     }
   ],
   "notes": [
-    "本版主指標改為放大係數：目前通勤壓力除以同星期、同時段、非雨天 baseline。",
+    "本版主指標改為 Rain-induced Last-mile Collapse Amplification Factor：目前最後一哩壓力除以同星期、同時段、非雨天 baseline。",
+    "目前最後一哩壓力由 YouBike 取車失敗、YouBike 還車失敗、公車延誤、雨天步行懲罰組成；道路干擾保留欄位但不以缺資料硬估。",
     "若 baseline 樣本不足，頁面會顯示基準累積中，不硬產生看似精準的雨天倍率。",
-    "道路與事故/施工資料尚未納入主指標，因目前可用即時道路資料無法對臺北與新北做一致覆蓋。",
-    "雨量目前使用 Open-Meteo 逐時降雨；若接上 10/30/60 分鐘雨量站資料，可直接替換 RainLevel。"
-  ]
+    "雨量目前使用 Open-Meteo 逐時降雨；若接上雨量站 10/30/60 分鐘資料，可直接替換 RainLevel 與 walk_rain。"
+  ],
+  "metro_network": {
+    "lines": [
+      {
+        "id": "BL",
+        "color": "#0070bd",
+        "stations": [
+          {
+            "id": "TRTC-BL01",
+            "name": "頂埔",
+            "lon": 121.418744,
+            "lat": 24.959351,
+            "order": 1
+          },
+          {
+            "id": "TRTC-BL02",
+            "name": "永寧",
+            "lon": 121.43613,
+            "lat": 24.96682,
+            "order": 2
+          },
+          {
+            "id": "TRTC-BL03",
+            "name": "土城",
+            "lon": 121.44432,
+            "lat": 24.97313,
+            "order": 3
+          },
+          {
+            "id": "TRTC-BL04",
+            "name": "海山",
+            "lon": 121.448787,
+            "lat": 24.985348,
+            "order": 4
+          },
+          {
+            "id": "TRTC-BL05",
+            "name": "亞東醫院",
+            "lon": 121.452465,
+            "lat": 24.99828,
+            "order": 5
+          },
+          {
+            "id": "TRTC-BL06",
+            "name": "府中",
+            "lon": 121.459276,
+            "lat": 25.008465,
+            "order": 6
+          },
+          {
+            "id": "TRTC-BL07",
+            "name": "板橋",
+            "lon": 121.462671,
+            "lat": 25.014098,
+            "order": 7
+          },
+          {
+            "id": "TRTC-BL08",
+            "name": "新埔",
+            "lon": 121.468363,
+            "lat": 25.023736,
+            "order": 8
+          },
+          {
+            "id": "TRTC-BL09",
+            "name": "江子翠",
+            "lon": 121.47257,
+            "lat": 25.030265,
+            "order": 9
+          },
+          {
+            "id": "TRTC-BL10",
+            "name": "龍山寺",
+            "lon": 121.500325,
+            "lat": 25.03528,
+            "order": 10
+          },
+          {
+            "id": "TRTC-BL11",
+            "name": "西門",
+            "lon": 121.508511,
+            "lat": 25.042274,
+            "order": 11
+          },
+          {
+            "id": "TRTC-BL12",
+            "name": "台北車站",
+            "lon": 121.517415,
+            "lat": 25.04631,
+            "order": 12
+          },
+          {
+            "id": "TRTC-BL13",
+            "name": "善導寺",
+            "lon": 121.523885,
+            "lat": 25.04468,
+            "order": 13
+          },
+          {
+            "id": "TRTC-BL14",
+            "name": "忠孝新生",
+            "lon": 121.5328,
+            "lat": 25.0423,
+            "order": 14
+          },
+          {
+            "id": "TRTC-BL15",
+            "name": "忠孝復興",
+            "lon": 121.543769,
+            "lat": 25.041633,
+            "order": 15
+          },
+          {
+            "id": "TRTC-BL16",
+            "name": "忠孝敦化",
+            "lon": 121.55045,
+            "lat": 25.041505,
+            "order": 16
+          },
+          {
+            "id": "TRTC-BL17",
+            "name": "國父紀念館",
+            "lon": 121.557815,
+            "lat": 25.04137,
+            "order": 17
+          },
+          {
+            "id": "TRTC-BL18",
+            "name": "市政府",
+            "lon": 121.565685,
+            "lat": 25.041135,
+            "order": 18
+          },
+          {
+            "id": "TRTC-BL19",
+            "name": "永春",
+            "lon": 121.5762,
+            "lat": 25.040855,
+            "order": 19
+          },
+          {
+            "id": "TRTC-BL20",
+            "name": "後山埤",
+            "lon": 121.58227,
+            "lat": 25.044715,
+            "order": 20
+          },
+          {
+            "id": "TRTC-BL21",
+            "name": "昆陽",
+            "lon": 121.593228,
+            "lat": 25.050459,
+            "order": 21
+          },
+          {
+            "id": "TRTC-BL22",
+            "name": "南港",
+            "lon": 121.60697,
+            "lat": 25.052035,
+            "order": 22
+          },
+          {
+            "id": "TRTC-BL23",
+            "name": "南港展覽館",
+            "lon": 121.616861,
+            "lat": 25.054919,
+            "order": 23
+          }
+        ]
+      },
+      {
+        "id": "BR",
+        "color": "#c48c31",
+        "stations": [
+          {
+            "id": "TRTC-BR01",
+            "name": "動物園",
+            "lon": 121.579501,
+            "lat": 24.998205,
+            "order": 1
+          },
+          {
+            "id": "TRTC-BR02",
+            "name": "木柵",
+            "lon": 121.573127,
+            "lat": 24.99824,
+            "order": 2
+          },
+          {
+            "id": "TRTC-BR03",
+            "name": "萬芳社區",
+            "lon": 121.568088,
+            "lat": 24.99857,
+            "order": 3
+          },
+          {
+            "id": "TRTC-BR04",
+            "name": "萬芳醫院",
+            "lon": 121.558092,
+            "lat": 24.99932,
+            "order": 4
+          },
+          {
+            "id": "TRTC-BR05",
+            "name": "辛亥",
+            "lon": 121.557046,
+            "lat": 25.005455,
+            "order": 5
+          },
+          {
+            "id": "TRTC-BR06",
+            "name": "麟光",
+            "lon": 121.558834,
+            "lat": 25.018495,
+            "order": 6
+          },
+          {
+            "id": "TRTC-BR07",
+            "name": "六張犁",
+            "lon": 121.55302,
+            "lat": 25.02381,
+            "order": 7
+          },
+          {
+            "id": "TRTC-BR08",
+            "name": "科技大樓",
+            "lon": 121.543462,
+            "lat": 25.02612,
+            "order": 8
+          },
+          {
+            "id": "TRTC-BR09",
+            "name": "大安",
+            "lon": 121.54237,
+            "lat": 25.033311,
+            "order": 9
+          },
+          {
+            "id": "TRTC-BR10",
+            "name": "忠孝復興",
+            "lon": 121.543703,
+            "lat": 25.041104,
+            "order": 10
+          },
+          {
+            "id": "TRTC-BR11",
+            "name": "南京復興",
+            "lon": 121.544303,
+            "lat": 25.052044,
+            "order": 11
+          },
+          {
+            "id": "TRTC-BR12",
+            "name": "中山國中",
+            "lon": 121.544215,
+            "lat": 25.06085,
+            "order": 12
+          },
+          {
+            "id": "TRTC-BR13",
+            "name": "松山機場",
+            "lon": 121.55162,
+            "lat": 25.063111,
+            "order": 13
+          },
+          {
+            "id": "TRTC-BR14",
+            "name": "大直",
+            "lon": 121.54679,
+            "lat": 25.07943,
+            "order": 14
+          },
+          {
+            "id": "TRTC-BR15",
+            "name": "劍南路",
+            "lon": 121.555582,
+            "lat": 25.08483,
+            "order": 15
+          },
+          {
+            "id": "TRTC-BR16",
+            "name": "西湖",
+            "lon": 121.567227,
+            "lat": 25.08216,
+            "order": 16
+          },
+          {
+            "id": "TRTC-BR17",
+            "name": "港墘",
+            "lon": 121.57516,
+            "lat": 25.08007,
+            "order": 17
+          },
+          {
+            "id": "TRTC-BR18",
+            "name": "文德",
+            "lon": 121.584973,
+            "lat": 25.078567,
+            "order": 18
+          },
+          {
+            "id": "TRTC-BR19",
+            "name": "內湖",
+            "lon": 121.594363,
+            "lat": 25.083675,
+            "order": 19
+          },
+          {
+            "id": "TRTC-BR20",
+            "name": "大湖公園",
+            "lon": 121.602214,
+            "lat": 25.083805,
+            "order": 20
+          },
+          {
+            "id": "TRTC-BR21",
+            "name": "葫洲",
+            "lon": 121.607146,
+            "lat": 25.07271,
+            "order": 21
+          },
+          {
+            "id": "TRTC-BR22",
+            "name": "東湖",
+            "lon": 121.611535,
+            "lat": 25.067455,
+            "order": 22
+          },
+          {
+            "id": "TRTC-BL23",
+            "name": "南港展覽館",
+            "lon": 121.616861,
+            "lat": 25.054919,
+            "order": 23
+          },
+          {
+            "id": "TRTC-BR23",
+            "name": "南港軟體園區",
+            "lon": 121.61586,
+            "lat": 25.059911,
+            "order": 23
+          }
+        ]
+      },
+      {
+        "id": "G0",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-G01",
+            "name": "新店",
+            "lon": 121.5377,
+            "lat": 24.958181,
+            "order": 1
+          },
+          {
+            "id": "TRTC-G02",
+            "name": "新店區公所",
+            "lon": 121.5413,
+            "lat": 24.96744,
+            "order": 2
+          },
+          {
+            "id": "TRTC-G03",
+            "name": "七張",
+            "lon": 121.543129,
+            "lat": 24.975036,
+            "order": 3
+          },
+          {
+            "id": "TRTC-G03A",
+            "name": "小碧潭",
+            "lon": 121.53058,
+            "lat": 24.97188,
+            "order": 3
+          },
+          {
+            "id": "TRTC-G04",
+            "name": "大坪林",
+            "lon": 121.54134,
+            "lat": 24.98272,
+            "order": 4
+          },
+          {
+            "id": "TRTC-G05",
+            "name": "景美",
+            "lon": 121.540697,
+            "lat": 24.992824,
+            "order": 5
+          },
+          {
+            "id": "TRTC-G06",
+            "name": "萬隆",
+            "lon": 121.539008,
+            "lat": 25.001978,
+            "order": 6
+          },
+          {
+            "id": "TRTC-G07",
+            "name": "公館",
+            "lon": 121.534358,
+            "lat": 25.014781,
+            "order": 7
+          },
+          {
+            "id": "TRTC-G08",
+            "name": "台電大樓",
+            "lon": 121.528143,
+            "lat": 25.020733,
+            "order": 8
+          },
+          {
+            "id": "TRTC-G09",
+            "name": "古亭",
+            "lon": 121.522868,
+            "lat": 25.026373,
+            "order": 9
+          }
+        ]
+      },
+      {
+        "id": "G1",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-G10",
+            "name": "中正紀念堂",
+            "lon": 121.518273,
+            "lat": 25.032767,
+            "order": 0
+          },
+          {
+            "id": "TRTC-G11",
+            "name": "小南門",
+            "lon": 121.510798,
+            "lat": 25.035619,
+            "order": 1
+          },
+          {
+            "id": "TRTC-G13",
+            "name": "北門",
+            "lon": 121.510184,
+            "lat": 25.049554,
+            "order": 3
+          },
+          {
+            "id": "TRTC-G14",
+            "name": "中山",
+            "lon": 121.520364,
+            "lat": 25.052621,
+            "order": 4
+          },
+          {
+            "id": "TRTC-G15",
+            "name": "松江南京",
+            "lon": 121.53285,
+            "lat": 25.052693,
+            "order": 5
+          },
+          {
+            "id": "TRTC-G17",
+            "name": "台北小巨蛋",
+            "lon": 121.552549,
+            "lat": 25.05152,
+            "order": 7
+          },
+          {
+            "id": "TRTC-G18",
+            "name": "南京三民",
+            "lon": 121.56471,
+            "lat": 25.051588,
+            "order": 8
+          },
+          {
+            "id": "TRTC-G19",
+            "name": "松山",
+            "lon": 121.577706,
+            "lat": 25.050118,
+            "order": 9
+          },
+          {
+            "id": "TRTC-BL11",
+            "name": "西門",
+            "lon": 121.508511,
+            "lat": 25.042274,
+            "order": 11
+          },
+          {
+            "id": "TRTC-BR11",
+            "name": "南京復興",
+            "lon": 121.544303,
+            "lat": 25.052044,
+            "order": 11
+          }
+        ]
+      },
+      {
+        "id": "O0",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-O01",
+            "name": "南勢角",
+            "lon": 121.509237,
+            "lat": 24.990065,
+            "order": 1
+          },
+          {
+            "id": "TRTC-O02",
+            "name": "景安",
+            "lon": 121.505114,
+            "lat": 24.99392,
+            "order": 2
+          },
+          {
+            "id": "TRTC-O03",
+            "name": "永安市場",
+            "lon": 121.511225,
+            "lat": 25.002895,
+            "order": 3
+          },
+          {
+            "id": "TRTC-O04",
+            "name": "頂溪",
+            "lon": 121.515398,
+            "lat": 25.01308,
+            "order": 4
+          },
+          {
+            "id": "TRTC-O06",
+            "name": "東門",
+            "lon": 121.528766,
+            "lat": 25.033894,
+            "order": 6
+          },
+          {
+            "id": "TRTC-O07",
+            "name": "忠孝新生",
+            "lon": 121.532856,
+            "lat": 25.041797,
+            "order": 7
+          },
+          {
+            "id": "TRTC-G09",
+            "name": "古亭",
+            "lon": 121.522868,
+            "lat": 25.026373,
+            "order": 9
+          },
+          {
+            "id": "TRTC-O09",
+            "name": "行天宮",
+            "lon": 121.53315,
+            "lat": 25.05924,
+            "order": 9
+          },
+          {
+            "id": "TRTC-G15",
+            "name": "松江南京",
+            "lon": 121.53285,
+            "lat": 25.052693,
+            "order": 15
+          }
+        ]
+      },
+      {
+        "id": "O1",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-O10",
+            "name": "中山國小",
+            "lon": 121.526609,
+            "lat": 25.062665,
+            "order": 0
+          },
+          {
+            "id": "TRTC-O11",
+            "name": "民權西路",
+            "lon": 121.519585,
+            "lat": 25.06235,
+            "order": 1
+          },
+          {
+            "id": "TRTC-O12",
+            "name": "大橋頭",
+            "lon": 121.513003,
+            "lat": 25.06322,
+            "order": 2
+          },
+          {
+            "id": "TRTC-O13",
+            "name": "台北橋",
+            "lon": 121.500575,
+            "lat": 25.063075,
+            "order": 3
+          },
+          {
+            "id": "TRTC-O14",
+            "name": "菜寮",
+            "lon": 121.491451,
+            "lat": 25.059808,
+            "order": 4
+          },
+          {
+            "id": "TRTC-O15",
+            "name": "三重",
+            "lon": 121.48422,
+            "lat": 25.05571,
+            "order": 5
+          },
+          {
+            "id": "TRTC-O16",
+            "name": "先嗇宮",
+            "lon": 121.47165,
+            "lat": 25.04632,
+            "order": 6
+          },
+          {
+            "id": "TRTC-O17",
+            "name": "頭前庄",
+            "lon": 121.460479,
+            "lat": 25.039862,
+            "order": 7
+          },
+          {
+            "id": "TRTC-O18",
+            "name": "新莊",
+            "lon": 121.45218,
+            "lat": 25.03608,
+            "order": 8
+          },
+          {
+            "id": "TRTC-O19",
+            "name": "輔大",
+            "lon": 121.435735,
+            "lat": 25.03279,
+            "order": 9
+          }
+        ]
+      },
+      {
+        "id": "O2",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-O20",
+            "name": "丹鳳",
+            "lon": 121.422422,
+            "lat": 25.029073,
+            "order": 0
+          },
+          {
+            "id": "TRTC-O21",
+            "name": "迴龍",
+            "lon": 121.411757,
+            "lat": 25.022107,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "O5",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-O50",
+            "name": "三重國小",
+            "lon": 121.49701,
+            "lat": 25.070275,
+            "order": 0
+          },
+          {
+            "id": "TRTC-O51",
+            "name": "三和國中",
+            "lon": 121.486455,
+            "lat": 25.076794,
+            "order": 1
+          },
+          {
+            "id": "TRTC-O52",
+            "name": "徐匯中學",
+            "lon": 121.479945,
+            "lat": 25.080485,
+            "order": 2
+          },
+          {
+            "id": "TRTC-O53",
+            "name": "三民高中",
+            "lon": 121.473365,
+            "lat": 25.085425,
+            "order": 3
+          },
+          {
+            "id": "TRTC-O54",
+            "name": "蘆洲",
+            "lon": 121.46471,
+            "lat": 25.09152,
+            "order": 4
+          }
+        ]
+      },
+      {
+        "id": "R0",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-R02",
+            "name": "象山",
+            "lon": 121.57008,
+            "lat": 25.032816,
+            "order": 2
+          },
+          {
+            "id": "TRTC-R03",
+            "name": "台北101/世貿",
+            "lon": 121.562755,
+            "lat": 25.033028,
+            "order": 3
+          },
+          {
+            "id": "TRTC-R04",
+            "name": "信義安和",
+            "lon": 121.55265,
+            "lat": 25.03331,
+            "order": 4
+          },
+          {
+            "id": "TRTC-O06",
+            "name": "東門",
+            "lon": 121.528766,
+            "lat": 25.033894,
+            "order": 6
+          },
+          {
+            "id": "TRTC-R06",
+            "name": "大安森林公園",
+            "lon": 121.536151,
+            "lat": 25.033225,
+            "order": 6
+          },
+          {
+            "id": "TRTC-BR09",
+            "name": "大安",
+            "lon": 121.54237,
+            "lat": 25.033311,
+            "order": 9
+          },
+          {
+            "id": "TRTC-R09",
+            "name": "台大醫院",
+            "lon": 121.51602,
+            "lat": 25.041399,
+            "order": 9
+          },
+          {
+            "id": "TRTC-G10",
+            "name": "中正紀念堂",
+            "lon": 121.518273,
+            "lat": 25.032767,
+            "order": 10
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-R12",
+            "name": "雙連",
+            "lon": 121.520685,
+            "lat": 25.057575,
+            "order": 2
+          },
+          {
+            "id": "TRTC-R14",
+            "name": "圓山",
+            "lon": 121.520074,
+            "lat": 25.071409,
+            "order": 4
+          },
+          {
+            "id": "TRTC-R15",
+            "name": "劍潭",
+            "lon": 121.524955,
+            "lat": 25.084201,
+            "order": 5
+          },
+          {
+            "id": "TRTC-R16",
+            "name": "士林",
+            "lon": 121.52623,
+            "lat": 25.093492,
+            "order": 6
+          },
+          {
+            "id": "TRTC-R17",
+            "name": "芝山",
+            "lon": 121.522546,
+            "lat": 25.102718,
+            "order": 7
+          },
+          {
+            "id": "TRTC-R18",
+            "name": "明德",
+            "lon": 121.518785,
+            "lat": 25.109815,
+            "order": 8
+          },
+          {
+            "id": "TRTC-R19",
+            "name": "石牌",
+            "lon": 121.515572,
+            "lat": 25.114455,
+            "order": 9
+          },
+          {
+            "id": "TRTC-O11",
+            "name": "民權西路",
+            "lon": 121.519585,
+            "lat": 25.06235,
+            "order": 11
+          },
+          {
+            "id": "TRTC-BL12",
+            "name": "台北車站",
+            "lon": 121.517415,
+            "lat": 25.04631,
+            "order": 12
+          },
+          {
+            "id": "TRTC-G14",
+            "name": "中山",
+            "lon": 121.520364,
+            "lat": 25.052621,
+            "order": 14
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "color": "#8a94a6",
+        "stations": [
+          {
+            "id": "TRTC-R20",
+            "name": "唭哩岸",
+            "lon": 121.506234,
+            "lat": 25.120852,
+            "order": 0
+          },
+          {
+            "id": "TRTC-R21",
+            "name": "奇岩",
+            "lon": 121.50114,
+            "lat": 25.12547,
+            "order": 1
+          },
+          {
+            "id": "TRTC-R22",
+            "name": "北投",
+            "lon": 121.498648,
+            "lat": 25.131819,
+            "order": 2
+          },
+          {
+            "id": "TRTC-R22A",
+            "name": "新北投",
+            "lon": 121.502595,
+            "lat": 25.136931,
+            "order": 2
+          },
+          {
+            "id": "TRTC-R23",
+            "name": "復興崗",
+            "lon": 121.485457,
+            "lat": 25.137474,
+            "order": 3
+          },
+          {
+            "id": "TRTC-R24",
+            "name": "忠義",
+            "lon": 121.473293,
+            "lat": 25.131041,
+            "order": 4
+          },
+          {
+            "id": "TRTC-R25",
+            "name": "關渡",
+            "lon": 121.4671,
+            "lat": 25.12563,
+            "order": 5
+          },
+          {
+            "id": "TRTC-R26",
+            "name": "竹圍",
+            "lon": 121.45955,
+            "lat": 25.1369,
+            "order": 6
+          },
+          {
+            "id": "TRTC-R27",
+            "name": "紅樹林",
+            "lon": 121.4588,
+            "lat": 25.15399,
+            "order": 7
+          },
+          {
+            "id": "TRTC-R28",
+            "name": "淡水",
+            "lon": 121.445805,
+            "lat": 25.167745,
+            "order": 8
+          }
+        ]
+      }
+    ]
+  },
+  "component_weights": {
+    "bike_pickup": 0.25,
+    "bike_return": 0.25,
+    "bus_delay": 0.25,
+    "walk_rain": 0.15,
+    "road_interference": 0.1
+  },
+  "literature_basis": {
+    "catchment_radius_m": 500,
+    "summary": "參考共享單車作為捷運最後一哩補充工具的研究，MVP 採 500m 捷運站影響範圍；正式版可用雙北 YouBike 歷史旅次重算 buffer 邊際密度轉折點。",
+    "buffer_density_formula": "increase_Den_j = (D_{j+1} - D_j) / [pi * (R_{j+1}^2 - R_j^2)]",
+    "station_typology": "MVP 以轉乘線數、公車站密度與 YouBike 站密度做規則式站型；正式版可用 hourly trips features + K-means + silhouette coefficient。"
+  }
 }

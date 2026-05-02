@@ -1,0 +1,181 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+  --bg: #11151b;
+  --surface: #171c24;
+  --line: #303844;
+  --text: #f2f5f8;
+  --muted: #9aa7b6;
+  --teal: #39c5bb;
+  --amber: #f4b942;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.rlcaf-widget {
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg);
+}
+
+header,
+.summary-grid,
+.content-grid {
+  display: grid;
+  gap: 14px;
+}
+
+header {
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  margin-bottom: 16px;
+}
+
+header p,
+footer,
+.summary-grid span,
+.rank-list span span {
+  color: var(--muted);
+}
+
+h1 {
+  margin: 4px 0 0;
+  font-size: 1.55rem;
+  letter-spacing: 0;
+}
+
+header strong {
+  font-size: 2.3rem;
+  color: var(--teal);
+}
+
+.summary-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.summary-grid div,
+.network-panel,
+.rank-list,
+footer {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.summary-grid div {
+  padding: 14px;
+}
+
+.summary-grid b {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.35rem;
+}
+
+.content-grid {
+  grid-template-columns: minmax(0, 1fr) 330px;
+}
+
+.network-panel {
+  min-height: 540px;
+  padding: 12px;
+}
+
+#networkSvg {
+  display: block;
+  width: 100%;
+  height: 540px;
+}
+
+.metro-line {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.7;
+}
+
+.station-point {
+  stroke: #11151b;
+  stroke-width: 2.2;
+  cursor: pointer;
+}
+
+.station-point:hover {
+  stroke: var(--text);
+}
+
+.rank-list {
+  margin: 0;
+  padding: 18px;
+  list-style: none;
+}
+
+.rank-list li {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+
+.rank-list li:last-child {
+  border-bottom: 0;
+}
+
+.rank-index {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.rank-name {
+  font-weight: 800;
+}
+
+.rank-name span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.rank-score {
+  color: var(--teal);
+  font-weight: 900;
+}
+
+footer {
+  margin-top: 16px;
+  padding: 14px;
+  line-height: 1.6;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 20;
+  display: none;
+  max-width: 280px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0f1318;
+  color: var(--text);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .summary-grid,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

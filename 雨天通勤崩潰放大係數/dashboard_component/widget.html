@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雨天通勤崩潰放大係數組件</title>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+  <article class="rlcaf-widget">
+    <header>
+      <div>
+        <p>Rain-induced Last-mile Collapse Amplification Factor</p>
+        <h1>雨天通勤崩潰放大係數</h1>
+      </div>
+      <strong id="metricValue">--</strong>
+    </header>
+
+    <section class="summary-grid">
+      <div><span>目前最後一哩壓力</span><b id="pressureValue">--</b></div>
+      <div><span>baseline ready</span><b id="baselineValue">--</b></div>
+      <div><span>平均降雨</span><b id="rainValue">--</b></div>
+      <div><span>更新時間</span><b id="updateValue">--</b></div>
+    </section>
+
+    <section class="content-grid">
+      <div class="network-panel">
+        <svg id="networkSvg" viewBox="0 0 900 560" role="img" aria-label="雙北捷運路網 RLCAF"></svg>
+      </div>
+      <ol id="rankList" class="rank-list"></ol>
+    </section>
+
+    <footer id="methodText"></footer>
+  </article>
+  <div id="tooltip" class="tooltip"></div>
+  <script src="widget.js"></script>
+</body>
+</html>
