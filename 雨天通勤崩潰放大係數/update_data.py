@@ -90,7 +90,18 @@ def haversine_m(lon1, lat1, lon2, lat2):
 
 
 def parse_line(station_id):
-    return station_id[:2] if station_id[:2] in LINE_COLORS else station_id[:1]
+    station_id = (station_id or "").upper()
+    if station_id.startswith("BL"):
+        return "BL"
+    if station_id.startswith("BR"):
+        return "BR"
+    if station_id.startswith("R"):
+        return "R"
+    if station_id.startswith("G"):
+        return "G"
+    if station_id.startswith("O"):
+        return "O"
+    return ""
 
 
 def fetch_metro_stations(headers):

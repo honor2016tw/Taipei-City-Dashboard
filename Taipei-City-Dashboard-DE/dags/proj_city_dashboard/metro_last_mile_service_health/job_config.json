@@ -1,0 +1,38 @@
+{
+    "dag_infos": {
+        "dag_id": "metro_last_mile_service_health",
+        "start_date": "2026-05-02",
+        "schedule_interval": "*/5 * * * *",
+        "catchup": false,
+        "tags": ["metro", "last-mile", "YouBike", "bus", "metrotaipei"],
+        "description": "Metro Taipei last-mile service health from TDX metro, YouBike and bus ETA snapshots.",
+        "default_args": {
+            "owner": "airflow",
+            "email": ["DEFAULT_EMAIL_LIST"],
+            "email_on_retry": false,
+            "email_on_failure": true,
+            "retries": 1,
+            "retry_delay" : 60
+        },
+        "ready_data_db": "postgres_default",
+        "ready_data_default_table": "metro_last_mile_service_health",
+        "ready_data_history_table": "metro_last_mile_service_health_history",
+        "raw_data_db": "postgres_default",
+        "raw_data_table": "",
+        "load_behavior": "current+history"
+    },
+    "data_infos": {
+        "name_cn": "雙北捷運最後一哩服務健康度",
+        "airflow_update_freq": "5 minutes",
+        "source": "https://tdx.transportdata.tw/",
+        "source_type": "TDX JSON APIs; Taipei City Dashboard metro route GeoJSON",
+        "source_dept": "交通部運輸資料流通服務平臺; 臺北城市儀表板",
+        "gis_format": "GeoJSON exported for dashboard mapData",
+        "output_coordinate": "EPSG:4326",
+        "is_geometry": 1,
+        "dataset_description": "以捷運站 500 公尺接駁圈為單位，整合 YouBike 即時可借/可還、公車 ETA 與接駁覆蓋，計算最後一哩服務健康度。",
+        "etl_description": "fetch TDX metro stations, YouBike stations/availability, bus stops/ETA; spatially join by 500m radius; compute service score; write current/history tables and optional FE mapData GeoJSON files",
+        "sensitivity": "public"
+    }
+}
+
