@@ -16,7 +16,7 @@ const props = defineProps([
 	"map_filter_on",
 ]);
 
-const emits = defineEmits([
+defineEmits([
 	"filterByParam",
 	"filterByLayer",
 	"clearByParamFilter",
@@ -27,9 +27,10 @@ const emits = defineEmits([
 const SEGMENTS = [
 	{ key: "weekday_am", label: "平日早高峰", sub: "07:00–09:00" },
 	{ key: "weekday_pm", label: "平日晚高峰", sub: "17:00–19:00" },
-	{ key: "weekend_am", label: "週末上午",   sub: "07:00–09:00" },
-	{ key: "weekend_pm", label: "週末傍晚",   sub: "17:00–19:00" },
+	{ key: "weekend_am", label: "週末上午", sub: "07:00–09:00" },
+	{ key: "weekend_pm", label: "週末傍晚", sub: "17:00–19:00" },
 ];
+const DEFAULT_COLORS = ["#E25555", "#18B7A7", "#F2A93B"];
 
 function firstAvailableSegment() {
 	if (!props.series || props.series.length === 0) return "weekend_pm";
@@ -41,11 +42,11 @@ function firstAvailableSegment() {
 const selectedSegment = ref(firstAvailableSegment());
 
 const currentSeries = computed(() =>
-	(props.series || []).find((s) => s.name === selectedSegment.value)
+	(props.series || []).find((s) => s.name === selectedSegment.value),
 );
 
 const hasData = computed(
-	() => currentSeries.value && currentSeries.value.data.some((v) => v > 0)
+	() => currentSeries.value && currentSeries.value.data.some((v) => v > 0),
 );
 
 const donutSeries = computed(() => currentSeries.value?.data ?? []);
@@ -57,21 +58,33 @@ const donutOptions = computed(() => ({
 		animations: { enabled: true, speed: 300 },
 	},
 	labels: props.chart_config?.categories ?? [],
-	colors: props.chart_config?.color ?? ["#ef6f6c", "#39c5bb", "#f4b942"],
+	colors: props.chart_config?.color ?? DEFAULT_COLORS,
 	legend: {
 		show: true,
 		position: "bottom",
 		fontSize: "12px",
-		labels: { colors: "#cfd8e3" },
+		labels: { colors: "#d8e2ef" },
 	},
 	dataLabels: {
 		enabled: true,
-		style: { fontSize: "12px", colors: ["#1a1d28"] },
+		style: {
+			fontSize: "12px",
+			fontWeight: 700,
+			colors: ["#ffffff"],
+		},
+		dropShadow: {
+			enabled: true,
+			top: 1,
+			left: 0,
+			blur: 2,
+			opacity: 0.45,
+		},
 		formatter: (val) => `${Math.round(val)}%`,
 	},
 	tooltip: {
 		y: {
-			formatter: (v) => `${v.toLocaleString()} ${props.chart_config?.unit ?? "站"}`,
+			formatter: (v) =>
+				`${v.toLocaleString()} ${props.chart_config?.unit ?? "站"}`,
 		},
 	},
 	plotOptions: {
@@ -80,10 +93,16 @@ const donutOptions = computed(() => ({
 				size: "60%",
 				labels: {
 					show: true,
+					name: {
+						color: "#d8e2ef",
+					},
+					value: {
+						color: "#f8fafc",
+					},
 					total: {
 						show: true,
 						label: "合計",
-						color: "#8a94a6",
+						color: "#d8e2ef",
 						fontSize: "13px",
 						formatter: (w) =>
 							w.globals.seriesTotals
@@ -106,7 +125,10 @@ const donutOptions = computed(() => ({
 			<button
 				v-for="seg in SEGMENTS"
 				:key="seg.key"
-				:class="['segment-tab', { active: selectedSegment === seg.key }]"
+				:class="[
+					'segment-tab',
+					{ active: selectedSegment === seg.key },
+				]"
 				@click="selectedSegment = seg.key"
 			>
 				<span class="seg-label">{{ seg.label }}</span>
@@ -156,7 +178,10 @@ const donutOptions = computed(() => ({
 	color: #8a94a6;
 	border-radius: 4px;
 	cursor: pointer;
-	transition: background 0.15s, color 0.15s, border-color 0.15s;
+	transition:
+		background 0.15s,
+		color 0.15s,
+		border-color 0.15s;
 	line-height: 1.2;
 }
 
@@ -166,9 +191,9 @@ const donutOptions = computed(() => ({
 }
 
 .segment-tab.active {
-	background: #39c5bb22;
-	border-color: #39c5bb;
-	color: #39c5bb;
+	background: #18b7a722;
+	border-color: #18b7a7;
+	color: #5ee5d8;
 }
 
 .seg-label {

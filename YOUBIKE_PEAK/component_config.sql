@@ -28,7 +28,7 @@ VALUES (990002, 'youbike_peak_pressure', 'YouBike尖峰壓力站分佈');
 INSERT INTO public.component_charts ("index", "color", "types", "unit")
 VALUES (
     'youbike_peak_pressure',
-    ARRAY['#ef6f6c', '#39c5bb', '#f4b942'],
+    ARRAY['#E25555', '#18B7A7', '#F2A93B'],
     ARRAY['YouBikePeakSegmentChart'],
     '站'
 );
@@ -45,7 +45,7 @@ VALUES (
     'geojson',
     NULL,
     NULL,
-    '{"circle-color": ["match", ["get", "role"], "借車壓力站", "#ef6f6c", "還車壓力站", "#f4b942", "#39c5bb"], "circle-radius": 4, "circle-opacity": 0.78, "circle-stroke-color": "#ffffff", "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 11, 0.3, 15, 1.2]}'::json,
+    '{"circle-color": ["match", ["get", "role"], "借車壓力站", "#E25555", "還車壓力站", "#F2A93B", "#18B7A7"], "circle-radius": 4, "circle-opacity": 0.78, "circle-stroke-color": "#ffffff", "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 11, 0.3, 15, 1.2]}'::json,
     '[{"key":"name","name":"站名"},{"key":"area","name":"行政區"},{"key":"city","name":"城市"},{"key":"segment","name":"時段"},{"key":"role","name":"壓力角色"},{"key":"avg_bike_rate","name":"平均可借率"},{"key":"avg_dock_rate","name":"平均可還率"}]'::json
 );
 
@@ -117,7 +117,7 @@ VALUES (
     'geojson',
     NULL,
     NULL,
-    '{"circle-color": ["match", ["get", "role"], "借車壓力站", "#ef6f6c", "還車壓力站", "#f4b942", "#39c5bb"], "circle-radius": 4, "circle-opacity": ["match", ["get", "city"], "TPE", 0.78, 0], "circle-stroke-color": "#ffffff", "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 11, 0.3, 15, 1.2]}'::json,
+    '{"circle-color": ["match", ["get", "role"], "借車壓力站", "#E25555", "還車壓力站", "#F2A93B", "#18B7A7"], "circle-radius": 4, "circle-opacity": ["match", ["get", "city"], "TPE", 0.78, 0], "circle-stroke-color": "#ffffff", "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 11, 0.3, 15, 1.2]}'::json,
     '[{"key":"name","name":"站名"},{"key":"area","name":"行政區"},{"key":"city","name":"城市"},{"key":"segment","name":"時段"},{"key":"role","name":"壓力角色"},{"key":"avg_bike_rate","name":"平均可借率"},{"key":"avg_dock_rate","name":"平均可還率"}]'::json
 );
 
