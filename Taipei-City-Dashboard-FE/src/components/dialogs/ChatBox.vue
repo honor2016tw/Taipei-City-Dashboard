@@ -13,9 +13,9 @@ import http from "../../router/axios";
 const chatStore = useChatStore();
 const contentStore = useContentStore();
 const authStore = useAuthStore();
-const { addChatData, addQueryData, saveChatLog } = chatStore;
+const { addChatData, addQueryData, sendAiMessage, clearAiHistory, saveChatLog } = chatStore;
 const { createDashboard } = contentStore;
-const { chatData } = storeToRefs(chatStore);
+const { chatData, chatMode, isAiStreaming } = storeToRefs(chatStore);
 const { editDashboard } = storeToRefs(contentStore);
 const { user } = storeToRefs(authStore);
 
@@ -62,12 +62,21 @@ const qaBtnHandler = async (text, relations) => {
 	}
 };
 
+const onAiTabClick = () => {
+	if (!user.value.user_id) {
+		addChatData({ role: 'bot', content: '請先登入會員以使用 AI 對話功能！' });
+		return;
+	}
+	chatMode.value = 'ai';
+};
+
 const sendBtnHandler = (text) => {
 	if (!text.trim()) return;
-	addQueryData({
-		role: "user",
-		content: text,
-	});
+	if (chatMode.value === 'ai') {
+		sendAiMessage(text);
+	} else {
+		addQueryData({ role: 'user', content: text });
+	}
 	userMessage.value = "";
 };
 
@@ -76,7 +85,7 @@ const toggleSticky = () => {
 };
 
 watch(
-	() => chatData.value.length,
+	chatData,
 	async () => {
 		await nextTick();
 		const chat = chatAreaRef.value;
@@ -92,6 +101,20 @@ watch(
     <!-- 標題 -->
     <div class="header">
       <h3>臺北城市儀表板小幫手</h3>
+      <div class="mode-tabs">
+        <button
+          :class="{ active: chatMode === 'search' }"
+          @click="chatMode = 'search'"
+        >
+          搜尋組件
+        </button>
+        <button
+          :class="{ active: chatMode === 'ai' }"
+          @click="onAiTabClick"
+        >
+          AI 對話
+        </button>
+      </div>
     </div>
 
     <!-- 聊天區 -->
@@ -114,8 +137,10 @@ watch(
           v-show="isStickyOpen"
           class="sticky-body"
         >
-          <span>小幫手會依據您輸入的內容，自動檢索本站臺的組件資料庫，並回傳相似度較高的組件清單，協助您快速找到符合需求的元件或資訊。<br><br>
-            目前小幫手僅提供組件比對與分析服務，不支援一般聊天功能。如造成不便，敬請見諒！</span>
+          <span>
+            <b>搜尋組件</b>：依輸入內容比對組件資料庫，回傳相似度高的組件清單，可一鍵建立個人儀表板。<br><br>
+            <b>AI 對話</b>：透過 LLM 回答問題，支援多輪對話，可查詢資料庫即時資料。需登入後使用。
+          </span>
         </div>
       </div>
       <div
@@ -133,10 +158,13 @@ watch(
           </div>
           <div class="content">
             <div
-              v-if="chat.content"
+              v-if="chat.content || (isAiStreaming && chat === chatData[chatData.length - 1])"
               class="message--bubble"
             >
-              <p>{{ chat.content }}</p>
+              <p>{{ chat.content }}<span
+                v-if="isAiStreaming && chat === chatData[chatData.length - 1]"
+                class="streaming-cursor"
+              >▋</span></p>
             </div>
             <!-- 表格區 -->
             <div
@@ -279,7 +307,35 @@ $radius-20: 20px;
 			font-size: 18px;
 			font-weight: 700;
 			color: $white;
-			margin: 0;
+			margin: 0 0 0.75rem;
+		}
+
+		.mode-tabs {
+			display: flex;
+			gap: 0.5rem;
+
+			button {
+				flex: 1;
+				padding: 0.35rem 0;
+				border-radius: $radius-15;
+				border: 1px solid $border-color;
+				background: transparent;
+				color: $white;
+				font-size: 13px;
+				cursor: pointer;
+				transition: background 0.15s;
+
+				&:hover {
+					background: rgba(255, 255, 255, 0.1);
+				}
+
+				&.active {
+					background: $white;
+					color: $bg-dark;
+					font-weight: 700;
+					border-color: $white;
+				}
+			}
 		}
 	}
 
@@ -405,7 +461,16 @@ $radius-20: 20px;
 							padding-left: 16px;
 							padding-right: 16px;
 							font-size: 16px;
+
+							.streaming-cursor {
+								display: inline-block;
+								animation: blink 0.8s step-end infinite;
+							}
 						}
+					}
+
+					@keyframes blink {
+						50% { opacity: 0; }
 					}
 
 					.message--button {

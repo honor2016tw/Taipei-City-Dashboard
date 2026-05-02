@@ -1,6 +1,7 @@
 import { ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import http from "../router/axios";
+import { useAuthStore } from "./authStore";
 
 export const useChatStore = defineStore('chat', () => {
   	// 預設訊息
@@ -15,6 +16,11 @@ export const useChatStore = defineStore('chat', () => {
   	];
 
 	const recommendComponents = ref(null)
+
+	const chatMode = ref('search') // 'search' | 'ai'
+	const aiMessages = ref([])
+	const aiSessionId = ref(`sess_${Date.now()}`)
+	const isAiStreaming = ref(false)
 
   	// 從 sessionStorage 讀取
   	const savedChatData = JSON.parse(sessionStorage.getItem('chatData')) || [];
@@ -101,6 +107,78 @@ export const useChatStore = defineStore('chat', () => {
 		saveChatLog(newChatData.content, recommendComponents.value);
   	};
 
+	const sendAiMessage = async (text) => {
+		if (isAiStreaming.value || !text.trim()) return
+
+		addChatData({ role: 'user', content: text })
+		aiMessages.value.push({ role: 'user', content: text })
+
+		const placeholderIdx = chatData.value.length
+		chatData.value.push({ id: placeholderIdx + 1, role: 'bot', isDefault: false, content: '' })
+
+		isAiStreaming.value = true
+
+		try {
+			const authStore = useAuthStore()
+			const res = await fetch(`${import.meta.env.VITE_API_URL}/ai/chat/twai`, {
+				method: 'POST',
+				headers: {
+					'Authorization': `Bearer ${authStore.token}`,
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					messages: aiMessages.value,
+					session_id: aiSessionId.value,
+				}),
+			})
+
+			if (!res.ok) {
+				if (res.status === 401) authStore.handleLogout()
+				chatData.value[placeholderIdx].content = `錯誤 ${res.status}，請稍後再試。`
+				return
+			}
+
+			const reader = res.body.getReader()
+			const decoder = new TextDecoder()
+			let fullContent = ''
+			let buffer = ''
+
+			while (true) {
+				const { done, value } = await reader.read()
+				if (done) break
+				buffer += decoder.decode(value, { stream: true })
+				const lines = buffer.split('\n')
+				buffer = lines.pop() // 保留未完成的行
+
+				for (const line of lines) {
+					if (!line.startsWith('data:')) continue
+					const raw = line.slice(5).trim()
+					if (raw === '[DONE]') continue
+					try {
+						const parsed = JSON.parse(raw)
+						const delta = parsed.choices?.[0]?.delta?.content ?? ''
+						fullContent += delta
+						chatData.value[placeholderIdx].content = fullContent
+					} catch {}
+				}
+			}
+
+			if (!fullContent) chatData.value[placeholderIdx].content = '（無回應）'
+			aiMessages.value.push({ role: 'assistant', content: fullContent })
+
+		} catch (err) {
+			chatData.value[placeholderIdx].content = '發生網路錯誤，請稍後再試。'
+			console.error('AI chat error:', err)
+		} finally {
+			isAiStreaming.value = false
+		}
+	}
+
+	const clearAiHistory = () => {
+		aiMessages.value = []
+		aiSessionId.value = `sess_${Date.now()}`
+	}
+
 	const saveChatLog = async(question, answer) => {
 		try {
         	const formData = new FormData();
@@ -124,5 +202,5 @@ export const useChatStore = defineStore('chat', () => {
       	}
 	};
 
-	return { chatData, addChatData, addQueryData, saveChatLog }
+	return { chatData, chatMode, aiMessages, aiSessionId, isAiStreaming, addChatData, addQueryData, sendAiMessage, clearAiHistory, saveChatLog }
 })

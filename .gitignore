@@ -77,5 +77,3 @@ Taipei-City-Dashboard-DE/docker/prod/.env
 
 # Parking：本機 DB 憑證（run_parking_load.ps1 / run_parking_manager_sql.ps1）
 db/migrations/parking/dashboard/.env.parking
-
-/Taipei-City-Dashboard-FE_2/
