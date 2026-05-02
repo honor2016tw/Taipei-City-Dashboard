@@ -116,8 +116,8 @@ func QueryYouBikePeakAnalysis(ctx context.Context, args string) (string, error) 
 	}
 
 	cityMap := map[string]string{
-		"taipei":    "台北市",
-		"new_taipei": "新北市",
+		"taipei":     "TPE",
+		"new_taipei": "NTPC",
 	}
 
 	type PeakRow struct {

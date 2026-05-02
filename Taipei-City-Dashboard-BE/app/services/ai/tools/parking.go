@@ -21,7 +21,7 @@ type parkingRow struct {
 	TotalCar     int       `gorm:"column:total_car"`
 	AvailableCar int       `gorm:"column:available_car"`
 	AvailPct     int       `gorm:"column:available_pct"`
-	DataTime     time.Time `gorm:"column:data_time"`
+	DataTime     time.Time `gorm:"column:imported_at"`
 }
 
 func QueryParkingAvailability(ctx context.Context, args string) (string, error) {
@@ -45,7 +45,7 @@ func QueryParkingAvailability(ctx context.Context, args string) (string, error) 
 	query := `
 		SELECT p.name, p.dist, p.address, p.total_car, r.available_car,
 		       ROUND(r.available_car::numeric / NULLIF(p.total_car, 0) * 100)::int AS available_pct,
-		       r.data_time
+		       r.imported_at
 		FROM tran_parking p
 		JOIN tran_parking_capacity_realtime r ON p.station_id = r.station_id
 		WHERE p.city = ?
