@@ -24,4 +24,5 @@ export const chartTypes: chartType = {
 	MapLegend: "地圖圖例", // V
 	TextUnitChart: "文字數值圖", // V
 	MetroLastMileLineChart: "捷運路線排行",
+	YouBikePeakSegmentChart: "尖峰壓力圖",
 };

@@ -29,6 +29,7 @@ import IconPercentChart from "./components/IconPercentChart.vue";
 import IndicatorChart from "./components/IndicatorChart.vue";
 import TextUnitChart from "./components/TextUnitChart.vue";
 import MetroLastMileLineChart from "./components/MetroLastMileLineChart.vue";
+import YouBikePeakSegmentChart from "./components/YouBikePeakSegmentChart.vue";
 
 import MapLegendSvg from "./assets/chart/MapLegend.svg";
 import DistrictChartSvg from "./assets/chart/DistrictChart.svg";
@@ -225,6 +226,8 @@ function returnChartComponent(name, svg) {
 		return svg ? TextUnitChartSvg : TextUnitChart;
 	case "MetroLastMileLineChart":
 		return svg ? BarChartSvg : MetroLastMileLineChart;
+	case "YouBikePeakSegmentChart":
+		return svg ? DonutChartSvg : YouBikePeakSegmentChart;
 	default:
 		return svg ? MapLegendSvg : MapLegend;
 	}
