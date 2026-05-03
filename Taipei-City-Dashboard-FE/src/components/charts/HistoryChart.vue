@@ -7,6 +7,11 @@ import { timeTerms } from "../../assets/configs/AllTimes";
 const props = defineProps(["chart_config", "series", "history_config"]);
 
 const currentSeries = ref(0);
+const historyColors =
+	Array.isArray(props.history_config?.color) &&
+	props.history_config.color.length > 0
+		? props.history_config.color
+		: props.chart_config?.color || [];
 
 const chartOptions = ref({
 	chart: {
@@ -20,9 +25,7 @@ const chartOptions = ref({
 			},
 		},
 	},
-	colors: props.history_config.color[0]
-		? props.history_config.color
-		: props.chart_config.color,
+	colors: historyColors,
 	dataLabels: {
 		enabled: false,
 	},
@@ -40,9 +43,7 @@ const chartOptions = ref({
 		strokeWidth: 0,
 	},
 	stroke: {
-		colors: props.history_config.color[0]
-			? props.history_config.color
-			: props.chart_config.color,
+		colors: historyColors,
 		curve: "smooth",
 		show: true,
 		width: 2,

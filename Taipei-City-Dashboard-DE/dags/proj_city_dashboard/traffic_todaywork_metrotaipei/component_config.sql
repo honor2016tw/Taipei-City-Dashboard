@@ -69,7 +69,7 @@ INSERT INTO public.query_charts (
 )
 VALUES (
     'traffic_todaywork',
-    '{"color": null, "range": ["quarter_ago", "halfyear_ago", "year_ago"], "unit": "件"}'::json,
+    '{"color": ["#2f9ca1"], "range": ["quarter_ago", "halfyear_ago", "year_ago"], "unit": "件"}'::json,
     ARRAY[20020]::integer[],
     '{"mode": "byParam", "byParam": {"xParam": "district", "yParam": null}}'::json,
     'current',
@@ -170,7 +170,7 @@ INSERT INTO public.query_charts (
 )
 VALUES (
     'traffic_todaywork',
-    '{"color": null, "range": ["quarter_ago", "halfyear_ago", "year_ago"], "unit": "件"}'::json,
+    '{"color": ["#2f9ca1"], "range": ["quarter_ago", "halfyear_ago", "year_ago"], "unit": "件"}'::json,
     ARRAY[20021]::integer[],
     '{"mode": "byParam", "byParam": {"xParam": "district", "yParam": null}}'::json,
     'current',
